@@ -66,7 +66,7 @@ export const VoiceAuthentication = () => {
               <Inputs text={item.text} />
             ))}
           </Grid>
-          <Grid item lg={4}>
+          <Grid item lg={6}>
             <Box>
               <AuthenticationCards />
             </Box>

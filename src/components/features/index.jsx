@@ -113,6 +113,30 @@ const card = [
     detail:
       "We use 3 seconds of any voice to authenticate, identify or enroll. Pass phrases and voice prints are so yesterday.",
   },
+  {
+    image: webImg,
+    heading: "Text and language independent Recognition ",
+    detail:
+      "We use 3 seconds of any voice to authenticate, identify or enroll. Pass phrases and voice prints are so yesterday.",
+  },
+  {
+    image: webImg,
+    heading: "Text and language independent Recognition ",
+    detail:
+      "We use 3 seconds of any voice to authenticate, identify or enroll. Pass phrases and voice prints are so yesterday.",
+  },
+  {
+    image: webImg,
+    heading: "Text and language independent Recognition ",
+    detail:
+      "We use 3 seconds of any voice to authenticate, identify or enroll. Pass phrases and voice prints are so yesterday.",
+  },
+  {
+    image: webImg,
+    heading: "Text and language independent Recognition ",
+    detail:
+      "We use 3 seconds of any voice to authenticate, identify or enroll. Pass phrases and voice prints are so yesterday.",
+  },
 ];
 export const Features = () => {
   const classes = useStyles();
