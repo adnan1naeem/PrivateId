@@ -7,6 +7,7 @@ const useStyles = makeStyles({
     background: "#FFFFFF",
     boxShadow: "3px 11px 13px -4px rgba(0, 0, 0, 0.05)",
     borderRadius: 25,
+    marginBottom: 14,
   },
   text: {
     fontSize: 20,
