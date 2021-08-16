@@ -56,7 +56,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     position: "relative",
-    top: "-120px",
+    top: "-440px",
   },
 });
 export const GetReady = () => {

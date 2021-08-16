@@ -7,6 +7,8 @@ const useStyles = makeStyles({
     backgroundImage: `url(${letstalk})`,
     backgroundColor: "#2A3D80",
     minHeight: "100vh",
+    position: "relative",
+    top: -450,
   },
   btnFonts: {
     fontWeight: 600,

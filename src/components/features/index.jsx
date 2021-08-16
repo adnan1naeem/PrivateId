@@ -23,6 +23,8 @@ const useStyles = makeStyles({
   },
   padding: {
     padding: 55,
+    paddingLeft: "10%",
+    paddingRight: "10%",
   },
   seeMore: {
     fontWeight: 700,
@@ -149,12 +151,17 @@ export const Features = () => {
   }, [showMore]);
 
   return (
-    <Box>
+    <Box position="relative" top={-400}>
       <Box className={classes.dFlex}>
         <Box className={classes.title}>Features</Box>
         <Box></Box>
       </Box>
-      <Grid container spacing={4} className={classes.padding}>
+      <Grid
+        container
+        spacing={4}
+        className={classes.padding}
+        justifyContent="center"
+      >
         {cardsData.map((item) => (
           <Grid item lg={4}>
             <Cards

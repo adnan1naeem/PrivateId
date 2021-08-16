@@ -1,19 +1,13 @@
-import { Box, Grid, makeStyles } from "@material-ui/core";
+import { Box, Grid, makeStyles, Paper } from "@material-ui/core";
 import React from "react";
 import webLaptop from "../../assets/webLaptop.png";
 import search from "../../assets/search.png";
 import connect from "../../assets/connect.png";
 import vips from "../../assets/vips.png";
 const useStyles = makeStyles({
-  boxShadow: {
-    background: "#FFFFFF",
-    boxShadow: "2px 1px 36px 8px rgba(56, 125, 255, 0.11)",
-    borderRadius: 26,
-  },
+  boxShadow: {},
   historyImg: {
-    width: 312.46,
-    height: 133.16,
-    marginLeft: "1rem",
+    width: "100%",
   },
   historyTitle: {
     fontWeight: 700,
@@ -51,14 +45,11 @@ const useStyles = makeStyles({
     marginTop: 15,
   },
   laptopImg: {
-    width: 310,
-    height: 277.42,
-    marginTop: 22,
+    width: "100%",
   },
 
   vipImg: {
-    width: 335,
-    height: 257,
+    width: "100%",
   },
   vipTitle: {
     lineHeight: "22px",
@@ -72,8 +63,8 @@ const useStyles = makeStyles({
     textAlign: "center",
     color: "#595E64",
     fontFamily: "DM Sans",
-
     marginTop: 15,
+    marginBottom: 30,
   },
   dFlex: {
     display: "flex",
@@ -85,34 +76,53 @@ const useStyles = makeStyles({
 export const AuthenticationCards = () => {
   const classes = useStyles();
   return (
-    <Grid
-      container
-      alignItems="center"
-      spacing={4}
-      justifyContent="space-evenly"
-    >
+    <Grid container alignItems="center" spacing={4} justifyContent="center">
       <Grid item className={classes.boxShadow} lg={5}>
-        <Box>
+        <Paper
+          square={false}
+          elevation={7}
+          component={Box}
+          padding="22px"
+          borderRadius="26px"
+          className={classes.dFlex}
+        >
           <img src={webLaptop} className={classes.laptopImg} alt="" />
-        </Box>
+        </Paper>
 
-        <Grid item className={classes.boxShadow}>
+        <Paper
+          square={false}
+          elevation={7}
+          component={Box}
+          padding="22px"
+          borderRadius="26px"
+          marginTop={"18px"}
+          className={classes.dFlex}
+        >
           <Box>
             <img src={vips} alt="" className={classes.vipImg} />
           </Box>
           <Box>
             <Box className={classes.vipTitle}>
-              Route VIPs Block unwanted callers
+              Route VIPs
+              <br />
+              Block unwanted callers
             </Box>
             <Box className={classes.vipDetail}>
               Use the “block list” to give VIPs special treatment and disconnect
               or specially route blocked callers.
             </Box>
           </Box>
-        </Grid>
+        </Paper>
       </Grid>
       <Grid item lg={5} className={classes.boxShadow}>
-        <Box className={classes.dFlex}>
+        <Paper
+          square={false}
+          elevation={7}
+          component={Box}
+          padding="22px"
+          borderRadius="26px"
+          className={classes.dFlex}
+        >
           <Box>
             <img className={classes.historyImg} src={search} alt="" />
           </Box>
@@ -124,9 +134,17 @@ export const AuthenticationCards = () => {
             reliance on Caller ID. Click again to list all voices in each call
             and follow the trail in their Voice History, too.
           </Box>
-        </Box>
+        </Paper>
 
-        <Grid className={classes.boxShadow}>
+        <Paper
+          square={false}
+          elevation={7}
+          component={Box}
+          padding="22px"
+          borderRadius="26px"
+          marginTop={"18px"}
+          className={classes.dFlex}
+        >
           <Box className={classes.dFlex}>
             <Box>
               <img src={connect} alt="" className={classes.conectImg} />
@@ -138,7 +156,7 @@ export const AuthenticationCards = () => {
               to deny lists.
             </Box>
           </Box>
-        </Grid>
+        </Paper>
       </Grid>
     </Grid>
   );

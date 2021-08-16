@@ -17,8 +17,10 @@ const input = [
 const useStyles = makeStyles({
   bgImg: {
     backgroundImage: `url(${callBg})`,
-    minHeight: "100vh",
+    minHeight: "90vh",
     backgroundSize: "cover",
+    position: "relative",
+    top: -300,
   },
   title: {
     fontWeight: 700,
@@ -26,7 +28,7 @@ const useStyles = makeStyles({
     color: "#FFFFFF",
     lineHeight: "55px",
     fontFamily: "DM Sans",
-    marginTop: 76,
+    marginTop: 97,
   },
   subTitle: {
     fontWeight: 700,
@@ -54,11 +56,12 @@ export const VoiceAuthentication = () => {
   const classes = useStyles();
   return (
     <Box className={classes.bgImg}>
-      <Box minHeight="100vh" bgcolor="rgb(42 61 128 / 81%)">
+      <Box minHeight="90vh" bgcolor="rgb(42 61 128 / 81%)">
         <Grid
           container
           className={classes.mt}
           justifyContent="center"
+          alignItems="center"
           spacing={4}
         >
           <Grid item lg={4}>

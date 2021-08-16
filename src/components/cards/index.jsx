@@ -4,7 +4,6 @@ import React from "react";
 const useStyles = makeStyles({
   container: {
     height: 560,
-    width: 405,
     borderRadius: 26,
     background: "#FFFFFF",
     boxShadow: "2px 1px 36px 8px rgba(56, 125, 255, 0.11)",

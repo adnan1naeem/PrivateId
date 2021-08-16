@@ -23,13 +23,19 @@ const useStyles = makeStyles({
   },
   bgImg: {
     backgroundImage: `url(${webDataRef})`,
-    minHeight: "100vh",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "auto",
-    backgroundPositionY: "-616px",
+    backgroundSize: "60%",
+    backgroundPositionY: -224,
+    paddingTop: 450,
+    marginTop: 100,
+    paddingBottom: 200,
+    position: "relative",
+    top: -422,
+    zIndex: -1,
   },
   imgStyle: {
-    boxShadow: "10px 8px 0px #0014ff",
+    boxShadow: "29px 20px 0px #0060d5",
+    width: "100%",
   },
 });
 export const DataRefinery = () => {
@@ -41,11 +47,12 @@ export const DataRefinery = () => {
       className={classes.bgImg}
       justifyContent="center"
     >
-      <Grid item lg={6} xl={5}>
+      <Grid item lg={6} xl={4}>
         <Box>
           <img src={videoImg} className={classes.imgStyle} />
         </Box>
       </Grid>
+      <Grid item lg={1} />
       <Grid item lg={5}>
         <Box className={classes.heading}>
           Biometric security that guarantees privacy, a fundamental human right

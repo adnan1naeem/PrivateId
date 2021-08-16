@@ -122,13 +122,21 @@ const useStyles = makeStyles({
     marginTop: 49,
     marginBottom: 49,
   },
+  containerPosition: {
+    position: "relative",
+    top: -450,
+  },
 });
 
 export default function GoPricing() {
   const classes = useStyles();
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer
+      component={Paper}
+      className={classes.containerPosition}
+      elevtion={0}
+    >
       <Grid container justifyContent="center">
         <Grid item lg={9}>
           <Box className={classes.dFlex}>
