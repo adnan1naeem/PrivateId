@@ -47,7 +47,7 @@ export const DataRefinery = () => {
       className={classes.bgImg}
       justifyContent="center"
     >
-      <Grid item lg={6} xl={4}>
+      <Grid item lg={5}>
         <Box>
           <img src={videoImg} className={classes.imgStyle} />
         </Box>
