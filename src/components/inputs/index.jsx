@@ -6,7 +6,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     background: "#FFFFFF",
     boxShadow: "3px 11px 13px -4px rgba(0, 0, 0, 0.05)",
-    borderRadius: 25,
+    borderRadius: 67,
     marginBottom: 14,
   },
   text: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   dFlex: {
     display: "flex",
     alignItems: "center",
-    padding: 20,
+    padding: 13,
   },
 });
 export const Inputs = ({ text }) => {
@@ -33,9 +33,14 @@ export const Inputs = ({ text }) => {
   return (
     <Box className={classes.container}>
       <Box className={classes.dFlex}>
-        <Box className={classes.circul}></Box>
+        <Box>
+          <Box className={classes.circul}></Box>
+        </Box>
 
-        <Box className={classes.text}>{text}</Box>
+        <Box>
+          {" "}
+          <Box className={classes.text}>{text}</Box>
+        </Box>
       </Box>
     </Box>
   );

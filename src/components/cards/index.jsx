@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
   heading: {
     color: "#2A3D80",
-    width: 345,
+    width: 327,
     height: 66,
     fontWeight: 700,
     fontFamily: "DM Sans",

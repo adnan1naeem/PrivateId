@@ -8,7 +8,8 @@ const useStyles = makeStyles({
     backgroundColor: "#2A3D80",
     minHeight: "100vh",
     position: "relative",
-    top: -450,
+    top: -359,
+    padding: "5%",
   },
   btnFonts: {
     fontWeight: 600,
@@ -52,8 +53,6 @@ const useStyles = makeStyles({
   boxShadow: {
     boxShadow: "-8px 19px 13px -6px rgba(102, 165, 254, 0.3)",
     backgroundColor: "#ffffff",
-    width: 652,
-    height: 660,
     borderRadius: 72,
     display: "flex",
     flexDirection: "column",
@@ -62,6 +61,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     position: "relative",
     left: 60,
+    padding: "5%",
   },
   input: {
     color: "#797979",
@@ -70,7 +70,7 @@ const useStyles = makeStyles({
     display: "flex",
     fontFamily: "DM Sans",
     fontWeight: 400,
-    width: 463,
+    width: "100%",
     alignItems: "center",
     borderRadius: 42,
     padding: 18,
@@ -86,7 +86,7 @@ const useStyles = makeStyles({
     display: "flex",
     fontFamily: "DM Sans",
     fontWeight: 400,
-    width: 463,
+    width: "100%",
     alignItems: "center",
     borderRadius: 42,
     padding: 18,
@@ -99,7 +99,7 @@ const useStyles = makeStyles({
     display: "flex",
     fontFamily: "DM Sans",
     fontWeight: 400,
-    width: 463,
+    width: "100%",
     alignItems: "center",
     borderRadius: 42,
     padding: 18,
@@ -113,12 +113,11 @@ const useStyles = makeStyles({
     display: "flex",
     fontFamily: "DM Sans",
     fontWeight: 400,
-    width: 463,
     alignItems: "center",
     borderRadius: 42,
     padding: 18,
     marginTop: 23,
-    height: 127,
+    width: "100%",
   },
   dFlex: {
     display: "flex",
@@ -136,10 +135,10 @@ export const LetsTalk = () => {
         <Box className={classes.heading}> Start a conversation.</Box>
       </Box>
       <Grid contanier className={classes.dFlex}>
-        <Grid item lg={3}>
+        <Grid item xl={3} lg={4}>
           <img className={classes.customerImg} src={customer} />
         </Grid>
-        <Grid item lg={4} className={classes.boxShadow}>
+        <Grid item lg={5} xl={4} className={classes.boxShadow}>
           <input placeholder="Name" className={classes.input} />
           <input placeholder="Email" className={classes.emailInput} />
           <input placeholder="Phone" className={classes.phoneInput} />

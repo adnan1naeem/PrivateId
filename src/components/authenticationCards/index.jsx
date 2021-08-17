@@ -4,7 +4,7 @@ import webLaptop from "../../assets/webLaptop.png";
 import search from "../../assets/search.png";
 import connect from "../../assets/connect.png";
 import vips from "../../assets/vips.png";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   boxShadow: {},
   historyImg: {
     width: "100%",
@@ -31,10 +31,13 @@ const useStyles = makeStyles({
     textAlign: "center",
     color: "#595E64",
     lineHeight: "15px",
+    marginTop: 10,
+    fontSize: 14,
   },
   conectTitle: {
     fontWeight: 700,
-    fontSize: 18,
+    fontSize: 16,
+
     lineHeight: "15px",
     color: "#2A3D80",
     fontFamily: "DM Sans",
@@ -72,12 +75,12 @@ const useStyles = makeStyles({
 
     flexDirection: "column",
   },
-});
+}));
 export const AuthenticationCards = () => {
   const classes = useStyles();
   return (
     <Grid container alignItems="center" spacing={4} justifyContent="center">
-      <Grid item className={classes.boxShadow} lg={5}>
+      <Grid item className={classes.boxShadow} lg={6} xl={5}>
         <Paper
           square={false}
           elevation={7}

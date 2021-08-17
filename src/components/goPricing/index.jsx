@@ -124,7 +124,7 @@ const useStyles = makeStyles({
   },
   containerPosition: {
     position: "relative",
-    top: -450,
+    top: -363,
   },
 });
 
@@ -135,7 +135,7 @@ export default function GoPricing() {
     <TableContainer
       component={Paper}
       className={classes.containerPosition}
-      elevtion={0}
+      elevation={0}
     >
       <Grid container justifyContent="center">
         <Grid item lg={9}>

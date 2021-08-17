@@ -5,8 +5,9 @@ import { AuthenticationCards } from "../authenticationCards";
 import { Inputs } from "../inputs";
 const input = [
   { text: " Routes VIPs and blocks unwanted callers" },
-  { text: " Searches Voice in call recordings “Voice History”" },
-  { text: "Elastic AWS serverless architecture" },
+  { text: "Search any voice in call recordings" },
+  { text: "Instantly disambiguate customer profiles" },
+
   { text: " Guarantees user privacy with PPML and FHE" },
   {
     text: "Certified IEEE Standard for Biometric Privacy, ISO 27001, ISO 9001",
@@ -17,7 +18,7 @@ const input = [
 const useStyles = makeStyles({
   bgImg: {
     backgroundImage: `url(${callBg})`,
-    minHeight: "90vh",
+    minHeight: "135vh",
     backgroundSize: "cover",
     position: "relative",
     top: -300,
@@ -28,7 +29,6 @@ const useStyles = makeStyles({
     color: "#FFFFFF",
     lineHeight: "55px",
     fontFamily: "DM Sans",
-    marginTop: 97,
   },
   subTitle: {
     fontWeight: 700,
@@ -49,14 +49,14 @@ const useStyles = makeStyles({
     maxWidth: "93%",
   },
   mt: {
-    marginTop: 80,
+    padding: "5%",
   },
 });
 export const VoiceAuthentication = () => {
   const classes = useStyles();
   return (
     <Box className={classes.bgImg}>
-      <Box minHeight="90vh" bgcolor="rgb(42 61 128 / 81%)">
+      <Box minHeight="135vh" bgcolor="rgb(42 61 128 / 81%)">
         <Grid
           container
           className={classes.mt}
@@ -64,7 +64,7 @@ export const VoiceAuthentication = () => {
           alignItems="center"
           spacing={4}
         >
-          <Grid item lg={4}>
+          <Grid item xl={4} lg={5}>
             <Box className={classes.title}>CONTINUOUS VOICE AUTHENTICATION</Box>
             <Box className={classes.subTitle}>For AMAZON CONNECT</Box>
             <Box className={classes.detail}>
@@ -77,7 +77,7 @@ export const VoiceAuthentication = () => {
               ))}
             </Box>
           </Grid>
-          <Grid item lg={5}>
+          <Grid item lg={7} xl={6}>
             <AuthenticationCards />
           </Grid>
         </Grid>

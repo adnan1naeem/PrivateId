@@ -6,6 +6,8 @@ import { VoiceAuthentication } from "./components/voiceAuthentication";
 import GoPricing from "./components/goPricing";
 import { LetsTalk } from "./components/letsTalk";
 import { GetReady } from "./components/getReady";
+import { WebFooter } from "./components/webfooter";
+
 function App() {
   return (
     <div>
@@ -17,6 +19,7 @@ function App() {
       <GetReady />
       <GoPricing />
       <LetsTalk />
+      <WebFooter />
     </div>
   );
 }
