@@ -5,7 +5,7 @@ import { KeyCard } from "../keyCard";
 const useStyles = makeStyles({
   container: {
     backgroundImage: `url(${keyrelationship})`,
-    minHeight: "100vh",
+    minHeight: "1075px",
     backgroundColor: "rgb(42 61 128 / 81%)",
     display: "flex",
     alignItems: "center",

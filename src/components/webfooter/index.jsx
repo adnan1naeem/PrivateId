@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 import phn from "../../assets/phn.png";
 import en from "../../assets/envelop.png";
 import yt from "../../assets/youtube.png";
@@ -119,12 +120,21 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: " -359px",
   },
+  bgClrAboutUs: {
+    backgroundColor: "#DEDEDE",
+  },
 }));
 export const WebFooter = () => {
   const classes = useStyles();
+  const {
+    location: { pathname },
+  } = useHistory();
+  let containerClass =
+    pathname === "/about" ? classes.bgClrAboutUs : classes.bgClr;
 
   return (
-    <Box className={classes.bgClr}>
+    <Box className={containerClass}>
+      {pathname === "/about" && <Box height={11} bgcolor="#2A3D80" />}
       <Grid container justifyContent="center">
         <Grid item lg={9}>
           <Grid

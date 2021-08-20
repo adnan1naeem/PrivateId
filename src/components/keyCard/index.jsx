@@ -1,6 +1,26 @@
 import { Box, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
+import aboutus2 from "../../assets/aboutus2.jpg";
 const useStyles = makeStyles({
+  heading: {
+    fontFamily: "Dm Sans",
+    fontWeight: 700,
+    fontSize: 48,
+    color: "#0B216F",
+    marginTop: 38,
+    display: "flex",
+    alignItems: "center",
+    textAlign: "center",
+    flexDirection: "column",
+  },
+  details: {
+    fontFamily: "Dm Sans",
+    fontWeight: 500,
+    fontSize: 24,
+    color: "#000000",
+    marginTop: 17,
+    width: "85%",
+  },
   members: {
     fontFamily: "Dm Sans",
     fontWeight: 700,
@@ -13,6 +33,7 @@ const useStyles = makeStyles({
     fontWeight: 500,
     fontSize: 22,
     color: "#000000",
+    lineHeight: "37px",
   },
   detail: {
     fontFamily: "Dm Sans",
@@ -46,16 +67,27 @@ const useStyles = makeStyles({
     boxShadow: "0px 4px 4px rgba(42, 61, 128, 0.22)",
     borderRadius: 10,
   },
+  imgStyling: {
+    display: "flex",
+    justifyContent: "center",
+    height: 330,
+    marginTop: 168,
+  },
 });
 export const KeyCard = () => {
   const classes = useStyles();
   return (
     <Grid container>
       <Grid item lg={6}>
-        <Box className={classes.members}>Key Relationships</Box>
-        <Box>
-          “If I have seen further it is only by standing on the shoulders of
-          Giants.” - Sir Isaac Newton, 1676
+        <Box className={classes.heading}>
+          Key Relationships
+          <Box className={classes.details}>
+            “If I have seen further it is only by standing on the shoulders of
+            Giants.” - Sir Isaac Newton, 1676
+          </Box>
+        </Box>
+        <Box className={classes.imgStyling}>
+          <img src={aboutus2} alt="" />
         </Box>
       </Grid>
       <Grid item lg={6}>
