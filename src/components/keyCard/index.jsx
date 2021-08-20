@@ -6,6 +6,7 @@ const useStyles = makeStyles({
     fontWeight: 700,
     fontSize: 30,
     color: "#2A3D80",
+    flex: 1,
   },
   names: {
     fontFamily: "Dm Sans",
@@ -23,19 +24,27 @@ const useStyles = makeStyles({
     backgroundColor: "#F4F4F4",
     display: "flex",
     justifyContent: "space-evenly",
-    minHeight: 111,
     padding: 30,
+    alignItems: "center",
+    boxShadow: "0px 4px 4px rgba(42, 61, 128, 0.22)",
+    borderRadius: 10,
   },
   divider: {
     backgroundColor: "#C4C4C4",
     width: 2,
-    height: 45,
+    height: 70,
+    marginRight: 21,
+    marginLeft: 21,
   },
   mt: {
     backgroundColor: "#F4F4F4",
     display: "flex",
     justifyContent: "space-evenly",
     marginTop: 20,
+    padding: 30,
+    alignItems: "center",
+    boxShadow: "0px 4px 4px rgba(42, 61, 128, 0.22)",
+    borderRadius: 10,
   },
 });
 export const KeyCard = () => {
@@ -55,9 +64,7 @@ export const KeyCard = () => {
             <Box className={classes.members}>Edge Computing</Box>
           </Box>
           <Box>
-            <Box style={{ flex: 1 }}>
-              <Box className={classes.divider}></Box>
-            </Box>
+            <Box className={classes.divider}></Box>
           </Box>
           <Box style={{ flex: 1 }}>
             <Box className={classes.names}>TensorFlow Team</Box>
@@ -67,7 +74,7 @@ export const KeyCard = () => {
         <Box className={classes.mt}>
           <Box className={classes.members}>Business Advisory</Box>
           <Box className={classes.divider}></Box>
-          <Box>
+          <Box style={{ flex: 1 }}>
             <Box className={classes.names}>Richard Fields</Box>
             <Box className={classes.detail}>Allen & Co</Box>
           </Box>
@@ -75,7 +82,7 @@ export const KeyCard = () => {
         <Box className={classes.mt}>
           <Box className={classes.members}>Corporate Law</Box>
           <Box className={classes.divider}></Box>
-          <Box>
+          <Box style={{ flex: 1 }}>
             <Box className={classes.names}> Stephen Huttler</Box>
             <Box className={classes.detail}>Pillsbury Winthrop Shaw</Box>
             <Box className={classes.detail}>Pittman LLP</Box>
@@ -84,7 +91,7 @@ export const KeyCard = () => {
         <Box className={classes.mt}>
           <Box className={classes.members}>Intellectual Property</Box>
           <Box className={classes.divider}></Box>
-          <Box>
+          <Box style={{ flex: 1 }}>
             <Box className={classes.names}>Matthew Grady</Box>
             <Box className={classes.detail}>Wolf, Greenfield & Sacks, P.C.</Box>
           </Box>
@@ -92,7 +99,7 @@ export const KeyCard = () => {
         <Box className={classes.mt}>
           <Box className={classes.members}>Audit</Box>
           <Box className={classes.divider}></Box>
-          <Box>
+          <Box style={{ flex: 1 }}>
             <Box className={classes.names}>William Leffler</Box>
             <Box className={classes.detail}>RSM US LLP</Box>
           </Box>
