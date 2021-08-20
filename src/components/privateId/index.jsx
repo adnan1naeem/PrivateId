@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
   margin: {
     paddingLeft: 20,
     paddingRight: 20,
+    borderRadius: 20,
   },
 }));
 
@@ -85,7 +86,7 @@ export default function PrivateId() {
   return (
     <div className={classes.root}>
       <div>
-        <div className={classes.dflex}>
+        <div onClick={handleToggle} className={classes.dflex}>
           <Button
             ref={anchorRef}
             aria-controls={open ? "menu-list-grow" : undefined}
@@ -94,7 +95,7 @@ export default function PrivateId() {
           >
             private ID
           </Button>
-          <KeyboardArrowDownIcon onClick={handleToggle} />
+          <KeyboardArrowDownIcon />
         </div>
         <Popper
           open={open}
@@ -114,6 +115,7 @@ export default function PrivateId() {
               <Paper className={classes.margin}>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList
+                    style={{ padding: 20 }}
                     autoFocusItem={open}
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
@@ -125,12 +127,15 @@ export default function PrivateId() {
                       Overview
                     </MenuItem>
                     <Divider middle style={{ backgroundColor: " #BBD7FF" }} />
-                    <MenuItem
-                      className={classes.itemsText}
-                      onClick={handleClose}
-                    >
-                      Features
-                    </MenuItem>
+                    <div style={{ paddingTop: 10, paddingBottom: 10 }}>
+                      <MenuItem
+                        className={classes.itemsText}
+                        onClick={handleClose}
+                      >
+                        Features
+                      </MenuItem>
+                    </div>
+
                     <Divider middle style={{ backgroundColor: " #BBD7FF" }} />
                     <MenuItem
                       className={classes.itemsText}

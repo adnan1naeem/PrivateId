@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
   margin: {
     paddingLeft: 20,
     paddingRight: 20,
+    borderRadius: 20,
   },
 }));
 
@@ -79,7 +80,7 @@ export default function SalesId() {
   return (
     <div className={classes.root}>
       <div>
-        <div className={classes.dflex}>
+        <div onClick={handleToggle} className={classes.dflex}>
           <Button
             ref={anchorRef}
             aria-controls={open ? "menu-list-grow" : undefined}
@@ -88,7 +89,7 @@ export default function SalesId() {
           >
             Contact Sales
           </Button>
-          <KeyboardArrowDownIcon onClick={handleToggle} />
+          <KeyboardArrowDownIcon />
         </div>
         <Popper
           open={open}
@@ -108,6 +109,7 @@ export default function SalesId() {
               <Paper className={classes.margin}>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList
+                    style={{ padding: 20 }}
                     autoFocusItem={open}
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
@@ -118,7 +120,14 @@ export default function SalesId() {
                     >
                       +1-301-938-6300
                     </MenuItem>
-                    <Divider middle style={{ backgroundColor: " #BBD7FF" }} />
+                    <Divider
+                      middle
+                      style={{
+                        backgroundColor: " #BBD7FF",
+                        marginBottom: 10,
+                        marginTop: 10,
+                      }}
+                    />
                     <MenuItem
                       className={classes.itemsText}
                       onClick={handleClose}
