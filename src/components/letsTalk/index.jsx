@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     backgroundColor: "#2A3D80",
     minHeight: "100vh",
     position: "relative",
-    top: -359,
+    top: -303,
     padding: "5%",
   },
   btnFonts: {

@@ -9,6 +9,7 @@ import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import { Divider } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -117,6 +118,8 @@ export default function CompanyId() {
                     <MenuItem
                       className={classes.itemsText}
                       onClick={handleClose}
+                      component={Link}
+                      to="/about"
                     >
                       About Us
                     </MenuItem>

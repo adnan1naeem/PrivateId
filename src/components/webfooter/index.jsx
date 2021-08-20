@@ -118,7 +118,8 @@ const useStyles = makeStyles((theme) => ({
   bgClr: {
     backgroundColor: "#DEDEDE",
     position: "relative",
-    top: " -359px",
+    top: "-303px",
+    marginBottom: -303,
   },
   bgClrAboutUs: {
     backgroundColor: "#DEDEDE",

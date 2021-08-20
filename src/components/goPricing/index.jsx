@@ -117,7 +117,7 @@ const useStyles = makeStyles({
   },
   containerPosition: {
     position: "relative",
-    top: -363,
+    top: -324,
   },
 });
 
