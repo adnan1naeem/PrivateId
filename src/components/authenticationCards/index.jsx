@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
   conectDetail: {
     fontFamily: "DM Sans",
     fontWeight: 700,
-    fontSize: 12,
     textAlign: "center",
     color: "#595E64",
     lineHeight: "15px",

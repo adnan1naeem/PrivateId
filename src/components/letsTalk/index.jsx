@@ -46,7 +46,6 @@ const useStyles = makeStyles({
   },
   textenter: {
     display: "flex",
-    flexDirection: "column",
     alignItems: "center",
     flexDirection: "column",
   },
@@ -136,7 +135,7 @@ export const LetsTalk = () => {
       </Box>
       <Grid contanier className={classes.dFlex}>
         <Grid item xl={3} lg={4}>
-          <img className={classes.customerImg} src={customer} />
+          <img className={classes.customerImg} src={customer} alt="logo" />
         </Grid>
         <Grid item lg={5} xl={4} className={classes.boxShadow}>
           <input placeholder="Name" className={classes.input} />

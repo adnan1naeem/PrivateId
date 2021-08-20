@@ -57,7 +57,7 @@ export const Introduction = () => {
         </Grid>
         <Grid item lg={1} />
         <Grid item lg={4}>
-          <img src={webIntro} width="100%" />
+          <img src={webIntro} width="100%" alt="logo" />
         </Grid>
       </Grid>
     </Box>

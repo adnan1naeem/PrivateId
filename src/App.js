@@ -1,25 +1,14 @@
-import AppBar from "../src/components/appBar";
-import { DataRefinery } from "./components/dataRefinery";
-import { Features } from "./components/features";
-import { Introduction } from "./components/introduction";
-import { VoiceAuthentication } from "./components/voiceAuthentication";
-import GoPricing from "./components/goPricing";
-import { LetsTalk } from "./components/letsTalk";
-import { GetReady } from "./components/getReady";
-import { WebFooter } from "./components/webfooter";
+import React from "react";
+import { BrowserRouter, Switch } from "react-router-dom";
+import { Home } from "./pages/home";
 
 function App() {
   return (
-    <div>
-      <AppBar />
-      <Introduction />
-      <DataRefinery />
-      <Features />
-      <VoiceAuthentication />
-      <GetReady />
-      <GoPricing />
-      <LetsTalk />
-      <WebFooter />
+    <div style={{ overflowX: "hidden" }}>
+      <BrowserRouter>
+        <Switch path="/" component={Home} />
+        <Switch path="/home" component={Home} />
+      </BrowserRouter>
     </div>
   );
 }

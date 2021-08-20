@@ -27,10 +27,6 @@ const useStyles = makeStyles({
     lineHeight: "58px",
     fontFamily: "DM Sans",
   },
-  dFlex: {
-    display: "flex",
-    justifyContent: "center",
-  },
   padding: {
     padding: 55,
     paddingLeft: "10%",

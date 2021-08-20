@@ -1,4 +1,4 @@
-import { Box, Button, Grid, makeStyles } from "@material-ui/core";
+import { Box, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import webDataRef from "../../assets/webDataRef.png";
 import videoImg from "../../assets/videoImg.png";
@@ -49,7 +49,7 @@ export const DataRefinery = () => {
     >
       <Grid item lg={5}>
         <Box>
-          <img src={videoImg} className={classes.imgStyle} />
+          <img src={videoImg} className={classes.imgStyle} alt="logo" />
         </Box>
       </Grid>
       <Grid item lg={1} />

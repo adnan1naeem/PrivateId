@@ -190,7 +190,7 @@ export default function Appbar() {
     <div className={classes.grow}>
       <AppBar position="static" style={{ backgroundColor: "#0B216F" }}>
         <Toolbar className={classes.padding}>
-          <img className={classes.logo} src={webLogo} />
+          <img className={classes.logo} src={webLogo} alt="logo" />
           <div className={classes.dFlex}>
             <div className={classes.flex}>
               <div>

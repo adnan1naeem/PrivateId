@@ -38,7 +38,6 @@ export const Inputs = ({ text }) => {
         </Box>
 
         <Box>
-          {" "}
           <Box className={classes.text}>{text}</Box>
         </Box>
       </Box>

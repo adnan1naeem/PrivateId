@@ -74,6 +74,7 @@ export const Cards = ({ image, heading, detail }) => {
             <img
               style={{ position: "relative", top: -26, left: "-4px" }}
               src={image}
+              alt="logo"
             />
           </Box>
         </Box>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography } from "@material-ui/core";
@@ -187,15 +187,15 @@ export const WebFooter = () => {
                 Stay Connected
               </Typography>
               <Box className={classes.dflex}>
-                <img src={yt} className={classes.image} />
+                <img src={yt} className={classes.image} alt="logo" />
                 <Box className={classes.connecteditems}>Private Identity</Box>
               </Box>
               <Box className={classes.dflex}>
-                <img src={phn} className={classes.image} />
+                <img src={phn} className={classes.image} alt="logo" />
                 <Box className={classes.connecteditems}> +1 (800) 123-4567</Box>
               </Box>
               <Box className={classes.dflex}>
-                <img src={en} className={classes.image} />
+                <img src={en} className={classes.image} alt="logo" />
                 <Box className={classes.connecteditems}>Email Us</Box>
               </Box>
             </Grid>
@@ -203,19 +203,19 @@ export const WebFooter = () => {
             <Grid item lg={3}>
               <Typography className={classes.heading}>Support</Typography>
               <Box className={classes.dflex}>
-                <img src={stack} className={classes.image} />
+                <img src={stack} className={classes.image} alt="logo" />
                 <Box className={classes.connecteditems}>Stack Overflow</Box>
               </Box>
               <Box className={classes.dflex}>
-                <img src={tracker} className={classes.image} />
+                <img src={tracker} className={classes.image} alt="logo" />
                 <Box className={classes.connecteditems}>Issue Tracker</Box>
               </Box>
               <Box className={classes.dflex}>
-                <img src={api} className={classes.image} />
+                <img src={api} className={classes.image} alt="logo" />
                 <Box className={classes.connecteditems}>API Documentation</Box>
               </Box>
               <Box className={classes.dflex}>
-                <img src={patent} className={classes.image} />
+                <img src={patent} className={classes.image} alt="logo" />
                 <Box className={classes.connecteditems}>
                   {" "}
                   Intellectual Property/Patents

@@ -84,13 +84,6 @@ const useStyles = makeStyles({
     borderRadius: 31,
   },
   requestItem: {
-    fontWeight: 400,
-    fontSize: 30,
-    color: "#000000",
-    fontFamily: "DM Sans",
-    lineHeight: "40px",
-  },
-  requestItem: {
     fontWeight: 700,
     fontSize: 30,
     color: "#000000",
