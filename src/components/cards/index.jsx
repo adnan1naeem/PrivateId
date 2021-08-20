@@ -70,12 +70,8 @@ export const Cards = ({ image, heading, detail }) => {
     <Box className={classes.container}>
       <Box className={classes.dFlex}>
         <Box>
-          <Box className={classes.imgBg}>
-            <img
-              style={{ position: "relative", top: -26, left: "-4px" }}
-              src={image}
-              alt="logo"
-            />
+          <Box pt={2}>
+            <img src={image} alt="logo" />
           </Box>
         </Box>
       </Box>

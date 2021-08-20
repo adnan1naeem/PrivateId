@@ -192,7 +192,7 @@ export const Features = () => {
   }, [showMore]);
 
   return (
-    <Box position="relative" top={-400}>
+    <Box position="relative" top={-400} id="cards-container">
       <Box className={classes.dFlex}>
         <Box className={classes.title}>Features</Box>
         <Box></Box>
@@ -217,6 +217,7 @@ export const Features = () => {
         <Button
           className={classes.seeMore}
           onClick={() => setShowMore(!showMore)}
+          href={showMore ? "#cards-container" : ""}
         >
           {showMore ? "See less" : "See more"}
         </Button>
