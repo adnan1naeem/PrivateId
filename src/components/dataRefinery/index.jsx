@@ -1,10 +1,10 @@
-import { Box, Grid, makeStyles } from "@material-ui/core";
+import { Box, Grid, Hidden, makeStyles } from "@material-ui/core";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import webDataRef from "../../assets/webDataRef.png";
 import videoImg from "../../assets/videoImg.png";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   heading: {
     fontWeight: 400,
     fontSize: 35,
@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     marginTop: 13,
     fontFamily: "DM Sans",
     width: "85%",
+    [theme.breakpoints.down("md")]: { textAlign: "center", width: "100%" },
   },
   detail: {
     fontWeight: 400,
@@ -21,6 +22,7 @@ const useStyles = makeStyles({
     lineHeight: "37px",
     marginTop: 13,
     fontFamily: "DM Sans",
+    [theme.breakpoints.down("md")]: { textAlign: "center" },
   },
   bgImg: {
     backgroundImage: `url(${webDataRef})`,
@@ -47,7 +49,7 @@ const useStyles = makeStyles({
     boxShadow: "29px 20px 0px #0060d5",
     width: "100%",
   },
-});
+}));
 export const DataRefinery = ({
   title1,
   title2,
@@ -71,18 +73,20 @@ export const DataRefinery = ({
       className={containerClass}
       justifyContent="center"
     >
-      <Grid item lg={5}>
-        <Box>
-          <img src={videoImg} className={classes.imgStyle} alt="logo" />
-        </Box>
-        {description_about && (
-          <Box mt={"200px !important"} className={classes.detail}>
-            {description_about}
+      <Hidden mdDown>
+        <Grid item md={10} lg={5}>
+          <Box>
+            <img src={videoImg} className={classes.imgStyle} alt="logo" />
           </Box>
-        )}
-      </Grid>
+          {description_about && (
+            <Box mt={"200px !important"} className={classes.detail}>
+              {description_about}
+            </Box>
+          )}
+        </Grid>
+      </Hidden>
       <Grid item lg={1} />
-      <Grid item lg={5}>
+      <Grid item md={10} lg={5}>
         <Box className={classes.heading}>{title1}</Box>
         <Box className={classes.detail}>{heading1}</Box>
         <Box className={classes.heading}> {title2}</Box>
@@ -94,6 +98,19 @@ export const DataRefinery = ({
           </Box>
         </Box>
       </Grid>
+
+      <Hidden lgUp>
+        <Grid item md={10} lg={5}>
+          <Box>
+            <img src={videoImg} className={classes.imgStyle} alt="logo" />
+          </Box>
+          {description_about && (
+            <Box mt={"200px !important"} className={classes.detail}>
+              {description_about}
+            </Box>
+          )}
+        </Grid>
+      </Hidden>
     </Grid>
   );
 };
