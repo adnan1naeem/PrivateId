@@ -13,7 +13,8 @@ import webLogo from "../../assets/webLogo.svg";
 import PrivateId from "../privateId";
 import CompanyId from "../companyId";
 import SalesId from "../saleId";
-import { Button } from "@material-ui/core";
+import { Button, Hidden } from "@material-ui/core";
+import { MenuDrawer } from "../drawer";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -24,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     justifyContent: "space-evenly",
     alignItems: "center",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "flex-end",
+    },
   },
   flex: {
     display: "flex",
@@ -191,9 +195,14 @@ export default function Appbar() {
     <div className={classes.grow}>
       <AppBar position="static" style={{ backgroundColor: "#0B216F" }}>
         <Toolbar className={classes.padding}>
-          <img className={classes.logo} src={webLogo} alt="logo" />
+          <Hidden mdDown>
+            <img className={classes.logo} src={webLogo} alt="logo" />
+          </Hidden>
+          <Hidden lgUp>
+            <MenuDrawer />
+          </Hidden>
           <div className={classes.dFlex}>
-            <div className={classes.flex}>
+            <Hidden mdDown className={classes.flex}>
               <div>
                 <PrivateId />
               </div>
@@ -203,7 +212,7 @@ export default function Appbar() {
               <div>
                 <SalesId />
               </div>
-            </div>
+            </Hidden>
             <div>
               <Button className={classes.btnFonts}>GET AN API KEY</Button>
             </div>
