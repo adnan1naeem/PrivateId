@@ -5,7 +5,12 @@ import search from "../../assets/search.png";
 import connect from "../../assets/connect.png";
 import vips from "../../assets/vips.png";
 const useStyles = makeStyles((theme) => ({
-  boxShadow: {},
+  boxShadow: {
+    [theme.breakpoints.down("md")]: {
+      display: "flex",
+      justifyContent: "space-between",
+    },
+  },
   historyImg: {
     width: "100%",
   },
@@ -71,15 +76,17 @@ const useStyles = makeStyles((theme) => ({
   dFlex: {
     display: "flex",
     textAlign: "center",
-
     flexDirection: "column",
+    [theme.breakpoints.down("md")]: {
+      width: "40%",
+    },
   },
 }));
 export const AuthenticationCards = () => {
   const classes = useStyles();
   return (
     <Grid container alignItems="center" spacing={4} justifyContent="center">
-      <Grid item className={classes.boxShadow} lg={6} xl={5}>
+      <Grid item className={classes.boxShadow} md={8} lg={6} xl={5}>
         <Paper
           square={false}
           elevation={7}
@@ -116,7 +123,7 @@ export const AuthenticationCards = () => {
           </Box>
         </Paper>
       </Grid>
-      <Grid item lg={5} className={classes.boxShadow}>
+      <Grid item md={8} lg={5} className={classes.boxShadow}>
         <Paper
           square={false}
           elevation={7}
@@ -147,7 +154,7 @@ export const AuthenticationCards = () => {
           marginTop={"18px"}
           className={classes.dFlex}
         >
-          <Box className={classes.dFlex}>
+          <Box display="flex" textAlign="center" flexDirection="column">
             <Box>
               <img src={connect} alt="" className={classes.conectImg} />
             </Box>

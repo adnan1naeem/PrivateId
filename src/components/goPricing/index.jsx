@@ -131,7 +131,7 @@ export default function GoPricing() {
       elevation={0}
     >
       <Grid container justifyContent="center">
-        <Grid item lg={9} xs={12}>
+        <Grid xs={11} item lg={9}>
           <Box className={classes.dFlex}>
             <Box className={classes.header}>PAY-AS-YOU-GO PRICING</Box>
             <Box className={classes.detail}>

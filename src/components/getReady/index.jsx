@@ -75,7 +75,7 @@ export const GetReady = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item lg={9}>
+      <Grid item md={11} lg={9}>
         <Box className={classes.textCenter}>
           <Box className={classes.bgClr}>
             <Box>
