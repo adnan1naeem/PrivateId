@@ -1,6 +1,6 @@
 import { Box, makeStyles } from "@material-ui/core";
 import React from "react";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     alignItems: "center",
@@ -16,6 +16,10 @@ const useStyles = makeStyles({
     fontWeight: 400,
     marginLeft: 25,
     textAlign: "left",
+    [theme.breakpoints.down("sm")]: {
+      lineHeight: "18px",
+      fontSize: 12,
+    },
   },
   circul: {
     backgroundColor: " #2A3D80",
@@ -28,7 +32,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     padding: 13,
   },
-});
+}));
 export const Inputs = ({ text }) => {
   const classes = useStyles();
   return (

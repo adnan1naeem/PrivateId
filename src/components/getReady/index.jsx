@@ -12,6 +12,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       padding: 24,
     },
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+      padding: 20,
+      marginLeft: 20,
+      marginRight: 20,
+    },
   },
   text1: {
     fontWeight: 400,
@@ -21,6 +27,12 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.only("lg")]: {
       fontSize: 40,
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 33,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 22,
     },
   },
   text2: {
@@ -33,6 +45,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 40,
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 33,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 22,
+    },
   },
   detail: {
     fontWeight: 500,
@@ -42,6 +60,13 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.only("lg")]: {
       fontSize: 19,
+    },
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 18,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+      marginTop: 4,
     },
   },
   btn: {
@@ -56,6 +81,14 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: "#FFFFFF",
       color: "#2A3D80",
+    },
+    [theme.breakpoints.down("lg")]: {
+      width: 222,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+      width: 120,
+      marginTop: 20,
     },
   },
   dFlex: {
@@ -75,7 +108,7 @@ export const GetReady = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item md={11} lg={9}>
+      <Grid item md={11} lg={9} xs={12}>
         <Box className={classes.textCenter}>
           <Box className={classes.bgClr}>
             <Box>

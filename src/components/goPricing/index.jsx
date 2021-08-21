@@ -16,6 +16,9 @@ const StyledTableCell = withStyles((theme) => ({
     fontWeight: 400,
     fontSize: 30,
     fontFamily: "DM Sans",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 20,
+    },
   },
   body: {
     fontSize: 14,
@@ -41,7 +44,7 @@ const rows = [
   createData("Over 100M Requests/Month", "$0.40", "$0.0010"),
 ];
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 700,
   },
@@ -52,6 +55,14 @@ const useStyles = makeStyles({
     color: "#0B216E",
     lineHeight: "58px",
     fontFamily: "DM Sans",
+    [theme.breakpoints.down("lg")]: {
+      marginTop: 1,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 18,
+      marginTop: "0px",
+      lineHeight: "15px",
+    },
   },
   detail: {
     fontWeight: 400,
@@ -63,6 +74,14 @@ const useStyles = makeStyles({
     fontFamily: "DM Sans",
     marginTop: 14,
     lineHeight: "29px",
+    [theme.breakpoints.down("lg")]: {
+      width: "78%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+      marginTop: "0px",
+      lineHeight: "15px",
+    },
   },
   dFlex: {
     display: "flex",
@@ -82,6 +101,9 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 31,
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 24,
+    },
   },
   requestItem: {
     fontWeight: 700,
@@ -89,6 +111,9 @@ const useStyles = makeStyles({
     color: "#000000",
     fontFamily: "DM Sans",
     lineHeight: "40px",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 20,
+    },
   },
   headerRadiusLastColumn: {
     borderTopRightRadius: 20,
@@ -114,12 +139,15 @@ const useStyles = makeStyles({
     alignItems: "center",
     marginTop: 49,
     marginBottom: 49,
+    [theme.breakpoints.down("lg")]: {
+      marginLeft: 33,
+    },
   },
   containerPosition: {
     position: "relative",
     top: -324,
   },
-});
+}));
 
 export default function GoPricing() {
   const classes = useStyles();
@@ -131,7 +159,7 @@ export default function GoPricing() {
       elevation={0}
     >
       <Grid container justifyContent="center">
-        <Grid xs={11} item lg={9}>
+        <Grid xs={11} item lg={9} xs={12}>
           <Box className={classes.dFlex}>
             <Box className={classes.header}>PAY-AS-YOU-GO PRICING</Box>
             <Box className={classes.detail}>

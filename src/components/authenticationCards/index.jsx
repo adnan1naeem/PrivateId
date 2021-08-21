@@ -123,7 +123,7 @@ export const AuthenticationCards = () => {
           </Box>
         </Paper>
       </Grid>
-      <Grid item md={8} lg={5} className={classes.boxShadow}>
+      <Grid item md={8} lg={5} sm={6} className={classes.boxShadow}>
         <Paper
           square={false}
           elevation={7}

@@ -1,7 +1,7 @@
 import { Box, Button, makeStyles } from "@material-ui/core";
 import React from "react";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   container: {
     height: 560,
     borderRadius: 26,
@@ -18,6 +18,12 @@ const useStyles = makeStyles({
     lineHeight: "30px",
     textAlign: "center",
     marginTop: 28,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 18,
+      lineHeight: "23px",
+      marginLeft: 24,
+      marginRight: 24,
+    },
   },
   Detail: {
     width: "82%",
@@ -27,6 +33,11 @@ const useStyles = makeStyles({
     marginTop: 13,
     fontFamily: "DM Sans",
     textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 12,
+      lineHeight: "15px",
+      marginTop: "0px",
+    },
   },
   btnFonts: {
     fontWeight: 500,
@@ -62,8 +73,9 @@ const useStyles = makeStyles({
   dFlex: {
     display: "flex",
     justifyContent: "center",
+    [theme.breakpoints.down("sm")]: {},
   },
-});
+}));
 export const Cards = ({ image, heading, detail }) => {
   const classes = useStyles();
   return (

@@ -3,6 +3,8 @@ import React from "react";
 import callBg from "../../assets/callBg.png";
 import { AuthenticationCards } from "../authenticationCards";
 import { Inputs } from "../inputs";
+import voiceIPad from "../../assets/voiceIPad.png";
+import { Link } from "react-router-dom";
 const input = [
   { text: " Routes VIPs and blocks unwanted callers" },
   { text: "Search any voice in call recordings" },
@@ -18,6 +20,9 @@ const input = [
 const useStyles = makeStyles((theme) => ({
   bgImg: {
     backgroundImage: `url(${callBg})`,
+    [theme.breakpoints.only("md")]: {
+      backgroundImage: `url(${voiceIPad})`,
+    },
     minHeight: "135vh",
     backgroundSize: "cover",
     position: "relative",
@@ -28,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     textAlign: "center",
     alignItems: "center",
-    [theme.breakpoints.only("sm")]: {},
   },
   title: {
     fontWeight: 700,
@@ -36,6 +40,14 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF",
     lineHeight: "55px",
     fontFamily: "DM Sans",
+    [theme.breakpoints.down("md")]: {
+      fontSize: 41,
+      marginTop: 50,
+      [theme.breakpoints.down("sm")]: {
+        fontSize: 22,
+        lineHeight: "24px",
+      },
+    },
   },
   subTitle: {
     fontWeight: 700,
@@ -44,6 +56,13 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "66px",
     fontFamily: "DM Sans",
     marginTop: 8,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 36,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 24,
+      color: "#0B216E",
+    },
   },
   detail: {
     fontWeight: 400,
@@ -54,9 +73,23 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20,
     marginBottom: 32,
     maxWidth: "93%",
+    [theme.breakpoints.down("md")]: {
+      fontWeight: 700,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 12,
+      lineHeight: "18px",
+    },
   },
   mt: {
     padding: "5%",
+  },
+  width: {
+    width: "80%",
+    [theme.breakpoints.down("sm")]: {
+      width: "309px",
+      marginRight: 9,
+    },
   },
 }));
 export const VoiceAuthentication = () => {
@@ -73,12 +106,14 @@ export const VoiceAuthentication = () => {
         >
           <Grid item xl={4} lg={5} sm={10} xs={12} className={classes.iPadView}>
             <Box className={classes.title}>CONTINUOUS VOICE AUTHENTICATION</Box>
-            <Box className={classes.subTitle}>For AMAZON CONNECT</Box>
+            <Box>
+              <Link className={classes.subTitle}>For AMAZON CONNECT</Link>
+            </Box>
             <Box className={classes.detail}>
               Identifies and authenticates your customer’s voice every 3 seconds
               with 97% accuracy in IVR, Agent and call recordings
             </Box>
-            <Box width="80%">
+            <Box className={classes.width}>
               {input.map((item) => (
                 <Inputs text={item.text} />
               ))}

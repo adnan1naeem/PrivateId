@@ -13,7 +13,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 13,
     fontFamily: "DM Sans",
     width: "85%",
-    [theme.breakpoints.down("md")]: { textAlign: "center", width: "100%" },
+
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      width: "100%",
+    },
   },
   detail: {
     fontWeight: 400,
@@ -88,6 +92,9 @@ export const DataRefinery = ({
       <Grid item lg={1} />
       <Grid item md={10} lg={5}>
         <Box className={classes.heading}>{title1}</Box>
+        <Box className={classes.heading}>
+          A data refinery, built to privately identify every individual
+        </Box>
         <Box className={classes.detail}>{heading1}</Box>
         <Box className={classes.heading}> {title2}</Box>
         <Box>
