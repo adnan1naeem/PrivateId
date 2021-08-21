@@ -204,7 +204,8 @@ export const Features = () => {
         justifyContent="center"
       >
         {cardsData.map((item) => (
-          <Grid item lg={4}>
+          <Grid item lg={4} sm={6} xs={12}>
+            {" "}
             <Cards
               image={item.image}
               heading={item.heading}

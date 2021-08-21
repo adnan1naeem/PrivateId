@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     fontFamily: "DM Sans",
     fontWeight: 400,
     marginLeft: 25,
+    textAlign: "left",
   },
   circul: {
     backgroundColor: " #2A3D80",

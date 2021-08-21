@@ -134,7 +134,7 @@ export const LetsTalk = () => {
         <Box className={classes.heading}> Start a conversation.</Box>
       </Box>
       <Grid contanier className={classes.dFlex}>
-        <Grid item xl={3} lg={4}>
+        <Grid item xl={3} lg={4} sm={12}>
           <img className={classes.customerImg} src={customer} alt="logo" />
         </Grid>
         <Grid item lg={5} xl={4} className={classes.boxShadow}>

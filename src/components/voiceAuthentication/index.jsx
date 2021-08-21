@@ -15,13 +15,20 @@ const input = [
   { text: "Exempt from GDPR, CCPA, BIPA and HIPAA" },
   { text: "Cloud pay-as-you-go pricing" },
 ];
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   bgImg: {
     backgroundImage: `url(${callBg})`,
     minHeight: "135vh",
     backgroundSize: "cover",
     position: "relative",
     top: -300,
+  },
+  iPadView: {
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
+    alignItems: "center",
+    [theme.breakpoints.only("sm")]: {},
   },
   title: {
     fontWeight: 700,
@@ -51,7 +58,7 @@ const useStyles = makeStyles({
   mt: {
     padding: "5%",
   },
-});
+}));
 export const VoiceAuthentication = () => {
   const classes = useStyles();
   return (
@@ -64,7 +71,7 @@ export const VoiceAuthentication = () => {
           alignItems="center"
           spacing={4}
         >
-          <Grid item xl={4} lg={5}>
+          <Grid item xl={4} lg={5} sm={10} xs={12} className={classes.iPadView}>
             <Box className={classes.title}>CONTINUOUS VOICE AUTHENTICATION</Box>
             <Box className={classes.subTitle}>For AMAZON CONNECT</Box>
             <Box className={classes.detail}>
