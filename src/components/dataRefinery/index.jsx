@@ -118,10 +118,11 @@ export const DataRefinery = ({
         <Box className={classes.heading}> {title2}</Box>
         <Box>
           <Box className={classes.detail}>{heading2}</Box>
-
-          <Box mt={"74px"}>
-            <img src={image} alt="" />
-          </Box>
+          <Hidden mdDown>
+            <Box mt={"74px"}>
+              <img src={image} alt="" />
+            </Box>
+          </Hidden>
         </Box>
       </Grid>
 
@@ -135,6 +136,11 @@ export const DataRefinery = ({
               {description_about}
             </Box>
           )}
+          <Hidden lgUp>
+            <Box mt={"74px"} display="flex" justifyContent="center">
+              <img src={image} alt="" />
+            </Box>
+          </Hidden>
         </Grid>
       </Hidden>
     </Grid>

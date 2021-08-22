@@ -91,15 +91,20 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     height: 330,
     marginTop: 168,
+    [theme.breakpoints.down("md")]: {
+      marginTop: 60,
+      marginBottom: 60,
+    },
     [theme.breakpoints.down("xs")]: {
       height: 150,
+      marginTop: 70,
     },
   },
 }));
 export const KeyCard = () => {
   const classes = useStyles();
   return (
-    <Grid container>
+    <Grid container justifyContent="center">
       <Grid item xs={10} lg={6}>
         <Box>
           <Box className={classes.heading}>
