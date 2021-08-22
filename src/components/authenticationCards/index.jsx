@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       justifyContent: "space-between",
     },
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
   },
   historyImg: {
     width: "100%",
@@ -80,13 +83,19 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       width: "40%",
     },
+    [theme.breakpoints.down("xs")]: {
+      width: "88%",
+    },
+    [theme.breakpoints.down(480)]: {
+      width: "80%",
+    },
   },
 }));
 export const AuthenticationCards = () => {
   const classes = useStyles();
   return (
-    <Grid container alignItems="center" spacing={4} justifyContent="center">
-      <Grid item className={classes.boxShadow} md={8} lg={6} xl={5}>
+    <Grid container alignItems="center" spacing={1} justifyContent="center">
+      <Grid item className={classes.boxShadow} xs={11} sm={9} lg={6} xl={5}>
         <Paper
           square={false}
           elevation={7}
@@ -123,7 +132,7 @@ export const AuthenticationCards = () => {
           </Box>
         </Paper>
       </Grid>
-      <Grid item md={8} lg={5} sm={6} className={classes.boxShadow}>
+      <Grid item xs={11} sm={9} lg={5} className={classes.boxShadow}>
         <Paper
           square={false}
           elevation={7}

@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Hidden, Typography } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import phn from "../../assets/phn.png";
 import en from "../../assets/envelop.png";
@@ -10,14 +10,14 @@ import stack from "../../assets/stack.png";
 import tracker from "../../assets/tracker.png";
 import api from "../../assets/api.png";
 import patent from "../../assets/patent.png";
+import MobileFooter from "../mobileFooter";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
     display: "flex",
   },
   line: {
-    paddingLeft: "3rem",
-    width: 1660,
+    width: "100%",
     height: 3,
     background: "#EDEDED",
     marginTop: "3rem",
@@ -137,119 +137,127 @@ export const WebFooter = () => {
     <Box className={containerClass}>
       {pathname === "/about" && <Box height={11} bgcolor="#2A3D80" />}
       <Grid container justifyContent="center">
-        <Grid item lg={9}>
-          <Grid
-            container
-            className={classes.footer}
-            spacing={3}
-            justifyContent="center"
-          >
-            <Grid item lg={3}>
-              <Box>
-                <Box className={classes.heading}>Private ID</Box>
+        <Grid item xs={10} lg={9}>
+          <Hidden mdDown>
+            <Grid
+              container
+              className={classes.footer}
+              spacing={3}
+              justifyContent="center"
+            >
+              <Grid item lg={3}>
+                <Box>
+                  <Box className={classes.heading}>Private ID</Box>
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>Overview</Box>
+                  </Box>
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>Features</Box>
+                  </Box>
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>
+                      {" "}
+                      Continuous Voice Authentication for Amazon Connect®
+                    </Box>
+                  </Box>
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>Pricing</Box>
+                  </Box>
+                </Box>
+              </Grid>
+
+              <Grid item lg={3}>
+                <Typography className={classes.heading}>Company</Typography>
                 <Box className={classes.dflex}>
                   <Box className={classes.circle}></Box>
-                  <Box className={classes.privateitems}>Overview</Box>
+                  <Box className={classes.companyitems}>About Us</Box>
                 </Box>
                 <Box className={classes.dflex}>
                   <Box className={classes.circle}></Box>
-                  <Box className={classes.privateitems}>Features</Box>
+                  <Box className={classes.companyitems}>Key Relationships</Box>
                 </Box>
                 <Box className={classes.dflex}>
                   <Box className={classes.circle}></Box>
-                  <Box className={classes.privateitems}>
+                  <Box className={classes.companyitems}>Leadership</Box>
+                </Box>
+                <Box className={classes.dflex}>
+                  <Box className={classes.circle}></Box>
+                  <Box className={classes.companyitems}>Privacy Policy</Box>
+                </Box>
+                <Box className={classes.dflex}>
+                  <Box className={classes.circle}></Box>
+                  <Box className={classes.companyitems}>Terms of Use</Box>
+                </Box>
+              </Grid>
+
+              <Grid item lg={3}>
+                <Typography className={classes.heading}>
+                  Stay Connected
+                </Typography>
+                <Box className={classes.dflex}>
+                  <img src={yt} className={classes.image} alt="logo" />
+                  <Box className={classes.connecteditems}>Private Identity</Box>
+                </Box>
+                <Box className={classes.dflex}>
+                  <img src={phn} className={classes.image} alt="logo" />
+                  <Box className={classes.connecteditems}>
                     {" "}
-                    Continuous Voice Authentication for Amazon Connect®
+                    +1 (800) 123-4567
                   </Box>
                 </Box>
                 <Box className={classes.dflex}>
-                  <Box className={classes.circle}></Box>
-                  <Box className={classes.privateitems}>Pricing</Box>
+                  <img src={en} className={classes.image} alt="logo" />
+                  <Box className={classes.connecteditems}>Email Us</Box>
+                </Box>
+              </Grid>
+
+              <Grid item lg={3}>
+                <Typography className={classes.heading}>Support</Typography>
+                <Box className={classes.dflex}>
+                  <img src={stack} className={classes.image} alt="logo" />
+                  <Box className={classes.connecteditems}>Stack Overflow</Box>
+                </Box>
+                <Box className={classes.dflex}>
+                  <img src={tracker} className={classes.image} alt="logo" />
+                  <Box className={classes.connecteditems}>Issue Tracker</Box>
+                </Box>
+                <Box className={classes.dflex}>
+                  <img src={api} className={classes.image} alt="logo" />
+                  <Box className={classes.connecteditems}>
+                    API Documentation
+                  </Box>
+                </Box>
+                <Box className={classes.dflex}>
+                  <img src={patent} className={classes.image} alt="logo" />
+                  <Box className={classes.connecteditems}>
+                    {" "}
+                    Intellectual Property/Patents
+                  </Box>
+                </Box>
+              </Grid>
+
+              <Box className={classes.line}></Box>
+              <Box>
+                <Box className={classes.lowertext1}>
+                  © 2021 Private Identity LLC All Rights Reserved.
+                </Box>
+                <Box className={classes.lowertext2}>
+                  Private ID and Private Identity are registered trademarks of
+                  Private Identity LLC.
+                </Box>
+                <Box className={classes.lowertext3}>
+                  All other trademarks, service marks, trade names, trade dress,
+                  product names and logos are the property of their respective
+                  owners.
                 </Box>
               </Box>
             </Grid>
-
-            <Grid item lg={3}>
-              <Typography className={classes.heading}>Company</Typography>
-              <Box className={classes.dflex}>
-                <Box className={classes.circle}></Box>
-                <Box className={classes.companyitems}>About Us</Box>
-              </Box>
-              <Box className={classes.dflex}>
-                <Box className={classes.circle}></Box>
-                <Box className={classes.companyitems}>Key Relationships</Box>
-              </Box>
-              <Box className={classes.dflex}>
-                <Box className={classes.circle}></Box>
-                <Box className={classes.companyitems}>Leadership</Box>
-              </Box>
-              <Box className={classes.dflex}>
-                <Box className={classes.circle}></Box>
-                <Box className={classes.companyitems}>Privacy Policy</Box>
-              </Box>
-              <Box className={classes.dflex}>
-                <Box className={classes.circle}></Box>
-                <Box className={classes.companyitems}>Terms of Use</Box>
-              </Box>
-            </Grid>
-
-            <Grid item lg={3}>
-              <Typography className={classes.heading}>
-                Stay Connected
-              </Typography>
-              <Box className={classes.dflex}>
-                <img src={yt} className={classes.image} alt="logo" />
-                <Box className={classes.connecteditems}>Private Identity</Box>
-              </Box>
-              <Box className={classes.dflex}>
-                <img src={phn} className={classes.image} alt="logo" />
-                <Box className={classes.connecteditems}> +1 (800) 123-4567</Box>
-              </Box>
-              <Box className={classes.dflex}>
-                <img src={en} className={classes.image} alt="logo" />
-                <Box className={classes.connecteditems}>Email Us</Box>
-              </Box>
-            </Grid>
-
-            <Grid item lg={3}>
-              <Typography className={classes.heading}>Support</Typography>
-              <Box className={classes.dflex}>
-                <img src={stack} className={classes.image} alt="logo" />
-                <Box className={classes.connecteditems}>Stack Overflow</Box>
-              </Box>
-              <Box className={classes.dflex}>
-                <img src={tracker} className={classes.image} alt="logo" />
-                <Box className={classes.connecteditems}>Issue Tracker</Box>
-              </Box>
-              <Box className={classes.dflex}>
-                <img src={api} className={classes.image} alt="logo" />
-                <Box className={classes.connecteditems}>API Documentation</Box>
-              </Box>
-              <Box className={classes.dflex}>
-                <img src={patent} className={classes.image} alt="logo" />
-                <Box className={classes.connecteditems}>
-                  {" "}
-                  Intellectual Property/Patents
-                </Box>
-              </Box>
-            </Grid>
-
-            <Box className={classes.line}></Box>
-            <Box>
-              <Box className={classes.lowertext1}>
-                © 2021 Private Identity LLC All Rights Reserved.
-              </Box>
-              <Box className={classes.lowertext2}>
-                Private ID and Private Identity are registered trademarks of
-                Private Identity LLC.
-              </Box>
-              <Box className={classes.lowertext3}>
-                All other trademarks, service marks, trade names, trade dress,
-                product names and logos are the property of their respective
-                owners.
-              </Box>
-            </Box>
-          </Grid>
+          </Hidden>
+          <MobileFooter styling={classes} />
         </Grid>
       </Grid>
     </Box>

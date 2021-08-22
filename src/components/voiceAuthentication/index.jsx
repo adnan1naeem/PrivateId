@@ -86,8 +86,8 @@ const useStyles = makeStyles((theme) => ({
   },
   width: {
     width: "80%",
-    [theme.breakpoints.down("sm")]: {
-      width: "309px",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
       marginRight: 9,
     },
   },
@@ -104,7 +104,7 @@ export const VoiceAuthentication = () => {
           alignItems="center"
           spacing={4}
         >
-          <Grid item xl={4} lg={5} sm={10} xs={12} className={classes.iPadView}>
+          <Grid item xs={11} md={10} lg={5} xl={4} className={classes.iPadView}>
             <Box className={classes.title}>CONTINUOUS VOICE AUTHENTICATION</Box>
             <Box>
               <Link className={classes.subTitle}>For AMAZON CONNECT</Link>
