@@ -60,14 +60,21 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 130,
     paddingBottom: 200,
     zIndex: -1,
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: 30,
+    },
   },
   imgStyle: {
     boxShadow: "29px 20px 0px #0060d5",
     width: "100%",
     [theme.breakpoints.only("xs")]: {
-      top: -94,
       boxShadow: "13px 14px 0px #0060d5",
-      position: "relative",
+    },
+  },
+  handleMargin: {
+    marginTop: "200px !important",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "40px !important",
     },
   },
 }));
@@ -100,7 +107,7 @@ export const DataRefinery = ({
             <img src={videoImg} className={classes.imgStyle} alt="logo" />
           </Box>
           {description_about && (
-            <Box mt={"200px !important"} className={classes.detail}>
+            <Box className={`${classes.detail} ${classes.handleMargin}`}>
               {description_about}
             </Box>
           )}
@@ -132,7 +139,7 @@ export const DataRefinery = ({
             <img src={videoImg} className={classes.imgStyle} alt="logo" />
           </Box>
           {description_about && (
-            <Box mt={"200px !important"} className={classes.detail}>
+            <Box className={`${classes.detail} ${classes.handleMargin}`}>
               {description_about}
             </Box>
           )}

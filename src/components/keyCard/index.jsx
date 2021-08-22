@@ -41,11 +41,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 30,
     color: "#2A3D80",
     flex: 1,
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 12,
-    },
     [theme.breakpoints.down("lg")]: {
       fontSize: 20,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 10,
     },
   },
   names: {
@@ -54,12 +54,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 22,
     color: "#000000",
     lineHeight: "37px",
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 12,
-      lineHeight: "20px",
-    },
     [theme.breakpoints.down("lg")]: {
       fontSize: 16,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 10,
+      lineHeight: "20px",
     },
   },
   detail: {
@@ -142,7 +142,7 @@ export const KeyCard = () => {
           <img src={aboutus2} alt="" />
         </Box>
       </Grid>
-      <Grid item lg={6}>
+      <Grid item xs={12} sm={10} lg={6}>
         <Box className={classes.bgColor}>
           <Box style={{ flex: 1 }}>
             <Box className={classes.members}>Edge Computing</Box>
