@@ -57,19 +57,22 @@ export default function DrawerList() {
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="About Us" />
+            <ListItemText primary="Overview" />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Starred2" />
+            <ListItemText primary="Feature" />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Starred3" />
+            <ListItemText
+              primary="Continuous Voice Authentication for Amazon Connect®
+Pricing"
+            />
           </ListItem>
         </List>
       </Collapse>
@@ -119,13 +122,20 @@ export default function DrawerList() {
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Starred1" />
+            <ListItemText
+              primary="     +1-301-938-6300
+
+ 
+
+
+"
+            />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Starred2" />
+            <ListItemText primary="Email Us" />
           </ListItem>
         </List>
       </Collapse>

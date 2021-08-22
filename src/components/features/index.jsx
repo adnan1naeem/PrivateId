@@ -19,7 +19,7 @@ import vendor from "../../assets/vendor.png";
 import language from "../../assets/language.png";
 import fraud from "../../assets/fraud.png";
 import voice from "../../assets/voice.png";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 500,
     fontSize: 48,
@@ -47,12 +47,22 @@ const useStyles = makeStyles({
     lineHeight: "29px",
     width: 193,
     height: 63,
+    [theme.breakpoints.only("xs")]: {
+      marginTop: "0px",
+    },
   },
   dFlex: {
     display: "flex",
     justifyContent: "center",
   },
-});
+  position: {
+    position: "relative",
+    top: -400,
+    [theme.breakpoints.only("xs")]: {
+      top: -716,
+    },
+  },
+}));
 const card = [
   {
     image: ppml,
@@ -192,7 +202,7 @@ export const Features = () => {
   }, [showMore]);
 
   return (
-    <Box position="relative" top={-400} id="cards-container">
+    <Box className={classes.position} id="cards-container">
       <Box className={classes.dFlex}>
         <Box className={classes.title}>Features</Box>
         <Box></Box>

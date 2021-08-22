@@ -7,7 +7,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import { Box, Grid } from "@material-ui/core";
+import { Box, Grid, Hidden } from "@material-ui/core";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -18,6 +18,9 @@ const StyledTableCell = withStyles((theme) => ({
     fontFamily: "DM Sans",
     [theme.breakpoints.down("lg")]: {
       fontSize: 20,
+    },
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 8,
     },
   },
   body: {
@@ -82,7 +85,6 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: 12,
-      marginTop: "0px",
       lineHeight: "15px",
     },
   },
@@ -106,6 +108,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 31,
     [theme.breakpoints.down("lg")]: {
       fontSize: 24,
+      height: 64,
+      width: 64,
+    },
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 8,
+      height: 20,
+      width: 20,
     },
   },
   requestItem: {
@@ -115,7 +124,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
     lineHeight: "40px",
     [theme.breakpoints.down("lg")]: {
-      fontSize: 20,
+      fontSize: 8,
+    },
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 8,
+      lineHeight: "13px",
     },
   },
   headerRadiusLastColumn: {
@@ -130,12 +143,19 @@ const useStyles = makeStyles((theme) => ({
     color: "#000000",
     fontFamily: "DM Sans",
     marginLeft: 10,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 8,
+    },
   },
   dot: {
     width: 17,
     height: 17,
     backgroundColor: "#66A5FE",
     borderRadius: 10,
+    [theme.breakpoints.down("sm")]: {
+      width: 8,
+      height: 8,
+    },
   },
   dflex: {
     display: "flex",
@@ -145,10 +165,17 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       marginLeft: 33,
     },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: 14,
+      marginTop: 10,
+    },
   },
   containerPosition: {
     position: "relative",
     top: -324,
+    [theme.breakpoints.only("xs")]: {
+      top: -605,
+    },
   },
 }));
 
@@ -205,9 +232,14 @@ export default function GoPricing() {
           </Table>
           <Box className={classes.dflex}>
             <Box className={classes.dot}></Box>
+            <Hidden mdDown>
+              <Box className={classes.message}>
+                There are no upfront costs and no hardware to buy. Click here
+                for details.
+              </Box>
+            </Hidden>
             <Box className={classes.message}>
-              There are no upfront costs and no hardware to buy. Click here for
-              details.
+              There are no upfront costs and no hardware to buy.
             </Box>
           </Box>
         </Grid>

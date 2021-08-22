@@ -1,7 +1,7 @@
 import { Box, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import aboutus2 from "../../assets/aboutus2.jpg";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   heading: {
     fontFamily: "Dm Sans",
     fontWeight: 700,
@@ -12,6 +12,9 @@ const useStyles = makeStyles({
     alignItems: "center",
     textAlign: "center",
     flexDirection: "column",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 18,
+    },
   },
   details: {
     fontFamily: "Dm Sans",
@@ -20,6 +23,11 @@ const useStyles = makeStyles({
     color: "#000000",
     marginTop: 17,
     width: "85%",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+      marginTop: 10,
+      width: "none",
+    },
   },
   members: {
     fontFamily: "Dm Sans",
@@ -27,6 +35,9 @@ const useStyles = makeStyles({
     fontSize: 30,
     color: "#2A3D80",
     flex: 1,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+    },
   },
   names: {
     fontFamily: "Dm Sans",
@@ -34,12 +45,20 @@ const useStyles = makeStyles({
     fontSize: 22,
     color: "#000000",
     lineHeight: "37px",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+      lineHeight: "20px",
+    },
   },
   detail: {
     fontFamily: "Dm Sans",
     fontWeight: 500,
     fontSize: 22,
     color: "#898989",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+      lineHeight: "20px",
+    },
   },
   bgColor: {
     backgroundColor: "#F4F4F4",
@@ -72,18 +91,23 @@ const useStyles = makeStyles({
     justifyContent: "center",
     height: 330,
     marginTop: 168,
+    [theme.breakpoints.down("xs")]: {
+      height: 150,
+    },
   },
-});
+}));
 export const KeyCard = () => {
   const classes = useStyles();
   return (
     <Grid container>
-      <Grid item lg={6}>
-        <Box className={classes.heading}>
-          Key Relationships
-          <Box className={classes.details}>
-            “If I have seen further it is only by standing on the shoulders of
-            Giants.” - Sir Isaac Newton, 1676
+      <Grid item xs={10} lg={6}>
+        <Box>
+          <Box className={classes.heading}>
+            Key Relationships
+            <Box className={classes.details}>
+              “If I have seen further it is only by standing on the shoulders of
+              Giants.” - Sir Isaac Newton, 1676
+            </Box>
           </Box>
         </Box>
         <Box className={classes.imgStyling}>

@@ -90,11 +90,22 @@ const useStyles = makeStyles((theme) => ({
       width: "80%",
     },
   },
+  manageMargin: {
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 100,
+    },
+  },
 }));
 export const AuthenticationCards = () => {
   const classes = useStyles();
   return (
-    <Grid container alignItems="center" spacing={1} justifyContent="center">
+    <Grid
+      container
+      alignItems="center"
+      spacing={1}
+      justifyContent="center"
+      className={classes.manageMargin}
+    >
       <Grid item className={classes.boxShadow} xs={11} sm={9} lg={6} xl={5}>
         <Paper
           square={false}

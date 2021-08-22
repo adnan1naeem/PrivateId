@@ -13,21 +13,12 @@ import webLogo from "../../assets/webLogo.svg";
 import PrivateId from "../privateId";
 import CompanyId from "../companyId";
 import SalesId from "../saleId";
-import { Button, Hidden } from "@material-ui/core";
+import { Box, Button, Hidden } from "@material-ui/core";
 import { MenuDrawer } from "../drawer";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-  },
-  dFlex: {
-    display: "flex",
-    flex: 1,
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    [theme.breakpoints.down("md")]: {
-      justifyContent: "flex-end",
-    },
   },
   flex: {
     display: "flex",
@@ -45,10 +36,18 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     height: 61,
     width: 311,
+    [theme.breakpoints.only("xs")]: {
+      height: 30,
+      width: 152,
+    },
   },
   padding: {
     padding: 40,
+    [theme.breakpoints.only("xs")]: {
+      padding: "0px",
+    },
   },
+
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -108,6 +107,12 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid #39ACE8",
     borderRadius: 180,
     padding: 10,
+  },
+  dFlex: {
+    display: "flex",
+    [theme.breakpoints.only("xs")]: {
+      display: "flex",
+    },
   },
 }));
 
@@ -194,32 +199,35 @@ export default function Appbar() {
   return (
     <div className={classes.grow}>
       <AppBar position="static" style={{ backgroundColor: "#0B216F" }}>
-        <Toolbar className={classes.padding}>
-          <Hidden mdDown>
-            <img className={classes.logo} src={webLogo} alt="logo" />
-          </Hidden>
+        <Box className={classes.dFlex}>
           <Hidden lgUp>
             <MenuDrawer />
           </Hidden>
-          <div className={classes.dFlex}>
-            <Hidden mdDown className={classes.flex}>
-              <div>
-                <PrivateId />
-              </div>
-              <div>
-                <CompanyId />
-              </div>
-              <div>
-                <SalesId />
-              </div>
-            </Hidden>
-            <div>
-              <Button className={classes.btnFonts}>GET AN API KEY</Button>
-            </div>
-          </div>
+          <Toolbar className={classes.padding}>
+            <img className={classes.logo} src={webLogo} alt="logo" />
 
-          <div className={classes.sectionMobile}></div>
-        </Toolbar>
+            <div className={classes.dFlex}>
+              <Hidden mdDown className={classes.flex}>
+                <div>
+                  <PrivateId />
+                </div>
+                <div>
+                  <CompanyId />
+                </div>
+                <div>
+                  <SalesId />
+                </div>
+              </Hidden>
+              <Hidden mdDown>
+                <div>
+                  <Button className={classes.btnFonts}>GET AN API KEY</Button>
+                </div>
+              </Hidden>
+            </div>
+
+            <div className={classes.sectionMobile}></div>
+          </Toolbar>
+        </Box>
       </AppBar>
       {renderMobileMenu}
       {renderMenu}

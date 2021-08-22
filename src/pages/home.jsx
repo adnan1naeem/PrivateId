@@ -8,7 +8,6 @@ import GoPricing from "../components/goPricing";
 import { LetsTalk } from "../components/letsTalk";
 import { GetReady } from "../components/getReady";
 import { WebFooter } from "../components/webfooter";
-import MobileFooter from "../components/mobileFooter";
 import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({}));
 export const Home = () => {

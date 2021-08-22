@@ -1,10 +1,10 @@
-import { Box, Button, Grid, makeStyles } from "@material-ui/core";
+import { Box, Button, Grid, Hidden, makeStyles } from "@material-ui/core";
 import React from "react";
 import letstalk from "../../assets/letstalk.png";
 import customer from "../../assets/customer.png";
 const useStyles = makeStyles((theme) => ({
   bgImage: {
-    backgroundImage: `url(${letstalk})`,
+    backgroundImage: `url(${letstalk}) unset`,
     backgroundColor: "#2A3D80",
     minHeight: "100vh",
     position: "relative",
@@ -131,15 +131,63 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 96,
     [theme.breakpoints.down("md")]: {},
   },
+  inqiury: {
+    fontWeight: 700,
+    fontSize: 64,
+    color: "#FFFFFF",
+    lineHeight: "24px",
+    fontFamily: "DM Sans",
+    marginTop: 56,
+    [theme.breakpoints.only("xs")]: {
+      fontWeight: 700,
+      fontSize: 18,
+      color: "#FFFFFF",
+      lineHeight: "24px",
+      fontFamily: "DM Sans",
+      marginTop: 23,
+    },
+  },
+  detail: {
+    fontWeight: 400,
+    fontSize: 24,
+    color: "#FFFFFF",
+    lineHeight: "32px",
+    fontFamily: "DM Sans",
+    marginTop: 46,
+    [theme.breakpoints.only("xs")]: {
+      fontWeight: 400,
+      fontSize: 12,
+      color: "#FFFFFF",
+      lineHeight: "15px",
+      fontFamily: "DM Sans",
+      marginTop: 12,
+      textAlign: "center",
+    },
+  },
+  dflex: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
 }));
 export const LetsTalk = () => {
   const classes = useStyles();
   return (
     <Box className={classes.bgImage}>
-      <Box className={classes.textenter}>
-        <Box className={classes.title}>Let’s Talk!</Box>
-        <Box className={classes.heading}> Start a conversation.</Box>
+      <Box className={classes.dflex}>
+        <Box className={classes.inqiury}>Send your inquiry</Box>
+        <Box className={classes.detail}>
+          We provide the best solution for each client to make every business
+          decision, and satisfaction is the main thing. It is an approach that
+          brings together.
+        </Box>
       </Box>
+      <Hidden lgDown>
+        <Box className={classes.textenter}>
+          <Box className={classes.title}>Let’s Talk!</Box>
+          <Box className={classes.heading}> Start a conversation.</Box>
+        </Box>
+      </Hidden>
       <Grid container className={classes.dFlex} justifyContent="center">
         <Grid item xs={11} lg={4} xl={3}>
           <img className={classes.customerImg} src={customer} alt="logo" />

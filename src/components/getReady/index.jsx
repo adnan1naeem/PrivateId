@@ -14,9 +14,10 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column",
-      padding: 20,
-      marginLeft: 20,
+      padding: 12,
+      marginLeft: 28,
       marginRight: 20,
+      borderRadius: 22,
     },
   },
   text1: {
@@ -67,6 +68,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       fontSize: 12,
       marginTop: 4,
+      display: "flex",
+      textAlign: "center",
     },
   },
   btn: {
@@ -93,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
   },
   dFlex: {
     display: "flex",
+    justifyContent: "center",
   },
   textCenter: {
     display: "flex",
@@ -101,6 +105,9 @@ const useStyles = makeStyles((theme) => ({
     top: "-381px",
     [theme.breakpoints.only("lg")]: {
       top: "-350px",
+    },
+    [theme.breakpoints.only("xs")]: {
+      top: "-721px",
     },
   },
 }));

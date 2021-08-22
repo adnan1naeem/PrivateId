@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       width: "100%",
     },
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 16,
+      fontWeight: 500,
+      lineHeight: "19px",
+    },
   },
   detail: {
     fontWeight: 400,
@@ -27,6 +32,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 13,
     fontFamily: "DM Sans",
     [theme.breakpoints.down("md")]: { textAlign: "center" },
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 12,
+      lineHeight: "16px",
+    },
   },
   bgImg: {
     backgroundImage: `url(${webDataRef})`,
@@ -39,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: -422,
     zIndex: -1,
+    [theme.breakpoints.only("xs")]: {
+      top: -508,
+    },
   },
   bgImgAboutUs: {
     backgroundImage: `url(${webDataRef})`,
@@ -52,6 +64,11 @@ const useStyles = makeStyles((theme) => ({
   imgStyle: {
     boxShadow: "29px 20px 0px #0060d5",
     width: "100%",
+    [theme.breakpoints.only("xs")]: {
+      top: -94,
+      boxShadow: "13px 14px 0px #0060d5",
+      position: "relative",
+    },
   },
 }));
 export const DataRefinery = ({
@@ -78,7 +95,7 @@ export const DataRefinery = ({
       justifyContent="center"
     >
       <Hidden mdDown>
-        <Grid item md={10} lg={5}>
+        <Grid item xs={10} lg={5}>
           <Box>
             <img src={videoImg} className={classes.imgStyle} alt="logo" />
           </Box>
@@ -88,10 +105,12 @@ export const DataRefinery = ({
             </Box>
           )}
         </Grid>
+        <Grid item lg={1} />
       </Hidden>
-      <Grid item lg={1} />
-      <Grid item md={10} lg={5}>
-        <Box className={classes.heading}>{title1}</Box>
+      <Grid item xs={10} lg={5}>
+        <Hidden mdDown>
+          <Box className={classes.heading}>{title1}</Box>
+        </Hidden>
         <Box className={classes.heading}>
           A data refinery, built to privately identify every individual
         </Box>
@@ -107,7 +126,7 @@ export const DataRefinery = ({
       </Grid>
 
       <Hidden lgUp>
-        <Grid item md={10} lg={5}>
+        <Grid item xs={10} lg={5}>
           <Box>
             <img src={videoImg} className={classes.imgStyle} alt="logo" />
           </Box>

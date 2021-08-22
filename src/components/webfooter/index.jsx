@@ -147,11 +147,13 @@ export const WebFooter = () => {
             >
               <Grid item lg={3}>
                 <Box>
-                  <Box className={classes.heading}>Private ID</Box>
                   <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
+                    <li>
+                      <Box className={classes.circle}></Box>
+                    </li>
                     <Box className={classes.privateitems}>Overview</Box>
                   </Box>
+
                   <Box className={classes.dflex}>
                     <Box className={classes.circle}></Box>
                     <Box className={classes.privateitems}>Features</Box>

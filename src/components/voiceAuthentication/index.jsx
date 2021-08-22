@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     position: "relative",
     top: -300,
+    [theme.breakpoints.only("xs")]: {
+      top: -651,
+    },
   },
   iPadView: {
     display: "flex",

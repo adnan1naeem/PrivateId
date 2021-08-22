@@ -19,7 +19,7 @@ export const KeyRelationships = () => {
   return (
     <Box className={classes.container}>
       <Grid container justifyContent="center">
-        <Grid item lg={9}>
+        <Grid item md={8} xs={10} lg={9}>
           <Box>
             <Box>
               <Paper className={classes.paper} elevation={0}>

@@ -8,13 +8,19 @@ import { DataRefinery } from "../components/dataRefinery";
 import { Leadership } from "../components/leadership";
 import { WebFooter } from "../components/webfooter";
 import { KeyRelationships } from "../components/keyRelationships";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   bgImg: {
     backgroundImage: `url(${AboutusWeb})`,
     height: 249,
     backgroundSize: "cover",
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      height: 194,
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: 194,
+    },
   },
 
   header: {
@@ -23,7 +29,21 @@ const useStyles = makeStyles({
     fontFamily: "Dm Sans",
     color: "#ffffff",
     marginTop: 48,
+    [theme.breakpoints.only("md")]: {
+      fontSize: 50,
+      position: "relative",
+      left: 128,
+      top: -51,
+    },
+
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 18,
+      position: "relative",
+      top: -76,
+      left: 36,
+    },
   },
+
   image2: {
     position: "absolute",
     right: 0,
@@ -32,7 +52,15 @@ const useStyles = makeStyles({
     width: 427,
     zIndex: 1,
   },
-});
+  position: {
+    position: "relative",
+    left: 139,
+  },
+  componentMargin: {
+    position: "relative",
+    top: -230,
+  },
+}));
 export const AboutUs = () => {
   const classes = useStyles();
   return (
@@ -40,7 +68,7 @@ export const AboutUs = () => {
       <Appbar />
       <Box className={classes.bgImg}>
         <Grid container>
-          <Grid style={{ position: "relative", left: 139 }} item lg={9}>
+          <Grid xs={10} item lg={9}>
             <Box className={classes.header}>Company</Box>
           </Grid>
         </Grid>

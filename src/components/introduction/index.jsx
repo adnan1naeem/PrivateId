@@ -3,6 +3,7 @@ import React from "react";
 import webIntro from "../../assets/webIntro.png";
 import bgGradient from "../../assets/bgGradient.svg";
 import bgGradientMd from "../../assets/bgGradient-md.svg";
+import mobileIcons from "../../assets/mobileIcons.png";
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundImage: `url(${bgGradient})`,
@@ -13,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       backgroundImage: `url(${bgGradientMd})`,
       backgroundPositionY: "top",
+    },
+    [theme.breakpoints.down("md")]: {
+      backgroundSize: `cover`,
     },
   },
   heading: {
@@ -29,6 +33,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Abel",
     width: "97%",
     [theme.breakpoints.down("md")]: { textAlign: "center" },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 24,
+      lineHeight: "28px",
+      width: "100%",
+    },
   },
   btn: {
     fontWeight: 700,
@@ -45,6 +54,28 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "35px",
     width: 298,
     height: 103,
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 16,
+      fontWeight: 500,
+      lineHeight: "23px",
+      width: 179,
+      height: 51,
+      position: "relative",
+      bottom: "-137px",
+    },
+  },
+  pt: {
+    paddingTop: 115,
+    paddingBottom: 115,
+    [theme.breakpoints.only("xs")]: {
+      paddingTop: 30,
+      paddingBottom: 122,
+    },
+  },
+  dFlex: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: 20,
   },
 }));
 export const Introduction = () => {
@@ -55,9 +86,9 @@ export const Introduction = () => {
         container
         justifyContent="center"
         alignItems="center"
-        style={{ paddingTop: 115, paddingBottom: 115 }}
+        className={classes.pt}
       >
-        <Grid item md={10} lg={5}>
+        <Grid item xs={10} md={10} lg={5}>
           <Box className={classes.description}>
             Continuous authentication for a surprising and delightful customer
             experience
@@ -67,8 +98,15 @@ export const Introduction = () => {
           </Hidden>
         </Grid>
         <Grid item lg={1} />
-        <Grid item md={7} lg={4}>
-          <img src={webIntro} width="100%" alt="logo" />
+        <Grid item xs={10} md={7} lg={4}>
+          <Hidden xsDown>
+            <img src={webIntro} width="100%" alt="logo" />
+          </Hidden>
+          <Hidden smUp>
+            <Box className={classes.dFlex}>
+              <img src={mobileIcons} alt="" />
+            </Box>
+          </Hidden>
 
           <Hidden lgUp>
             <Box display="flex" justifyContent="center">
