@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     height: 61,
     width: 311,
+    flex: 1,
     [theme.breakpoints.only("xs")]: {
       height: 30,
       width: 152,
@@ -43,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   padding: {
     padding: 40,
+    flex: 1,
     [theme.breakpoints.only("xs")]: {
       padding: "0px",
     },
@@ -107,6 +109,7 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid #39ACE8",
     borderRadius: 180,
     padding: 10,
+    marginLeft: 100,
   },
   dFlex: {
     display: "flex",

@@ -96,18 +96,25 @@ const useStyles = makeStyles((theme) => ({
   },
   dFlex: {
     display: "flex",
-    justifyContent: "center",
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "center",
+    },
   },
   textCenter: {
     display: "flex",
     justifyContent: "center",
     position: "relative",
     top: "-381px",
+    marginBottom: 150,
     [theme.breakpoints.only("lg")]: {
       top: "-350px",
     },
+    [theme.breakpoints.down("md")]: {
+      top: -391,
+    },
     [theme.breakpoints.only("xs")]: {
       top: "-721px",
+      marginBottom: -70,
     },
   },
 }));

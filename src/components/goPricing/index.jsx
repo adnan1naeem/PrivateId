@@ -123,8 +123,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#000000",
     fontFamily: "DM Sans",
     lineHeight: "40px",
-    [theme.breakpoints.down("lg")]: {
-      fontSize: 8,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 24,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 16,
     },
     [theme.breakpoints.only("xs")]: {
       fontSize: 8,
@@ -175,6 +178,7 @@ const useStyles = makeStyles((theme) => ({
     top: -324,
     [theme.breakpoints.only("xs")]: {
       top: -605,
+      marginBottom: -305,
     },
   },
 }));

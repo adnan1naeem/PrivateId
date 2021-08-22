@@ -1,15 +1,27 @@
-import { Box, Button, Grid, Hidden, makeStyles } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  Grid,
+  Hidden,
+  makeStyles,
+  Paper,
+  withWidth,
+} from "@material-ui/core";
 import React from "react";
 import letstalk from "../../assets/letstalk.png";
+import customerPhone from "../../assets/callweb.png";
 import customer from "../../assets/customer.png";
 const useStyles = makeStyles((theme) => ({
   bgImage: {
-    backgroundImage: `url(${letstalk}) unset`,
+    backgroundImage: `url(${letstalk})`,
     backgroundColor: "#2A3D80",
     minHeight: "100vh",
     position: "relative",
     top: -303,
     padding: "5%",
+    [theme.breakpoints.down("xs")]: {
+      minHeight: "75vh",
+    },
   },
   btnFonts: {
     fontWeight: 600,
@@ -24,6 +36,12 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: "#FFFFFF",
       backgroundColor: "#2A3D80",
+    },
+    [theme.breakpoints.down("xs")]: {
+      padding: 9,
+      fontSize: 12,
+      width: 135,
+      marginTop: 22,
     },
   },
   title: {
@@ -45,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 62,
     [theme.breakpoints.down("md")]: {
       width: "100%",
+      borderRadius: "unset",
     },
   },
   textenter: {
@@ -53,20 +72,16 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
   },
   boxShadow: {
-    boxShadow: "-8px 19px 13px -6px rgba(102, 165, 254, 0.3)",
-    backgroundColor: "#ffffff",
     borderRadius: 72,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    textAlign: "center",
-    alignItems: "center",
     position: "relative",
     left: 60,
-    padding: "5%",
     [theme.breakpoints.down("md")]: {
       left: "unset",
-      top: -400,
+      top: -150,
+    },
+    [theme.breakpoints.down("xs")]: {
+      top: -60,
+      borderRadius: 14,
     },
   },
   input: {
@@ -80,9 +95,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     borderRadius: 42,
     padding: 18,
+    boxShadow: "2px 1px 36px 8px rgba(56, 125, 255, 0.11)",
     "&:hover": {
       border: "1px solid #C9C9C9",
       color: "#797979",
+    },
+    [theme.breakpoints.down("xs")]: {
+      padding: 9,
+      fontSize: 12,
     },
   },
   emailInput: {
@@ -95,13 +115,19 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     alignItems: "center",
     borderRadius: 42,
+    boxShadow: "2px 1px 36px 8px rgba(56, 125, 255, 0.11)",
     padding: 18,
     marginTop: 23,
+    [theme.breakpoints.down("xs")]: {
+      padding: 9,
+      fontSize: 12,
+    },
   },
   phoneInput: {
     color: "#797979",
     border: "1px solid #C9C9C9",
     fontSize: 24,
+    boxShadow: "2px 1px 36px 8px rgba(56, 125, 255, 0.11)",
     display: "flex",
     fontFamily: "DM Sans",
     fontWeight: 400,
@@ -110,6 +136,10 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 42,
     padding: 18,
     marginTop: 23,
+    [theme.breakpoints.down("xs")]: {
+      padding: 9,
+      fontSize: 12,
+    },
   },
   messageInput: {
     color: "#797979",
@@ -117,19 +147,26 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
     display: "flex",
     fontFamily: "DM Sans",
+    boxShadow: "2px 1px 36px 8px rgba(56, 125, 255, 0.11)",
     fontWeight: 400,
     alignItems: "center",
     borderRadius: 42,
     padding: 18,
     marginTop: 23,
     width: "100%",
+    [theme.breakpoints.down("xs")]: {
+      padding: 9,
+      fontSize: 12,
+    },
   },
   dFlex: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     marginTop: 96,
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 35,
+    },
   },
   inqiury: {
     fontWeight: 700,
@@ -170,8 +207,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
 }));
-export const LetsTalk = () => {
+export const LetsTalk = withWidth()(({ width }) => {
   const classes = useStyles();
+  let customerImg = customer;
+  if (width === "xs" || width === "md" || width === "sm") {
+    customerImg = customerPhone;
+  }
   return (
     <Box className={classes.bgImage}>
       <Box className={classes.dflex}>
@@ -190,16 +231,25 @@ export const LetsTalk = () => {
       </Hidden>
       <Grid container className={classes.dFlex} justifyContent="center">
         <Grid item xs={11} lg={4} xl={3}>
-          <img className={classes.customerImg} src={customer} alt="logo" />
+          <img className={classes.customerImg} src={customerImg} alt="logo" />
         </Grid>
         <Grid item xs={9} lg={5} xl={4} className={classes.boxShadow}>
-          <input placeholder="Name" className={classes.input} />
-          <input placeholder="Email" className={classes.emailInput} />
-          <input placeholder="Phone" className={classes.phoneInput} />
-          <input placeholder="Message" className={classes.messageInput} />
-          <Button className={classes.btnFonts}>Send</Button>
+          <Paper
+            component={Box}
+            p={4}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            borderRadius={14}
+          >
+            <input placeholder="Name" className={classes.input} />
+            <input placeholder="Email" className={classes.emailInput} />
+            <input placeholder="Phone" className={classes.phoneInput} />
+            <input placeholder="Message" className={classes.messageInput} />
+            <Button className={classes.btnFonts}>Send</Button>
+          </Paper>
         </Grid>
       </Grid>
     </Box>
   );
-};
+});
