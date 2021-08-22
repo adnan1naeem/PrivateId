@@ -22,7 +22,7 @@ export const Leadership = () => {
         <Box className={classes.heading}>Leadership</Box>
       </Box>
       <Grid container justifyContent="center">
-        <Grid item lg={9}>
+        <Grid item xs={11} sm={10} lg={11} xl={9}>
           <Grid container justifyContent="space-around" spacing={6}>
             <Grid item lg={6}>
               <LeadershipCard

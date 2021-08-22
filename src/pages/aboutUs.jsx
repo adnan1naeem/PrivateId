@@ -15,11 +15,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     display: "flex",
     alignItems: "center",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("md")]: {
       height: 194,
     },
     [theme.breakpoints.down("sm")]: {
-      height: 194,
+      height: 144,
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: 80,
     },
   },
 
@@ -28,19 +31,14 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     fontFamily: "Dm Sans",
     color: "#ffffff",
-    marginTop: 48,
-    [theme.breakpoints.only("md")]: {
+    [theme.breakpoints.down("md")]: {
       fontSize: 50,
-      position: "relative",
-      left: 128,
-      top: -51,
     },
-
-    [theme.breakpoints.only("xs")]: {
-      fontSize: 18,
-      position: "relative",
-      top: -76,
-      left: 36,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 30,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 16,
     },
   },
 
@@ -67,7 +65,7 @@ export const AboutUs = () => {
     <Box>
       <Appbar />
       <Box className={classes.bgImg}>
-        <Grid container>
+        <Grid container justifyContent="center">
           <Grid xs={10} item lg={9}>
             <Box className={classes.header}>Company</Box>
           </Grid>

@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     textAlign: "center",
     flexDirection: "column",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 32,
+    },
     [theme.breakpoints.down("xs")]: {
       fontSize: 18,
     },
@@ -23,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#000000",
     marginTop: 17,
     width: "85%",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 16,
+    },
     [theme.breakpoints.down("xs")]: {
       fontSize: 12,
       marginTop: 10,
@@ -38,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       fontSize: 12,
     },
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 20,
+    },
   },
   names: {
     fontFamily: "Dm Sans",
@@ -49,12 +58,18 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
       lineHeight: "20px",
     },
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 16,
+    },
   },
   detail: {
     fontFamily: "Dm Sans",
     fontWeight: 500,
     fontSize: 22,
     color: "#898989",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 16,
+    },
     [theme.breakpoints.down("xs")]: {
       fontSize: 12,
       lineHeight: "20px",
@@ -68,6 +83,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     boxShadow: "0px 4px 4px rgba(42, 61, 128, 0.22)",
     borderRadius: 10,
+    [theme.breakpoints.down("lg")]: {
+      padding: 16,
+    },
   },
   divider: {
     backgroundColor: "#C4C4C4",
@@ -85,15 +103,20 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     boxShadow: "0px 4px 4px rgba(42, 61, 128, 0.22)",
     borderRadius: 10,
+    [theme.breakpoints.down("lg")]: {
+      padding: 16,
+    },
   },
   imgStyling: {
     display: "flex",
     justifyContent: "center",
     height: 330,
     marginTop: 168,
+    [theme.breakpoints.down("lg")]: {
+      height: 270,
+    },
     [theme.breakpoints.down("md")]: {
       marginTop: 60,
-      marginBottom: 60,
     },
     [theme.breakpoints.down("xs")]: {
       height: 150,

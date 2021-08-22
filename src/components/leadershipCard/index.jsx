@@ -1,10 +1,16 @@
 import { Box, makeStyles, Paper } from "@material-ui/core";
 import linkdin from "../../assets/linkdin.png";
 import React from "react";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   imgStyling: {
     height: 348,
     width: "100%",
+    [theme.breakpoints.down("md")]: {
+      height: 432,
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: 170,
+    },
   },
   designationStyling: {
     fontFamily: "Dm Sans",
@@ -31,7 +37,7 @@ const useStyles = makeStyles({
     right: 38,
     position: "absolute",
   },
-});
+}));
 export const LeadershipCard = ({ image, name, designation, detail }) => {
   const classes = useStyles();
   return (

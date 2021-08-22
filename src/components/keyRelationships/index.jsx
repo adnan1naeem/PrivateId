@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: 22,
     paddingBottom: 60,
+    borderRadius: 33,
     [theme.breakpoints.down("md")]: {
       borderRadius: 56,
     },
