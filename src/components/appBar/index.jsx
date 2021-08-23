@@ -15,6 +15,7 @@ import CompanyId from "../companyId";
 import SalesId from "../saleId";
 import { Box, Button, Hidden } from "@material-ui/core";
 import { MenuDrawer } from "../drawer";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -119,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Appbar() {
+export default function Appbar({ hidecontent }) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -206,17 +207,24 @@ export default function Appbar() {
           <Hidden lgUp>
             <MenuDrawer />
           </Hidden>
+
           <Toolbar className={classes.padding}>
-            <img className={classes.logo} src={webLogo} alt="logo" />
+            <Link to="/" style={{ flex: 1 }}>
+              <img className={classes.logo} src={webLogo} alt="logo" />
+            </Link>
 
             <div className={classes.dFlex}>
               <Hidden mdDown className={classes.flex}>
-                <div>
-                  <PrivateId />
-                </div>
-                <div>
-                  <CompanyId />
-                </div>
+                {!hidecontent && (
+                  <>
+                    <div>
+                      <PrivateId />
+                    </div>
+                    <div>
+                      <CompanyId />
+                    </div>
+                  </>
+                )}
                 <div>
                   <SalesId />
                 </div>

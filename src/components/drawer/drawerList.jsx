@@ -12,13 +12,11 @@ import StarBorder from "@material-ui/icons/StarBorder";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
-  },
-  nested: {
-    paddingLeft: theme.spacing(4),
+  font: {
+    fontFamily: "Dm Sans",
+    fontSize: 18,
+    color: "#000000",
+    fontWeight: 700,
   },
 }));
 
@@ -33,112 +31,27 @@ export default function DrawerList() {
   };
 
   return (
-    <List
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-      className={classes.root}
-    >
-      <ListItem button onClick={() => handleClick(0)}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Private ID" />
-        {open[0] ? <ExpandLess /> : <ExpandMore />}
-      </ListItem>
-
-      <Collapse in={open[0]} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItem
-            button
-            className={classes.nested}
-            component={Link}
-            to="/about"
-          >
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Overview" />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Feature" />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
+    <ul>
+      <li>
+        <Link href to="/about" style={{ textDecoration: "none" }}>
+          <ListItem button onClick={() => handleClick(0)}>
             <ListItemText
-              primary="Continuous Voice Authentication for Amazon Connect®
-Pricing"
+              style={{
+                fontFamily: "Dm Sans",
+                fontSize: 18,
+                color: "#000000",
+                fontWeight: 700,
+              }}
+              primary="About Us"
             />
           </ListItem>
-        </List>
-      </Collapse>
-
-      <ListItem button onClick={() => handleClick(1)}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Company" />
-        {open[1] ? <ExpandLess /> : <ExpandMore />}
-      </ListItem>
-
-      <Collapse in={open[1]} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred2" />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred3" />
-          </ListItem>
-        </List>
-      </Collapse>
-
-      <ListItem button onClick={() => handleClick(2)}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Contact Sales" />
-        {open[2] ? <ExpandLess /> : <ExpandMore />}
-      </ListItem>
-
-      <Collapse in={open[2]} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText
-              primary="     +1-301-938-6300
-
- 
-
-
-"
-            />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Email Us" />
-          </ListItem>
-        </List>
-      </Collapse>
-    </List>
+        </Link>
+      </li>
+      <li>
+        <ListItem button onClick={() => handleClick(1)}>
+          <ListItemText className={classes.font} primary="Github" />
+        </ListItem>
+      </li>
+    </ul>
   );
 }

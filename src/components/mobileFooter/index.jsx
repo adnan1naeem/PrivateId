@@ -92,101 +92,40 @@ function MobileFooter(props) {
           <Grid item xs={10} md={5}>
             <ExpansionPanel>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography className={classes.heading}>Private ID</Typography>
-              </ExpansionPanelSummary>
-
-              <ExpansionPanelDetails className={classes.position}>
-                <Box>
-                  <ul>
-                    <li>
-                      <Box className={classes.dflex}>
-                        <Box className={classes.drawerFonts}>Overview</Box>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className={classes.dflex}>
-                        <Box className={classes.bullots}>Features</Box>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className={classes.dflex}>
-                        <Box className={classes.bullots}>
-                          Continuous Voice Authentication for Amazon Connect®
-                        </Box>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className={classes.dflex}>
-                        <Box className={classes.bullots}>Pricing</Box>
-                      </Box>
-                    </li>
-                  </ul>
-                </Box>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-          </Grid>
-          <Grid item xs={10} md={5}>
-            <ExpansionPanel>
-              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography>Company ID</Typography>
-              </ExpansionPanelSummary>
-              <ul>
-                <ExpansionPanelDetails className={classes.position}>
-                  <Typography>
-                    <li>
-                      <Box className={classes.dflex}>
-                        <Box className={classes.bullots}>About Us</Box>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className={classes.dflex}>
-                        <Box className={classes.bullots}>Key Relationships</Box>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className={classes.dflex}>
-                        <Box className={classes.circle}></Box>
-                        <Box className={classes.bullots}>Leadership</Box>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className={classes.dflex}>
-                        <Box className={classes.circle}></Box>
-                        <Box className={classes.bullots}>Privacy Policy</Box>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className={classes.dflex}>
-                        <Box className={classes.circle}></Box>
-                        <Box className={classes.bullots}>Terms of Use</Box>
-                      </Box>
-                    </li>
-                  </Typography>
-                </ExpansionPanelDetails>
-              </ul>
-            </ExpansionPanel>
-          </Grid>
-          <Grid item xs={10} md={5}>
-            <ExpansionPanel>
-              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={classes.heading}>
                   Stay Connected
                 </Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
-                  <Box className={classes.dflex}>
-                    <img src={yt} className={classes.image} alt="logo" />
-                    <Box className={classes.stay}>Private Identity</Box>
-                  </Box>
-                  <Box className={classes.dflex}>
-                    <img src={phn} className={classes.image} alt="logo" />
-                    <Box className={classes.stay}> +1-301-938-6300</Box>
-                  </Box>
-                  <Box className={classes.dflex}>
-                    <img src={en} className={classes.image} alt="logo" />
-                    <Box className={classes.stay}>Email Us</Box>
-                  </Box>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    href="https://www.youtube.com/embed/G33UR87I81E"
+                    target="_blank"
+                  >
+                    <Box className={classes.dflex}>
+                      <img src={yt} className={classes.image} alt="logo" />
+                      <Box className={classes.stay}>Private Identity</Box>
+                    </Box>
+                  </a>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    href="tel:+1 (800) 123-4567"
+                  >
+                    <Box className={classes.dflex}>
+                      <img src={phn} className={classes.image} alt="logo" />
+                      <Box className={classes.stay}> +1-301-938-6300</Box>
+                    </Box>
+                  </a>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    href="mailto:support@private.id"
+                  >
+                    <Box className={classes.dflex}>
+                      <img src={en} className={classes.image} alt="logo" />
+                      <Box className={classes.stay}>Email Us</Box>
+                    </Box>
+                  </a>
                 </Typography>
               </ExpansionPanelDetails>
             </ExpansionPanel>
@@ -198,14 +137,26 @@ function MobileFooter(props) {
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
-                  <Box className={classes.dflex}>
-                    <img src={stack} className={classes.image} alt="logo" />
-                    <Box className={classes.suppport}>Stack Overflow</Box>
-                  </Box>
-                  <Box className={classes.dflex}>
-                    <img src={tracker} className={classes.image} alt="logo" />
-                    <Box className={classes.suppport}>Issue Tracker</Box>
-                  </Box>
+                  <a
+                    href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
+                    target="_blank "
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <img src={stack} className={classes.image} alt="logo" />
+                      <Box className={classes.suppport}>Stack Overflow</Box>
+                    </Box>
+                  </a>
+                  <a
+                    href="https://github.com/openinfer/PrivateIdentity/issues"
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <img src={tracker} className={classes.image} alt="logo" />
+                      <Box className={classes.suppport}>Issue Tracker</Box>
+                    </Box>
+                  </a>
                   <Box className={classes.dflex}>
                     <img src={api} className={classes.image} alt="logo" />
                     <Box className={classes.suppport}>API Documentation</Box>

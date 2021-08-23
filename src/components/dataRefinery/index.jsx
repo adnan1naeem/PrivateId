@@ -47,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 200,
     position: "relative",
     top: -422,
-    zIndex: -1,
     [theme.breakpoints.only("xs")]: {
       top: -508,
     },
@@ -59,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundPositionY: -224,
     paddingTop: 130,
     paddingBottom: 200,
-    zIndex: -1,
     [theme.breakpoints.down("sm")]: {
       paddingTop: 30,
     },
@@ -67,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
   imgStyle: {
     boxShadow: "29px 20px 0px #0060d5",
     width: "100%",
+    minHeight: 400,
     [theme.breakpoints.only("xs")]: {
       boxShadow: "13px 14px 0px #0060d5",
     },
@@ -87,6 +86,7 @@ export const DataRefinery = ({
   image,
   description_about,
 }) => {
+  let videoLink = "https://www.youtube.com/embed/5iYEhEiOlrI";
   const classes = useStyles();
   const {
     location: { pathname },
@@ -104,7 +104,16 @@ export const DataRefinery = ({
       <Hidden mdDown>
         <Grid item xs={10} lg={5}>
           <Box>
-            <img src={videoImg} className={classes.imgStyle} alt="logo" />
+            <iframe
+              width="560"
+              height="315"
+              className={classes.imgStyle}
+              src={videoLink}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </Box>
           {description_about && (
             <Box className={`${classes.detail} ${classes.handleMargin}`}>
@@ -136,7 +145,16 @@ export const DataRefinery = ({
       <Hidden lgUp>
         <Grid item xs={10} lg={5}>
           <Box>
-            <img src={videoImg} className={classes.imgStyle} alt="logo" />
+            <iframe
+              width="560"
+              height="315"
+              className={classes.imgStyle}
+              src={videoLink}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </Box>
           {description_about && (
             <Box className={`${classes.detail} ${classes.handleMargin}`}>

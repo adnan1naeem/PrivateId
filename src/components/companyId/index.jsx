@@ -8,7 +8,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import { Divider } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({

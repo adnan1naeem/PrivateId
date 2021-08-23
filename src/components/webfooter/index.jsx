@@ -173,33 +173,37 @@ export const WebFooter = () => {
 
               <Grid item lg={3}>
                 <Typography className={classes.heading}>Company</Typography>
-                <Box className={classes.dflex}>
-                  <Box className={classes.circle}></Box>
-                  <Box className={classes.companyitems}>About Us</Box>
-                </Box>
-                <Box className={classes.dflex}>
-                  <Box className={classes.circle}></Box>
-                  <Box className={classes.companyitems}>Key Relationships</Box>
-                </Box>
-                <Box className={classes.dflex}>
-                  <Box className={classes.circle}></Box>
-                  <Box className={classes.companyitems}>Leadership</Box>
-                </Box>
-                <Box className={classes.dflex}>
-                  <Box className={classes.circle}></Box>
-                  <Box className={classes.companyitems}>Privacy Policy</Box>
-                </Box>
-                <Box className={classes.dflex}>
-                  <Box className={classes.circle}></Box>
-                  <Box className={classes.companyitems}>Terms of Use</Box>
-                </Box>
+                <a
+                  href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy"
+                  target={"_blank"}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.companyitems}>Privacy Policy</Box>
+                  </Box>
+                </a>
+                <a
+                  href="https://github.com/openinfer/PrivateIdentity/wiki/Terms-of-Use"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.companyitems}>Terms of Use</Box>
+                  </Box>
+                </a>
               </Grid>
 
               <Grid item lg={3}>
                 <Typography className={classes.heading}>
                   Stay Connected
                 </Typography>
-                <a href="https://www.youtube.com/embed/G33UR87I81E">
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="https://www.youtube.com/embed/G33UR87I81E"
+                  target="_blank"
+                >
                   <Box className={classes.dflex}>
                     <img src={yt} className={classes.image} alt="logo" />
                     <Box className={classes.connecteditems}>
@@ -207,7 +211,10 @@ export const WebFooter = () => {
                     </Box>
                   </Box>
                 </a>
-                <a href="tel:+1 (800) 123-4567">
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="tel:+1 (800) 123-4567"
+                >
                   <Box className={classes.dflex}>
                     <img src={phn} className={classes.image} alt="logo" />
                     <Box className={classes.connecteditems}>
@@ -216,7 +223,10 @@ export const WebFooter = () => {
                     </Box>
                   </Box>
                 </a>
-                <a href="mailto:support@private.id">
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="mailto:support@private.id"
+                >
                   <Box className={classes.dflex}>
                     <img src={en} className={classes.image} alt="logo" />
                     <Box className={classes.connecteditems}>Email Us</Box>
@@ -226,14 +236,26 @@ export const WebFooter = () => {
 
               <Grid item lg={3}>
                 <Typography className={classes.heading}>Support</Typography>
-                <Box className={classes.dflex}>
-                  <img src={stack} className={classes.image} alt="logo" />
-                  <Box className={classes.connecteditems}>Stack Overflow</Box>
-                </Box>
-                <Box className={classes.dflex}>
-                  <img src={tracker} className={classes.image} alt="logo" />
-                  <Box className={classes.connecteditems}>Issue Tracker</Box>
-                </Box>
+                <a
+                  href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
+                  target="_blank "
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box className={classes.dflex}>
+                    <img src={stack} className={classes.image} alt="logo" />
+                    <Box className={classes.connecteditems}>Stack Overflow</Box>
+                  </Box>
+                </a>
+                <a
+                  href="https://github.com/openinfer/PrivateIdentity/issues"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box className={classes.dflex}>
+                    <img src={tracker} className={classes.image} alt="logo" />
+                    <Box className={classes.connecteditems}>Issue Tracker</Box>
+                  </Box>
+                </a>
                 <Box className={classes.dflex}>
                   <img src={api} className={classes.image} alt="logo" />
                   <Box className={classes.connecteditems}>
