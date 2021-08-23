@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
 export const VoiceAuthentication = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.bgImg}>
+    <Box className={classes.bgImg} id="authentication">
       <Box minHeight="135vh" bgcolor="rgb(42 61 128 / 81%)">
         <Grid
           container

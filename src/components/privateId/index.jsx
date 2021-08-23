@@ -8,7 +8,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import { Divider } from "@material-ui/core";
+import { ButtonBase, Divider } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,6 +60,7 @@ export default function PrivateId() {
   };
 
   const handleClose = (event) => {
+    // event.preventDefault();
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
@@ -120,17 +122,12 @@ export default function PrivateId() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem
-                      className={classes.itemsText}
-                      onClick={handleClose}
-                    >
-                      Overview
-                    </MenuItem>
-                    <Divider middle style={{ backgroundColor: " #BBD7FF" }} />
                     <div style={{ paddingTop: 10, paddingBottom: 10 }}>
                       <MenuItem
                         className={classes.itemsText}
                         onClick={handleClose}
+                        href="#cards-container"
+                        component={ButtonBase}
                       >
                         Features
                       </MenuItem>
@@ -140,8 +137,18 @@ export default function PrivateId() {
                     <MenuItem
                       className={classes.itemsText}
                       onClick={handleClose}
+                      href="#authentication"
+                      component={ButtonBase}
                     >
                       Continuous Voice Authentication for Amazon Connect®
+                    </MenuItem>
+                    <Divider middle style={{ backgroundColor: " #BBD7FF" }} />
+                    <MenuItem
+                      className={classes.itemsText}
+                      onClick={handleClose}
+                      href="#pricing"
+                      component={ButtonBase}
+                    >
                       Pricing
                     </MenuItem>
                   </MenuList>

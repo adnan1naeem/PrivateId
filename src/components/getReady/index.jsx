@@ -121,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
 export const GetReady = () => {
   const classes = useStyles();
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center" id="get-ready">
       <Grid item md={11} lg={9} xs={11}>
         <Box className={classes.textCenter}>
           <Box className={classes.bgClr}>

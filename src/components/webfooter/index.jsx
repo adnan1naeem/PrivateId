@@ -146,11 +146,10 @@ export const WebFooter = () => {
               justifyContent="center"
             >
               <Grid item lg={3}>
+                <Typography className={classes.heading}>Private ID</Typography>
                 <Box>
                   <Box className={classes.dflex}>
-                    <li>
-                      <Box className={classes.circle}></Box>
-                    </li>
+                    <Box className={classes.circle}></Box>
                     <Box className={classes.privateitems}>Overview</Box>
                   </Box>
 
@@ -200,21 +199,29 @@ export const WebFooter = () => {
                 <Typography className={classes.heading}>
                   Stay Connected
                 </Typography>
-                <Box className={classes.dflex}>
-                  <img src={yt} className={classes.image} alt="logo" />
-                  <Box className={classes.connecteditems}>Private Identity</Box>
-                </Box>
-                <Box className={classes.dflex}>
-                  <img src={phn} className={classes.image} alt="logo" />
-                  <Box className={classes.connecteditems}>
-                    {" "}
-                    +1 (800) 123-4567
+                <a href="https://www.youtube.com/embed/G33UR87I81E">
+                  <Box className={classes.dflex}>
+                    <img src={yt} className={classes.image} alt="logo" />
+                    <Box className={classes.connecteditems}>
+                      Private Identity
+                    </Box>
                   </Box>
-                </Box>
-                <Box className={classes.dflex}>
-                  <img src={en} className={classes.image} alt="logo" />
-                  <Box className={classes.connecteditems}>Email Us</Box>
-                </Box>
+                </a>
+                <a href="tel:+1 (800) 123-4567">
+                  <Box className={classes.dflex}>
+                    <img src={phn} className={classes.image} alt="logo" />
+                    <Box className={classes.connecteditems}>
+                      {" "}
+                      +1 (800) 123-4567
+                    </Box>
+                  </Box>
+                </a>
+                <a href="mailto:support@private.id">
+                  <Box className={classes.dflex}>
+                    <img src={en} className={classes.image} alt="logo" />
+                    <Box className={classes.connecteditems}>Email Us</Box>
+                  </Box>
+                </a>
               </Grid>
 
               <Grid item lg={3}>

@@ -125,22 +125,6 @@ export default function CompanyId() {
                     >
                       About Us
                     </MenuItem>
-                    <Divider middle style={{ backgroundColor: " #BBD7FF" }} />
-                    <div style={{ paddingTop: 10, paddingBottom: 10 }}>
-                      <MenuItem
-                        className={classes.itemsText}
-                        onClick={handleClose}
-                      >
-                        Key Relationships
-                      </MenuItem>
-                    </div>
-                    <Divider middle style={{ backgroundColor: " #BBD7FF" }} />
-                    <MenuItem
-                      className={classes.itemsText}
-                      onClick={handleClose}
-                    >
-                      Leadership
-                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
