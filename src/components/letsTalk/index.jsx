@@ -7,7 +7,7 @@ import {
   Paper,
   withWidth,
 } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import letstalk from "../../assets/letstalk.png";
 import customerPhone from "../../assets/callweb.png";
 import customer from "../../assets/customer.png";
@@ -100,6 +100,9 @@ const useStyles = makeStyles((theme) => ({
       border: "1px solid #C9C9C9",
       color: "#797979",
     },
+    "&:focus-visible": {
+      outline: "none",
+    },
     [theme.breakpoints.down("xs")]: {
       padding: 9,
       fontSize: 12,
@@ -113,6 +116,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
     fontWeight: 400,
     width: "100%",
+    "&:focus-visible": {
+      outline: "none",
+    },
     alignItems: "center",
     borderRadius: 42,
     boxShadow: "2px 1px 36px 8px rgba(56, 125, 255, 0.11)",
@@ -134,6 +140,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     alignItems: "center",
     borderRadius: 42,
+    "&:focus-visible": {
+      outline: "none",
+    },
     padding: 18,
     marginTop: 23,
     [theme.breakpoints.down("xs")]: {
@@ -144,6 +153,9 @@ const useStyles = makeStyles((theme) => ({
   messageInput: {
     color: "#797979",
     border: "1px solid #C9C9C9",
+    "&:focus-visible": {
+      outline: "none",
+    },
     fontSize: 24,
     display: "flex",
     fontFamily: "DM Sans",
@@ -209,6 +221,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export const LetsTalk = withWidth()(({ width }) => {
   const classes = useStyles();
+  const [name, setName] = useState("");
   let customerImg = customer;
   if (width === "xs" || width === "md" || width === "sm") {
     customerImg = customerPhone;
@@ -242,7 +255,20 @@ export const LetsTalk = withWidth()(({ width }) => {
             alignItems="center"
             borderRadius={14}
           >
-            <input placeholder="Name" className={classes.input} />
+            <input
+              placeholder="Name"
+              className={classes.input}
+              value={name}
+              onChange={(e) => {
+                debugger;
+                setName(e.target.value);
+              }}
+            />
+            {name.length > 0 && name.length < 3 && (
+              <Box color="red" fontSize="9">
+                Name must have minimum three characters
+              </Box>
+            )}
             <input placeholder="Email" className={classes.emailInput} />
             <input placeholder="Phone" className={classes.phoneInput} />
             <input placeholder="Message" className={classes.messageInput} />
