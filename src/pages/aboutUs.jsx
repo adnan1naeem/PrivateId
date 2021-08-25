@@ -63,7 +63,7 @@ export const AboutUs = () => {
   const classes = useStyles();
   return (
     <Box id="about">
-      <Appbar hidecontent />
+      <Appbar />
       <Box className={classes.bgImg}>
         <Grid container justifyContent="center">
           <Grid xs={10} item lg={9}>
