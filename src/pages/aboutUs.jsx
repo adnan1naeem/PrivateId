@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
 export const AboutUs = () => {
   const classes = useStyles();
   return (
-    <Box>
+    <Box id="about">
       <Appbar hidecontent />
       <Box className={classes.bgImg}>
         <Grid container justifyContent="center">

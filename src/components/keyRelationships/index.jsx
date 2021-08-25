@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 export const KeyRelationships = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.container}>
+    <Box className={classes.container} id="key-relationship">
       <Grid container justifyContent="center">
         <Grid item xs={12} md={12} lg={9}>
           <Box>

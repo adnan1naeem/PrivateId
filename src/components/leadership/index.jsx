@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 export const Leadership = () => {
   const classes = useStyles();
   return (
-    <Box bgcolor="#F3F3F3" pt={4} pb={8}>
+    <Box bgcolor="#F3F3F3" pt={4} pb={8} id="leadership">
       <Box>
         <Box className={classes.heading}>Leadership</Box>
       </Box>

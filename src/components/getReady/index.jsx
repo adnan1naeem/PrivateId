@@ -116,6 +116,9 @@ const useStyles = makeStyles((theme) => ({
       top: "-721px",
       marginBottom: -70,
     },
+    [theme.breakpoints.up("xl")]: {
+      top: "-142px",
+    },
   },
 }));
 export const GetReady = () => {
@@ -132,12 +135,18 @@ export const GetReady = () => {
               </Box>
               <Box className={classes.detail}>
                 It is easy to get started with pre-built AWS solutions, Wasm
-                modules and SDKs for every use case.
+                modules and SDKs.
               </Box>
             </Box>
-            <Box>
-              <Button className={classes.btn}>Sign up</Button>
-            </Box>
+            <a
+              href="https://aws.amazon.com/marketplace/pp/prodview-7llim6nzt656u"
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+              <Box>
+                <Button className={classes.btn}>Sign up</Button>
+              </Box>
+            </a>
           </Box>
         </Box>
       </Grid>

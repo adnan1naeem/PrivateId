@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "18px",
       fontSize: 12,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 30,
+      lineHeight: "38px",
+    },
   },
   circul: {
     backgroundColor: " #2A3D80",

@@ -26,11 +26,19 @@ const useStyles = makeStyles((theme) => ({
     color: "#0B216E",
     lineHeight: "58px",
     fontFamily: "DM Sans",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 75,
+      fontWeight: 700,
+      lineHeight: "60px",
+    },
   },
   padding: {
     padding: 55,
     paddingLeft: "10%",
     paddingRight: "10%",
+    [theme.breakpoints.up("xl")]: {
+      padding: 75,
+    },
   },
   seeMore: {
     fontWeight: 700,
@@ -50,6 +58,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       marginTop: "0px",
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 40,
+      width: 400,
+      height: 126,
+      borderRadius: 77,
+      lineHeight: "40px",
+    },
   },
   dFlex: {
     display: "flex",
@@ -60,6 +75,9 @@ const useStyles = makeStyles((theme) => ({
     top: -400,
     [theme.breakpoints.only("xs")]: {
       top: -716,
+    },
+    [theme.breakpoints.up("xl")]: {
+      top: "-153px",
     },
   },
 }));
@@ -109,8 +127,7 @@ const card = [
   },
   {
     image: remote,
-    heading:
-      "Lightweight Verified Identity, Remote Onboarding and Authentication ",
+    heading: "Verified Identity and Remote Onboarding ",
 
     detail:
       "Verify customers’ and employees’ identity with face, voice, Drivers Licenses, Passport, National ID Card and/or Credit Card. Fully integrated with Amazon Cognito. ",
@@ -185,7 +202,7 @@ const card = [
   },
   {
     image: voice,
-    heading: "Continuous Voice Authentication and Identification ",
+    heading: "Continuous Voice Authentication  ",
 
     detail:
       "Continuously authenticates voice every 3 seconds in IVR, live conversations and call recordings. Automatically invokes 1:n speaker identification when a new voice appears.",

@@ -30,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       top: -651,
     },
+    [theme.breakpoints.up("xl")]: {
+      top: "-55px",
+      minHeight: "0vh",
+    },
   },
   iPadView: {
     display: "flex",
@@ -46,15 +50,20 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       fontSize: 41,
       marginTop: 50,
-      [theme.breakpoints.down("sm")]: {
-        fontSize: 22,
-        lineHeight: "24px",
-      },
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 22,
+      lineHeight: "24px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 70,
+      lineHeight: "77px",
     },
   },
   subTitle: {
     fontWeight: 700,
-    fontSize: 45,
+    fontSize: 43,
     color: "#00ABBA",
     lineHeight: "66px",
     fontFamily: "DM Sans",
@@ -65,6 +74,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: 24,
       color: "#0B216E",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 48,
+      lineHeight: "68px",
     },
   },
   detail: {
@@ -83,6 +96,13 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
       lineHeight: "18px",
     },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 25,
+      lineHeight: "24px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 25,
+    },
   },
   mt: {
     padding: "5%",
@@ -100,12 +120,19 @@ const useStyles = makeStyles((theme) => ({
       marginRight: 0,
     },
   },
+  minHeight: {
+    minHeight: "135vh",
+    backgroundColor: "rgb(42 61 128 / 81%)",
+    [theme.breakpoints.up("xl")]: {
+      minHeight: "0vh",
+    },
+  },
 }));
 export const VoiceAuthentication = () => {
   const classes = useStyles();
   return (
     <Box className={classes.bgImg} id="authentication">
-      <Box minHeight="135vh" bgcolor="rgb(42 61 128 / 81%)">
+      <Box className={classes.minHeight}>
         <Grid
           container
           className={classes.mt}
@@ -116,7 +143,7 @@ export const VoiceAuthentication = () => {
           <Grid item xs={11} md={10} lg={5} xl={4} className={classes.iPadView}>
             <Box className={classes.title}>CONTINUOUS VOICE AUTHENTICATION</Box>
             <Box>
-              <Link className={classes.subTitle}>For AMAZON CONNECT</Link>
+              <Link className={classes.subTitle}>For AMAZON CONNECT®</Link>
             </Box>
             <Box className={classes.detail}>
               Identifies and authenticates your customer’s voice every 3 seconds

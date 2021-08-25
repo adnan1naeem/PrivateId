@@ -38,9 +38,15 @@ const useStyles = makeStyles((theme) => ({
     height: 61,
     width: 311,
     flex: 1,
+    paddingLeft: 80,
     [theme.breakpoints.only("xs")]: {
       height: 30,
       width: 152,
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: 150,
+      width: 400,
+      paddingLeft: 225,
     },
   },
   padding: {
@@ -48,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     [theme.breakpoints.only("xs")]: {
       padding: "0px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      padding: "20",
     },
   },
 
@@ -111,11 +120,20 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 180,
     padding: 10,
     marginLeft: 100,
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 30,
+      padding: 30,
+    },
   },
   dFlex: {
     display: "flex",
     [theme.breakpoints.only("xs")]: {
       display: "flex",
+    },
+  },
+  flex: {
+    [theme.breakpoints.only("xs")]: {
+      flex: 1,
     },
   },
 }));
@@ -204,15 +222,13 @@ export default function Appbar({ hidecontent }) {
     <div className={classes.grow}>
       <AppBar position="static" style={{ backgroundColor: "#0B216F" }}>
         <Box className={classes.dFlex}>
-          <Hidden lgUp>
-            <MenuDrawer />
-          </Hidden>
-
           <Toolbar className={classes.padding}>
             <Link to="/" style={{ flex: 1 }}>
               <img className={classes.logo} src={webLogo} alt="logo" />
             </Link>
-
+            <Hidden lgUp>
+              <MenuDrawer />
+            </Hidden>
             <div className={classes.dFlex}>
               <Hidden mdDown className={classes.flex}>
                 {!hidecontent && (

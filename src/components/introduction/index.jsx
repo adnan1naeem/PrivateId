@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: `no-repeat`,
     backgroundPositionX: "-3px",
     backgroundPositionY: "bottom",
+
     [theme.breakpoints.down("lg")]: {
       backgroundImage: `url(${bgGradientMd})`,
       backgroundPositionY: "top",
@@ -38,6 +39,10 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "28px",
       width: "100%",
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 134,
+      lineHeight: "136px",
+    },
   },
   btn: {
     fontWeight: 700,
@@ -63,6 +68,11 @@ const useStyles = makeStyles((theme) => ({
       position: "relative",
       bottom: "-137px",
     },
+    [theme.breakpoints.up("xl")]: {
+      width: 375,
+      height: 133,
+      fontSize: 40,
+    },
   },
   pt: {
     paddingTop: 115,
@@ -70,6 +80,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       paddingTop: 30,
       paddingBottom: 122,
+    },
+    [theme.breakpoints.only("xl")]: {
+      paddingTop: 206,
+      paddingBottom: 267,
     },
   },
   dFlex: {
@@ -81,16 +95,16 @@ const useStyles = makeStyles((theme) => ({
 export const Introduction = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.container}>
+    <Box className={classes.container} id="introduction">
       <Grid
         container
         justifyContent="center"
         alignItems="center"
         className={classes.pt}
       >
-        <Grid item xs={10} md={10} lg={5}>
+        <Grid item xs={10} md={10} lg={5} xl={5}>
           <Box className={classes.description}>
-            Continuous authentication for a surprising and delightful customer
+            Decentralized biometrics  for a surprising and delightful customer
             experience
           </Box>
           <Hidden mdDown>

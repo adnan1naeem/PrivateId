@@ -41,15 +41,16 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData("0-1M Requests/Month  ", " $1.00", "$0.0010"),
-  createData("1M-10M Requests/Month", "$0.80", "$0.0010"),
-  createData("10M-100M Requests/Month", "$0.60", "$0.0010"),
-  createData("Over 100M Requests/Month", "$0.40", "$0.0010"),
+  createData("0-1M Requests/Month  ", "$0.0010"),
+  createData("1M-10M Requests/Month", "$0.0008"),
+  createData("10M-100M Requests/Month", ".$0.0006"),
+  createData("Over 100M Requests/Month", "$0.004"),
 ];
 
 const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 700,
+    marginTop: 30,
     [theme.breakpoints.down("sm")]: {
       minWidth: 280,
     },
@@ -68,6 +69,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 18,
       marginTop: "0px",
       lineHeight: "15px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 70,
     },
   },
   detail: {
@@ -175,10 +179,13 @@ const useStyles = makeStyles((theme) => ({
   },
   containerPosition: {
     position: "relative",
-    top: -324,
+    top: -415,
     [theme.breakpoints.only("xs")]: {
       top: -605,
       marginBottom: -305,
+    },
+    [theme.breakpoints.up("xl")]: {
+      top: -210,
     },
   },
 }));
@@ -196,10 +203,6 @@ export default function GoPricing() {
         <Grid xs={10} item lg={9}>
           <Box className={classes.dFlex}>
             <Box className={classes.header}>PAY-AS-YOU-GO PRICING</Box>
-            <Box className={classes.detail}>
-              We know the best solution for all of your business ideas and we
-              can help you solve all business problems
-            </Box>
           </Box>
 
           <Table className={classes.table} aria-label="customized table">
@@ -209,7 +212,7 @@ export default function GoPricing() {
                   Tier
                 </StyledTableCell>
                 <StyledTableCell>Description</StyledTableCell>
-                <StyledTableCell>Per Each 1000 Requests </StyledTableCell>
+
                 <StyledTableCell className={classes.headerRadiusLastColumn}>
                   Each Request
                 </StyledTableCell>
@@ -227,9 +230,6 @@ export default function GoPricing() {
                   <StyledTableCell className={classes.requestItem} align="left">
                     {row.calories}
                   </StyledTableCell>
-                  <StyledTableCell className={classes.requestItem} align="left">
-                    {row.fat}
-                  </StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>
@@ -242,9 +242,11 @@ export default function GoPricing() {
                 for details.
               </Box>
             </Hidden>
-            <Box className={classes.message}>
-              There are no upfront costs and no hardware to buy.
-            </Box>
+            <Hidden lgUp>
+              <Box className={classes.message}>
+                There are no upfront costs and no hardware to buy.
+              </Box>
+            </Hidden>
           </Box>
         </Grid>
       </Grid>

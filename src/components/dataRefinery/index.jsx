@@ -23,6 +23,11 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 500,
       lineHeight: "19px",
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 49,
+      fontWeight: 500,
+      lineHeight: "56px",
+    },
   },
   detail: {
     fontWeight: 400,
@@ -35,6 +40,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       fontSize: 12,
       lineHeight: "16px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 35,
+      width: "91%",
+      lineHeight: "40px",
     },
   },
   bgImg: {
@@ -49,6 +59,9 @@ const useStyles = makeStyles((theme) => ({
     top: -422,
     [theme.breakpoints.only("xs")]: {
       top: -508,
+    },
+    [theme.breakpoints.up("xl")]: {
+      top: "-350px",
     },
   },
   bgImgAboutUs: {
@@ -102,7 +115,7 @@ export const DataRefinery = ({
       justifyContent="center"
     >
       <Hidden mdDown>
-        <Grid item xs={10} lg={5}>
+        <Grid item xs={10} lg={5} xl={6}>
           <Box>
             <iframe
               width="560"
@@ -123,13 +136,9 @@ export const DataRefinery = ({
         </Grid>
         <Grid item lg={1} />
       </Hidden>
-      <Grid item xs={10} lg={5}>
-        <Hidden mdDown>
-          <Box className={classes.heading}>{title1}</Box>
-        </Hidden>
-        <Box className={classes.heading}>
-          A data refinery, built to privately identify every individual
-        </Box>
+      <Grid item xs={10} lg={5} xl={4}>
+        <Box className={classes.heading}>{title1}</Box>
+
         <Box className={classes.detail}>{heading1}</Box>
         <Box className={classes.heading}> {title2}</Box>
         <Box>
@@ -143,7 +152,7 @@ export const DataRefinery = ({
       </Grid>
 
       <Hidden lgUp>
-        <Grid item xs={10} lg={5}>
+        <Grid item xs={10} lg={5} xl={4}>
           <Box>
             <iframe
               width="560"

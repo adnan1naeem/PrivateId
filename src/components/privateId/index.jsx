@@ -14,6 +14,9 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    [theme.breakpoints.only("xl")]: {
+      flex: 1,
+    },
   },
   paper: {
     marginRight: theme.spacing(2),
@@ -26,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
     whiteSpace: "normal",
     maxWidth: 224,
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 21,
+      lineHeight: "35px",
+    },
   },
   idTitle: {
     color: "#FFFFFF",
@@ -34,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontFamily: "DM Sans",
     textTransform: "inherit",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 50,
+    },
   },
   dflex: {
     display: "flex",
@@ -47,6 +57,24 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 20,
     paddingRight: 20,
     borderRadius: 20,
+  },
+  icon: {
+    fontSize: "1.5rem",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "3.5rem",
+    },
+  },
+
+  popper: {
+    [theme.breakpoints.up("xl")]: {
+      top: 60,
+    },
+  },
+  padding: {
+    padding: 20,
+    [theme.breakpoints.up("xl")]: {
+      padding: 30,
+    },
   },
 }));
 
@@ -97,7 +125,7 @@ export default function PrivateId() {
           >
             private ID
           </Button>
-          <KeyboardArrowDownIcon />
+          <KeyboardArrowDownIcon className={classes.icon} />
         </div>
         <Popper
           open={open}
@@ -117,7 +145,7 @@ export default function PrivateId() {
               <Paper className={classes.margin}>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList
-                    style={{ padding: 20 }}
+                    className={classes.padding}
                     autoFocusItem={open}
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}

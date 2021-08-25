@@ -1,15 +1,13 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Hidden, Typography } from "@material-ui/core";
+import { Box, ButtonBase, Hidden, Typography } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import phn from "../../assets/phn.png";
 import en from "../../assets/envelop.png";
-import yt from "../../assets/youtube.png";
 import stack from "../../assets/stack.png";
 import tracker from "../../assets/tracker.png";
 import api from "../../assets/api.png";
-import patent from "../../assets/patent.png";
 import MobileFooter from "../mobileFooter";
 
 const useStyles = makeStyles((theme) => ({
@@ -148,34 +146,89 @@ export const WebFooter = () => {
               <Grid item lg={3}>
                 <Typography className={classes.heading}>Private ID</Typography>
                 <Box>
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.privateitems}>Overview</Box>
-                  </Box>
-
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.privateitems}>Features</Box>
-                  </Box>
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.privateitems}>
-                      {" "}
-                      Continuous Voice Authentication for Amazon Connect®
+                  <a
+                    href="#introduction"
+                    component={ButtonBase}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <Box className={classes.circle}></Box>
+                      <Box className={classes.privateitems}>Overview</Box>
                     </Box>
-                  </Box>
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.privateitems}>Pricing</Box>
-                  </Box>
+                  </a>
+                  <a
+                    href="#cards-container"
+                    component={ButtonBase}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <Box className={classes.circle}></Box>
+                      <Box className={classes.privateitems}>Features</Box>
+                    </Box>
+                  </a>
+                  <a
+                    href="#authentication"
+                    component={ButtonBase}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <Box className={classes.circle}></Box>
+                      <Box className={classes.privateitems}>
+                        {" "}
+                        Continuous Voice Authentication for Amazon Connect®
+                      </Box>
+                    </Box>
+                  </a>
+                  <a
+                    href="#pricing"
+                    component={ButtonBase}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <Box className={classes.circle}></Box>
+                      <Box className={classes.privateitems}>Pricing</Box>
+                    </Box>
+                  </a>
                 </Box>
               </Grid>
 
               <Grid item lg={3}>
                 <Typography className={classes.heading}>Company</Typography>
                 <a
+                  href="/about"
+                  component={ButtonBase}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.companyitems}>About Us</Box>
+                  </Box>
+                </a>
+                <a
+                  href="#key-relationship"
+                  component={ButtonBase}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.companyitems}>
+                      Key Relationships
+                    </Box>
+                  </Box>
+                </a>
+                <a
+                  href="#leadership"
+                  component={ButtonBase}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.companyitems}>Leadership</Box>
+                  </Box>
+                </a>
+                <a
                   href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy"
-                  target={"_blank"}
+                  target="_blank"
                   style={{ textDecoration: "none" }}
                 >
                   <Box className={classes.dflex}>
@@ -183,14 +236,25 @@ export const WebFooter = () => {
                     <Box className={classes.companyitems}>Privacy Policy</Box>
                   </Box>
                 </a>
+                <Box className={classes.dflex}>
+                  <Box className={classes.circle}></Box>
+                  <Box className={classes.companyitems}>Terms of Use</Box>
+                </Box>
+                <Box className={classes.dflex}>
+                  <Box className={classes.circle}></Box>
+                  <Box className={classes.companyitems}>
+                    Intellectual Property
+                  </Box>
+                </Box>
                 <a
-                  href="https://github.com/openinfer/PrivateIdentity/wiki/Terms-of-Use"
-                  target="_blank"
                   style={{ textDecoration: "none" }}
+                  href="mailto:support@private.id"
                 >
                   <Box className={classes.dflex}>
                     <Box className={classes.circle}></Box>
-                    <Box className={classes.companyitems}>Terms of Use</Box>
+                    <Box className={classes.companyitems}>
+                      sales@private.id{" "}
+                    </Box>
                   </Box>
                 </a>
               </Grid>
@@ -199,18 +263,7 @@ export const WebFooter = () => {
                 <Typography className={classes.heading}>
                   Stay Connected
                 </Typography>
-                <a
-                  style={{ textDecoration: "none" }}
-                  href="https://www.youtube.com/embed/G33UR87I81E"
-                  target="_blank"
-                >
-                  <Box className={classes.dflex}>
-                    <img src={yt} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>
-                      Private Identity
-                    </Box>
-                  </Box>
-                </a>
+
                 <a
                   style={{ textDecoration: "none" }}
                   href="tel:+1 (800) 123-4567"
@@ -219,7 +272,7 @@ export const WebFooter = () => {
                     <img src={phn} className={classes.image} alt="logo" />
                     <Box className={classes.connecteditems}>
                       {" "}
-                      +1 (800) 123-4567
+                      +1-301-938-6300
                     </Box>
                   </Box>
                 </a>
@@ -229,21 +282,19 @@ export const WebFooter = () => {
                 >
                   <Box className={classes.dflex}>
                     <img src={en} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>Email Us</Box>
+                    <Box className={classes.connecteditems}>api@private.id</Box>
                   </Box>
                 </a>
               </Grid>
 
               <Grid item lg={3}>
                 <Typography className={classes.heading}>Support</Typography>
-                <a
-                  href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
-                  target="_blank "
-                  style={{ textDecoration: "none" }}
-                >
+                <a>
                   <Box className={classes.dflex}>
-                    <img src={stack} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>Stack Overflow</Box>
+                    <img src={api} className={classes.image} alt="logo" />
+                    <Box className={classes.connecteditems}>
+                      API Documentation
+                    </Box>
                   </Box>
                 </a>
                 <a
@@ -256,19 +307,16 @@ export const WebFooter = () => {
                     <Box className={classes.connecteditems}>Issue Tracker</Box>
                   </Box>
                 </a>
-                <Box className={classes.dflex}>
-                  <img src={api} className={classes.image} alt="logo" />
-                  <Box className={classes.connecteditems}>
-                    API Documentation
+                <a
+                  href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
+                  target="_blank "
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box className={classes.dflex}>
+                    <img src={stack} className={classes.image} alt="logo" />
+                    <Box className={classes.connecteditems}>Stack Overflow</Box>
                   </Box>
-                </Box>
-                <Box className={classes.dflex}>
-                  <img src={patent} className={classes.image} alt="logo" />
-                  <Box className={classes.connecteditems}>
-                    {" "}
-                    Intellectual Property/Patents
-                  </Box>
-                </Box>
+                </a>
               </Grid>
 
               <Box className={classes.line}></Box>

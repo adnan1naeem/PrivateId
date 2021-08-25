@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 24,
       marginRight: 24,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 26,
+    },
   },
   Detail: {
     width: "82%",
@@ -37,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
       lineHeight: "15px",
       marginTop: "0px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 22,
     },
   },
   btnFonts: {
@@ -93,11 +99,11 @@ export const Cards = ({ image, heading, detail }) => {
       <Box className={classes.dFlex}>
         <Box className={classes.Detail}>{detail}</Box>
       </Box>
-      <Box className={classes.dFlex}>
+      {/* <Box className={classes.dFlex}>
         <Box>
           <Button className={classes.btnFonts}>read more</Button>
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

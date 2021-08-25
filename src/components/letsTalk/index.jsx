@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Grid,
-  Hidden,
   makeStyles,
   Paper,
   withWidth,
@@ -20,7 +19,11 @@ const useStyles = makeStyles((theme) => ({
     top: -303,
     padding: "5%",
     [theme.breakpoints.down("xs")]: {
-      minHeight: "75vh",
+      minHeight: "68vh",
+    },
+    [theme.breakpoints.up("xl")]: {
+      minHeight: "24vh",
+      top: -150,
     },
   },
   btnFonts: {
@@ -195,6 +198,9 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "DM Sans",
       marginTop: 23,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 80,
+    },
   },
   detail: {
     fontWeight: 400,
@@ -212,36 +218,39 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 12,
       textAlign: "center",
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 30,
+    },
   },
   dflex: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
   },
+  message: {
+    fontSize: 10,
+    marginTop: 10,
+    fontFamily: "Dm Sans",
+    color: "red",
+  },
 }));
 export const LetsTalk = withWidth()(({ width }) => {
   const classes = useStyles();
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [msg, setMsg] = useState("");
   let customerImg = customer;
   if (width === "xs" || width === "md" || width === "sm") {
     customerImg = customerPhone;
   }
   return (
-    <Box className={classes.bgImage}>
+    <Box className={classes.bgImage} id="letstalk">
       <Box className={classes.dflex}>
-        <Box className={classes.inqiury}>Send your inquiry</Box>
-        <Box className={classes.detail}>
-          We provide the best solution for each client to make every business
-          decision, and satisfaction is the main thing. It is an approach that
-          brings together.
-        </Box>
+        <Box className={classes.inqiury}>Let’s Talk!</Box>
+        <Box className={classes.detail}>Start a conversation.</Box>
       </Box>
-      <Hidden lgDown>
-        <Box className={classes.textenter}>
-          <Box className={classes.title}>Let’s Talk!</Box>
-          <Box className={classes.heading}> Start a conversation.</Box>
-        </Box>
-      </Hidden>
+
       <Grid container className={classes.dFlex} justifyContent="center">
         <Grid item xs={11} lg={4} xl={3}>
           <img className={classes.customerImg} src={customerImg} alt="logo" />
@@ -260,18 +269,44 @@ export const LetsTalk = withWidth()(({ width }) => {
               className={classes.input}
               value={name}
               onChange={(e) => {
-                debugger;
                 setName(e.target.value);
               }}
             />
             {name.length > 0 && name.length < 3 && (
-              <Box color="red" fontSize="9">
+              <Box className={classes.message}>
                 Name must have minimum three characters
               </Box>
             )}
-            <input placeholder="Email" className={classes.emailInput} />
-            <input placeholder="Phone" className={classes.phoneInput} />
-            <input placeholder="Message" className={classes.messageInput} />
+            <input
+              placeholder="Email"
+              className={classes.emailInput}
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            {email.length > 0 && !email.includes("@") && (
+              <Box className={classes.message}>Please inter valid email</Box>
+            )}
+            <input
+              placeholder="Phone"
+              className={classes.phoneInput}
+              value={phone}
+              onChange={(e) => {
+                setPhone(e.target.value);
+              }}
+            />
+            {phone.length > 0 && name.length < 12 && (
+              <Box className={classes.message}>Please enter valid number</Box>
+            )}
+            <input
+              placeholder="Message"
+              value={msg}
+              className={classes.messageInput}
+              onChange={(e) => {
+                setMsg(e.target.value);
+              }}
+            />
             <Button className={classes.btnFonts}>Send</Button>
           </Paper>
         </Grid>
