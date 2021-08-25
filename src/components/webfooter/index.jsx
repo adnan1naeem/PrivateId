@@ -118,6 +118,9 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: "-303px",
     marginBottom: -303,
+    [theme.breakpoints.up("xl")]: {
+      top: "-173px",
+    },
   },
   bgClrAboutUs: {
     backgroundColor: "#DEDEDE",
@@ -193,7 +196,7 @@ export const WebFooter = () => {
               </Grid>
 
               <Grid item lg={3}>
-                <Typography className={classes.heading}>Company</Typography>
+                <Box className={classes.heading}>Company</Box>
                 <a
                   href="/about"
                   component={ButtonBase}
