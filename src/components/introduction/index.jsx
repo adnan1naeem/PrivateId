@@ -39,9 +39,11 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "28px",
       width: "100%",
     },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 134,
-      lineHeight: "136px",
+
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 35,
+      lineHeight: "45px",
+      width: "109%",
     },
   },
   btn: {
@@ -68,10 +70,13 @@ const useStyles = makeStyles((theme) => ({
       position: "relative",
       bottom: "-137px",
     },
-    [theme.breakpoints.up("xl")]: {
-      width: 375,
-      height: 133,
-      fontSize: 40,
+
+    [theme.breakpoints.only("lg")]: {
+      width: 155,
+      height: 50,
+      fontSize: 12,
+      fontWeight: 400,
+      borderRadius: 49,
     },
   },
   pt: {
@@ -96,37 +101,41 @@ export const Introduction = () => {
   const classes = useStyles();
   return (
     <Box className={classes.container} id="introduction">
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        className={classes.pt}
-      >
-        <Grid item xs={10} md={10} lg={5} xl={5}>
-          <Box className={classes.description}>
-            Decentralized biometrics  for a surprising and delightful customer
-            experience
-          </Box>
-          <Hidden mdDown>
-            <Button className={classes.btn}>Get Started</Button>
-          </Hidden>
-        </Grid>
-        <Grid item lg={1} />
-        <Grid item xs={10} md={7} lg={4}>
-          <Hidden xsDown>
-            <img src={webIntro} width="100%" alt="logo" />
-          </Hidden>
-          <Hidden smUp>
-            <Box className={classes.dFlex}>
-              <img src={mobileIcons} alt="" />
-            </Box>
-          </Hidden>
+      <Grid container justifyContent="center">
+        <Grid item xs={12} xl={7} lg={7}>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            className={classes.pt}
+          >
+            <Grid item xs={10} md={10} lg={5} xl={5}>
+              <Box className={classes.description}>
+                Decentralized biometrics  for a surprising and delightful
+                customer experience
+              </Box>
+              <Hidden mdDown>
+                <Button className={classes.btn}>Get Started</Button>
+              </Hidden>
+            </Grid>
+            <Grid item lg={1} />
+            <Grid item xs={10} md={7} lg={4}>
+              <Hidden xsDown>
+                <img src={webIntro} width="100%" alt="logo" />
+              </Hidden>
+              <Hidden smUp>
+                <Box className={classes.dFlex}>
+                  <img src={mobileIcons} alt="" />
+                </Box>
+              </Hidden>
 
-          <Hidden lgUp>
-            <Box display="flex" justifyContent="center">
-              <Button className={classes.btn}>Get Started</Button>
-            </Box>
-          </Hidden>
+              <Hidden lgUp>
+                <Box display="flex" justifyContent="center">
+                  <Button className={classes.btn}>Get Started</Button>
+                </Box>
+              </Hidden>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Box>

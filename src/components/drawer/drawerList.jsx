@@ -5,7 +5,7 @@ import tracker from "../../assets/tracker.png";
 import api from "../../assets/api.png";
 import ListItem from "@material-ui/core/ListItem";
 import { Box, ButtonBase } from "@material-ui/core";
-
+import webLogo from "../../assets/webLogo.svg";
 const useStyles = makeStyles((theme) => ({
   font: {
     fontFamily: "Dm Sans",
@@ -48,6 +48,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: 450,
   },
+  dFlex: {
+    display: "flex",
+    width: 450,
+    marginTop: 10,
+  },
   heading: {
     paddingTop: "4rem",
     margin: 10,
@@ -74,9 +79,13 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 5,
     width: "63%",
   },
+  logoFonts: {
+    marginTop: 20,
+    height: 58,
+  },
 }));
 
-export default function DrawerList() {
+export default function DrawerList({ onClose }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState([false, false, false]);
 
@@ -89,140 +98,165 @@ export default function DrawerList() {
   return (
     <ul>
       <Box>
-        <Box className={classes.heading}>Private ID</Box>
-        <a
-          href="/introduction"
-          component={ButtonBase}
-          style={{ textDecoration: "none" }}
-        >
-          <Box className={classes.dflex}>
-            <Box className={classes.circle}></Box>
-            <Box className={classes.privateitems}>Overview</Box>
-          </Box>
-        </a>
-
-        <a
-          href="#cards-container"
-          component={ButtonBase}
-          style={{ textDecoration: "none" }}
-        >
-          <Box className={classes.dflex}>
-            <Box className={classes.circle}></Box>
-            <Box className={classes.privateitems}>Features</Box>
-          </Box>
-        </a>
-
-        <a
-          href="#authentication"
-          component={ButtonBase}
-          style={{ textDecoration: "none" }}
-        >
-          <Box className={classes.dflex}>
-            <Box className={classes.circle}></Box>
-            <Box className={classes.privateitems}>
-              {" "}
-              Continuous Voice Authentication for Amazon Connect®
-            </Box>
-          </Box>
-        </a>
-
-        <a
-          href="#pricing"
-          component={ButtonBase}
-          style={{ textDecoration: "none" }}
-        >
-          <Box className={classes.dflex}>
-            <Box className={classes.circle}></Box>
-            <Box className={classes.privateitems}>Pricing</Box>
-          </Box>
-        </a>
-
-        <a
-          href="#pricing"
-          component={ButtonBase}
-          style={{ textDecoration: "none" }}
-        >
-          <Box className={classes.dflex}>
-            <Box className={classes.circle}></Box>
-            <Box className={classes.privateitems}>Contact Us</Box>
-          </Box>
-        </a>
-      </Box>
-
-      <ListItem button onClick={() => handleClick(1)}>
         <Box>
-          <Box className={classes.heading}>Support</Box>
-          <a>
-            <Box className={classes.dflex}>
-              <img src={api} className={classes.image} alt="logo" />
-              <Box className={classes.connecteditems}>API Documentation</Box>
+          <img className={classes.logoFonts} src={webLogo} alt="" />
+        </Box>
+        <Box>
+          <a
+            href="/#introduction"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+            onClick={onClose}
+          >
+            <Box className={classes.dFlex}>
+              <Box className={classes.circle}></Box>
+              <Box className={classes.privateitems}>Overview</Box>
             </Box>
           </a>
+        </Box>
+
+        <Box>
           <a
-            href="https://github.com/openinfer/PrivateIdentity/issues"
+            href="/#cards-container"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+            onClick={onClose}
+          >
+            <Box className={classes.dflex}>
+              <Box className={classes.circle}></Box>
+              <Box className={classes.privateitems}>Features</Box>
+            </Box>
+          </a>
+        </Box>
+        <Box>
+          <a
+            href="#authentication"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+          >
+            <Box className={classes.dflex}>
+              <Box className={classes.circle}></Box>
+              <Box className={classes.privateitems}>
+                {" "}
+                Continuous Voice Authentication for Amazon Connect®
+              </Box>
+            </Box>
+          </a>
+        </Box>
+        <Box>
+          <a
+            href="#pricing"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+          >
+            <Box className={classes.dflex}>
+              <Box className={classes.circle}></Box>
+              <Box className={classes.privateitems}>Pricing</Box>
+            </Box>
+          </a>
+        </Box>
+        <Box>
+          <a
+            href="#pricing"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+          >
+            <Box className={classes.dflex}>
+              <Box className={classes.circle}></Box>
+              <Box className={classes.privateitems}>Contact Us</Box>
+            </Box>
+          </a>
+        </Box>
+      </Box>
+
+      <Box button onClick={() => handleClick(1)}>
+        <Box>
+          <Box className={classes.heading}>Support</Box>
+          <Box>
+            <a>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.connecteditems}>API Documentation</Box>
+              </Box>
+            </a>
+          </Box>
+          <Box>
+            <a
+              href="https://github.com/openinfer/PrivateIdentity/issues"
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.connecteditems}>Issue Tracker</Box>
+              </Box>
+            </a>
+          </Box>
+          <Box>
+            <a
+              href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
+              target="_blank "
+              style={{ textDecoration: "none" }}
+            >
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.connecteditems}>Stack Overflow</Box>
+              </Box>
+            </a>
+          </Box>
+        </Box>
+      </Box>
+
+      <Box style={{ display: "flex", flexDirection: "column" }}>
+        <Box className={classes.heading}>Company</Box>
+        <Box>
+          <a
+            href="/about"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+          >
+            <Box className={classes.dflex}>
+              <Box className={classes.circle}></Box>
+              <Box className={classes.companyitems}>About Us</Box>
+            </Box>
+          </a>
+        </Box>
+        <Box>
+          <a
+            href="/about#key-relationship"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+          >
+            <Box className={classes.dflex}>
+              <Box className={classes.circle}></Box>
+              <Box className={classes.companyitems}>Key Relationships</Box>
+            </Box>
+          </a>
+        </Box>
+        <Box>
+          <a
+            href="/about#leadership"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+          >
+            <Box className={classes.dflex}>
+              <Box className={classes.circle}></Box>
+              <Box className={classes.companyitems}>Leadership</Box>
+            </Box>
+          </a>
+        </Box>
+        <Box>
+          <a
+            href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
             <Box className={classes.dflex}>
-              <img src={tracker} className={classes.image} alt="logo" />
-              <Box className={classes.connecteditems}>Issue Tracker</Box>
-            </Box>
-          </a>
-          <a
-            href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
-            target="_blank "
-            style={{ textDecoration: "none" }}
-          >
-            <Box className={classes.dflex}>
-              <img src={stack} className={classes.image} alt="logo" />
-              <Box className={classes.connecteditems}>Stack Overflow</Box>
+              <Box className={classes.circle}></Box>
+              <Box className={classes.companyitems}>Privacy Policy</Box>
             </Box>
           </a>
         </Box>
-      </ListItem>
-
-      <Box style={{ display: "flex", flexDirection: "column" }}>
-        <Box className={classes.heading}>Company</Box>
-        <a
-          href="/about"
-          component={ButtonBase}
-          style={{ textDecoration: "none" }}
-        >
-          <Box className={classes.dflex}>
-            <Box className={classes.circle}></Box>
-            <Box className={classes.companyitems}>About Us</Box>
-          </Box>
-        </a>
-        <a
-          href="#key-relationship"
-          component={ButtonBase}
-          style={{ textDecoration: "none" }}
-        >
-          <Box className={classes.dflex}>
-            <Box className={classes.circle}></Box>
-            <Box className={classes.companyitems}>Key Relationships</Box>
-          </Box>
-        </a>
-        <a
-          href="#leadership"
-          component={ButtonBase}
-          style={{ textDecoration: "none" }}
-        >
-          <Box className={classes.dflex}>
-            <Box className={classes.circle}></Box>
-            <Box className={classes.companyitems}>Leadership</Box>
-          </Box>
-        </a>
-        <a
-          href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy"
-          target="_blank"
-          style={{ textDecoration: "none" }}
-        >
-          <Box className={classes.dflex}>
-            <Box className={classes.circle}></Box>
-            <Box className={classes.companyitems}>Privacy Policy</Box>
-          </Box>
-        </a>
         <Box className={classes.dflex}>
           <Box className={classes.circle}></Box>
           <Box className={classes.companyitems}>Terms of Use</Box>

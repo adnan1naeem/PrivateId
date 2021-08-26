@@ -58,12 +58,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       marginTop: "0px",
     },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 40,
-      width: 400,
-      height: 126,
-      borderRadius: 77,
-      lineHeight: "40px",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 10,
+      fontWeight: 500,
+      width: 160,
+      height: 42,
     },
   },
   dFlex: {
@@ -219,37 +218,46 @@ export const Features = () => {
   }, [showMore]);
 
   return (
-    <Box className={classes.position} id="cards-container">
-      <Box className={classes.dFlex}>
-        <Box className={classes.title}>Features</Box>
-        <Box></Box>
-      </Box>
-      <Grid
-        container
-        spacing={4}
-        className={classes.padding}
-        justifyContent="center"
-      >
-        {cardsData.map((item) => (
-          <Grid item lg={4} sm={6} xs={12}>
-            {" "}
-            <Cards
-              image={item.image}
-              heading={item.heading}
-              detail={item.detail}
-            />
+    <Grid
+      container
+      justifyContent="center"
+      className={classes.position}
+      id="cards-container"
+    >
+      <Grid item xs={12} xl={6} lg={6}>
+        <Box>
+          <Box className={classes.dFlex}>
+            <Box className={classes.title}>Features</Box>
+            <Box></Box>
+          </Box>
+          <Grid
+            container
+            spacing={4}
+            className={classes.padding}
+            justifyContent="center"
+          >
+            {cardsData.map((item) => (
+              <Grid item lg={4} sm={6} xs={12}>
+                {" "}
+                <Cards
+                  image={item.image}
+                  heading={item.heading}
+                  detail={item.detail}
+                />
+              </Grid>
+            ))}
           </Grid>
-        ))}
+          <Box className={classes.dFlex}>
+            <Button
+              className={classes.seeMore}
+              onClick={() => setShowMore(!showMore)}
+              href={showMore ? "#cards-container" : ""}
+            >
+              {showMore ? "See less" : "See more"}
+            </Button>
+          </Box>
+        </Box>
       </Grid>
-      <Box className={classes.dFlex}>
-        <Button
-          className={classes.seeMore}
-          onClick={() => setShowMore(!showMore)}
-          href={showMore ? "#cards-container" : ""}
-        >
-          {showMore ? "See less" : "See more"}
-        </Button>
-      </Box>
-    </Box>
+    </Grid>
   );
 };

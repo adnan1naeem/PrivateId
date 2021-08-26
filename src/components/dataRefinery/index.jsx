@@ -2,7 +2,6 @@ import { Box, Grid, Hidden, makeStyles } from "@material-ui/core";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import webDataRef from "../../assets/webDataRef.png";
-import videoImg from "../../assets/videoImg.png";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -23,10 +22,11 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 500,
       lineHeight: "19px",
     },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 49,
-      fontWeight: 500,
-      lineHeight: "56px",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 18,
+      fontWeight: 400,
+      lineHeight: "25px",
+      width: "133%",
     },
   },
   detail: {
@@ -41,10 +41,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
       lineHeight: "16px",
     },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 35,
-      width: "91%",
-      lineHeight: "40px",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+      lineHeight: "20px",
+      width: "139%",
     },
   },
   bgImg: {
@@ -74,6 +74,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       paddingTop: 30,
     },
+    [theme.breakpoints.only("lg")]: {
+      backgroundSize: "none",
+    },
   },
   imgStyle: {
     boxShadow: "29px 20px 0px #0060d5",
@@ -81,6 +84,10 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 400,
     [theme.breakpoints.only("xs")]: {
       boxShadow: "13px 14px 0px #0060d5",
+    },
+    [theme.breakpoints.only("lg")]: {
+      height: 200,
+      minHeight: 0,
     },
   },
   handleMargin: {
@@ -95,7 +102,7 @@ export const DataRefinery = ({
   title2,
   heading1,
   heading2,
-  description,
+
   image,
   description_about,
 }) => {
@@ -108,75 +115,74 @@ export const DataRefinery = ({
     pathname === "/about" ? classes.bgImgAboutUs : classes.bgImg;
 
   return (
-    <Grid
-      container
-      spacing={4}
-      className={containerClass}
-      justifyContent="center"
-    >
-      <Hidden mdDown>
-        <Grid item xs={10} lg={5} xl={6}>
-          <Box>
-            <iframe
-              width="560"
-              height="315"
-              className={classes.imgStyle}
-              src={videoLink}
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </Box>
-          {description_about && (
-            <Box className={`${classes.detail} ${classes.handleMargin}`}>
-              {description_about}
-            </Box>
-          )}
-        </Grid>
-        <Grid item lg={1} />
-      </Hidden>
-      <Grid item xs={10} lg={5} xl={4}>
-        <Box className={classes.heading}>{title1}</Box>
-
-        <Box className={classes.detail}>{heading1}</Box>
-        <Box className={classes.heading}> {title2}</Box>
-        <Box>
-          <Box className={classes.detail}>{heading2}</Box>
+    <Grid container justifyContent="center" className={containerClass}>
+      <Grid item xs={12} xl={8} lg={6}>
+        <Grid container spacing={4} justifyContent="center">
           <Hidden mdDown>
-            <Box mt={"74px"}>
-              <img src={image} alt="" />
-            </Box>
+            <Grid item xs={10} lg={5} xl={5}>
+              <Box>
+                <iframe
+                  width="560"
+                  height="315"
+                  className={classes.imgStyle}
+                  src={videoLink}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </Box>
+              {description_about && (
+                <Box className={`${classes.detail} ${classes.handleMargin}`}>
+                  {description_about}
+                </Box>
+              )}
+            </Grid>
+            <Grid item lg={1} />
           </Hidden>
-        </Box>
-      </Grid>
+          <Grid item xs={10} lg={5} xl={5}>
+            <Box className={classes.heading}>{title1}</Box>
 
-      <Hidden lgUp>
-        <Grid item xs={10} lg={5} xl={4}>
-          <Box>
-            <iframe
-              width="560"
-              height="315"
-              className={classes.imgStyle}
-              src={videoLink}
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </Box>
-          {description_about && (
-            <Box className={`${classes.detail} ${classes.handleMargin}`}>
-              {description_about}
+            <Box className={classes.detail}>{heading1}</Box>
+            <Box className={classes.heading}> {title2}</Box>
+            <Box>
+              <Box className={classes.detail}>{heading2}</Box>
+              <Hidden mdDown>
+                <Box mt={"74px"}>
+                  <img src={image} alt="" />
+                </Box>
+              </Hidden>
             </Box>
-          )}
+          </Grid>
+
           <Hidden lgUp>
-            <Box mt={"74px"} display="flex" justifyContent="center">
-              <img src={image} alt="" />
-            </Box>
+            <Grid item xs={10} lg={5} xl={4}>
+              <Box>
+                <iframe
+                  width="560"
+                  height="315"
+                  className={classes.imgStyle}
+                  src={videoLink}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </Box>
+              {description_about && (
+                <Box className={`${classes.detail} ${classes.handleMargin}`}>
+                  {description_about}
+                </Box>
+              )}
+              <Hidden lgUp>
+                <Box mt={"74px"} display="flex" justifyContent="center">
+                  <img src={image} alt="" />
+                </Box>
+              </Hidden>
+            </Grid>
           </Hidden>
         </Grid>
-      </Hidden>
+      </Grid>
     </Grid>
   );
 };

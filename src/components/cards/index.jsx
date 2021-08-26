@@ -7,6 +7,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 26,
     background: "#FFFFFF",
     boxShadow: "2px 1px 36px 8px rgba(56, 125, 255, 0.11)",
+    [theme.breakpoints.only("lg")]: {
+      height: 280,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 405,
+    },
   },
   heading: {
     color: "#2A3D80",
@@ -24,8 +30,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 24,
       marginRight: 24,
     },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 26,
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 11,
+      fontWeight: 500,
+      lineHeight: "17px",
     },
   },
   Detail: {
@@ -41,8 +49,11 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "15px",
       marginTop: "0px",
     },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 22,
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 8,
+      fontWeight: 400,
+      lineHeight: " 13px",
+      marginTop: "-21px",
     },
   },
   btnFonts: {
@@ -81,6 +92,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     [theme.breakpoints.down("sm")]: {},
   },
+  img: {
+    [theme.breakpoints.only("lg")]: {
+      width: 82,
+    },
+  },
 }));
 export const Cards = ({ image, heading, detail }) => {
   const classes = useStyles();
@@ -89,7 +105,7 @@ export const Cards = ({ image, heading, detail }) => {
       <Box className={classes.dFlex}>
         <Box>
           <Box pt={2}>
-            <img src={image} alt="logo" />
+            <img className={classes.img} src={image} alt="logo" />
           </Box>
         </Box>
       </Box>

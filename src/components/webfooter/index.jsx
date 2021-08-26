@@ -150,7 +150,7 @@ export const WebFooter = () => {
                 <Typography className={classes.heading}>Private ID</Typography>
                 <Box>
                   <a
-                    href="#introduction"
+                    href="/#introduction"
                     component={ButtonBase}
                     style={{ textDecoration: "none" }}
                   >
@@ -160,7 +160,7 @@ export const WebFooter = () => {
                     </Box>
                   </a>
                   <a
-                    href="#cards-container"
+                    href="/#cards-container"
                     component={ButtonBase}
                     style={{ textDecoration: "none" }}
                   >
@@ -170,7 +170,7 @@ export const WebFooter = () => {
                     </Box>
                   </a>
                   <a
-                    href="#authentication"
+                    href="/#authentication"
                     component={ButtonBase}
                     style={{ textDecoration: "none" }}
                   >
@@ -183,7 +183,7 @@ export const WebFooter = () => {
                     </Box>
                   </a>
                   <a
-                    href="#pricing"
+                    href="/#pricing"
                     component={ButtonBase}
                     style={{ textDecoration: "none" }}
                   >
@@ -208,7 +208,7 @@ export const WebFooter = () => {
                   </Box>
                 </a>
                 <a
-                  href="#key-relationship"
+                  href="/about/#key-relationship"
                   component={ButtonBase}
                   style={{ textDecoration: "none" }}
                 >
@@ -220,7 +220,7 @@ export const WebFooter = () => {
                   </Box>
                 </a>
                 <a
-                  href="#leadership"
+                  href="/about#leadership"
                   component={ButtonBase}
                   style={{ textDecoration: "none" }}
                 >
@@ -249,17 +249,11 @@ export const WebFooter = () => {
                     Intellectual Property
                   </Box>
                 </Box>
-                <a
-                  style={{ textDecoration: "none" }}
-                  href="mailto:support@private.id"
-                >
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.companyitems}>
-                      sales@private.id{" "}
-                    </Box>
-                  </Box>
-                </a>
+
+                <Box className={classes.dflex}>
+                  <Box className={classes.circle}></Box>
+                  <Box className={classes.companyitems}>sales@private.id </Box>
+                </Box>
               </Grid>
 
               <Grid item lg={3}>
@@ -267,27 +261,15 @@ export const WebFooter = () => {
                   Stay Connected
                 </Typography>
 
-                <a
-                  style={{ textDecoration: "none" }}
-                  href="tel:+1 (800) 123-4567"
-                >
-                  <Box className={classes.dflex}>
-                    <img src={phn} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>
-                      {" "}
-                      +1-301-938-6300
-                    </Box>
-                  </Box>
-                </a>
-                <a
-                  style={{ textDecoration: "none" }}
-                  href="mailto:support@private.id"
-                >
-                  <Box className={classes.dflex}>
-                    <img src={en} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>api@private.id</Box>
-                  </Box>
-                </a>
+                <Box className={classes.dflex}>
+                  <img src={phn} className={classes.image} alt="logo" />
+                  <Box className={classes.connecteditems}> +1-301-938-6300</Box>
+                </Box>
+
+                <Box className={classes.dflex}>
+                  <img src={en} className={classes.image} alt="logo" />
+                  <Box className={classes.connecteditems}>api@private.id</Box>
+                </Box>
               </Grid>
 
               <Grid item lg={3}>

@@ -249,6 +249,7 @@ export default function Appbar({ hidecontent }) {
                 <a
                   href="https://aws.amazon.com/marketplace/pp/prodview-7llim6nzt656u"
                   target="_blank"
+                  style={{ textDecoration: "none" }}
                 >
                   <div>
                     <Button className={classes.btnFonts}>GET AN API KEY</Button>

@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  CircularProgress,
   Grid,
   makeStyles,
   Paper,
@@ -10,6 +11,7 @@ import React, { useState } from "react";
 import letstalk from "../../assets/letstalk.png";
 import customerPhone from "../../assets/callweb.png";
 import customer from "../../assets/customer.png";
+import Axios from "axios";
 const useStyles = makeStyles((theme) => ({
   bgImage: {
     backgroundImage: `url(${letstalk})`,
@@ -240,6 +242,36 @@ export const LetsTalk = withWidth()(({ width }) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [msg, setMsg] = useState("");
+  const [sendingMessage, setSendingMessage] = useState(false);
+
+  const handleSendMessage = () => {
+    let data = {
+      name,
+      email_address: email,
+      phone_number: phone,
+      message: msg,
+    };
+
+    let isDataValid =
+      name.length > 2 &&
+      email.length > 0 &&
+      email.includes("@") &&
+      phone.length > 10 &&
+      msg.length > 0;
+
+    if (isDataValid) {
+      setSendingMessage(true);
+      Axios.post("https://apidevel.private.id/trueid/v1.1/contact_us", data)
+        .then((res) => {
+          setSendingMessage(false);
+          debugger;
+        })
+        .catch((err) => {
+          setSendingMessage(false);
+          debugger;
+        });
+    }
+  };
   let customerImg = customer;
   if (width === "xs" || width === "md" || width === "sm") {
     customerImg = customerPhone;
@@ -286,7 +318,7 @@ export const LetsTalk = withWidth()(({ width }) => {
               }}
             />
             {email.length > 0 && !email.includes("@") && (
-              <Box className={classes.message}>Please inter valid email</Box>
+              <Box className={classes.message}>Please enter valid email</Box>
             )}
             <input
               placeholder="Phone"
@@ -296,7 +328,7 @@ export const LetsTalk = withWidth()(({ width }) => {
                 setPhone(e.target.value);
               }}
             />
-            {phone.length > 0 && name.length < 12 && (
+            {phone.length > 0 && phone.length < 12 && (
               <Box className={classes.message}>Please enter valid number</Box>
             )}
             <input
@@ -307,7 +339,16 @@ export const LetsTalk = withWidth()(({ width }) => {
                 setMsg(e.target.value);
               }}
             />
-            <Button className={classes.btnFonts}>Send</Button>
+            <Button
+              className={classes.btnFonts}
+              onClick={handleSendMessage}
+              disabled={sendingMessage}
+            >
+              Send{" "}
+              {sendingMessage && (
+                <CircularProgress style={{ color: "white", marginLeft: 16 }} />
+              )}
+            </Button>
           </Paper>
         </Grid>
       </Grid>

@@ -131,35 +131,53 @@ const useStyles = makeStyles((theme) => ({
 export const VoiceAuthentication = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.bgImg} id="authentication">
-      <Box className={classes.minHeight}>
-        <Grid
-          container
-          className={classes.mt}
-          justifyContent="center"
-          alignItems="center"
-          spacing={4}
-        >
-          <Grid item xs={11} md={10} lg={5} xl={4} className={classes.iPadView}>
-            <Box className={classes.title}>CONTINUOUS VOICE AUTHENTICATION</Box>
-            <Box>
-              <Link className={classes.subTitle}>For AMAZON CONNECT®</Link>
-            </Box>
-            <Box className={classes.detail}>
-              Identifies and authenticates your customer’s voice every 3 seconds
-              with 97% accuracy in IVR, Agent and call recordings
-            </Box>
-            <Box className={classes.width}>
-              {input.map((item) => (
-                <Inputs text={item.text} />
-              ))}
-            </Box>
-          </Grid>
-          <Grid item lg={7} xl={6}>
-            <AuthenticationCards />
-          </Grid>
-        </Grid>
-      </Box>
-    </Box>
+    <Grid
+      container
+      justifyContent="center"
+      className={classes.bgImg}
+      id="authentication"
+    >
+      <Grid item xs={12} xl={6} lg={6}>
+        <Box>
+          <Box className={classes.minHeight}>
+            <Grid
+              container
+              className={classes.mt}
+              justifyContent="center"
+              alignItems="center"
+              spacing={4}
+            >
+              <Grid
+                item
+                xs={11}
+                md={10}
+                lg={5}
+                xl={4}
+                className={classes.iPadView}
+              >
+                <Box className={classes.title}>
+                  CONTINUOUS VOICE AUTHENTICATION
+                </Box>
+                <Box>
+                  <Link className={classes.subTitle}>For AMAZON CONNECT®</Link>
+                </Box>
+                <Box className={classes.detail}>
+                  Identifies and authenticates your customer’s voice every 3
+                  seconds with 97% accuracy in IVR, Agent and call recordings
+                </Box>
+                <Box className={classes.width}>
+                  {input.map((item) => (
+                    <Inputs text={item.text} />
+                  ))}
+                </Box>
+              </Grid>
+              <Grid item lg={7} xl={6}>
+                <AuthenticationCards />
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Grid>
+    </Grid>
   );
 };
