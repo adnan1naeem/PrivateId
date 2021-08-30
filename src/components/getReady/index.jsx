@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
 
     [theme.breakpoints.only("lg")]: {
-      fontSize: 40,
+      fontSize: 20,
     },
     [theme.breakpoints.down("md")]: {
       fontSize: 33,
@@ -44,13 +44,13 @@ const useStyles = makeStyles((theme) => ({
 
     marginLeft: 15,
     [theme.breakpoints.only("lg")]: {
-      fontSize: 40,
+      fontSize: 25,
     },
     [theme.breakpoints.down("md")]: {
       fontSize: 33,
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: 22,
+      fontSize: 25,
     },
   },
   detail: {
@@ -60,11 +60,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
 
     [theme.breakpoints.only("lg")]: {
-      fontSize: 19,
+      fontSize: 15,
+      width: "72%",
     },
-    [theme.breakpoints.down("lg")]: {
-      fontSize: 18,
-    },
+
     [theme.breakpoints.down("xs")]: {
       fontSize: 12,
       marginTop: 4,
@@ -93,6 +92,10 @@ const useStyles = makeStyles((theme) => ({
       width: 120,
       marginTop: 20,
     },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 15,
+      width: 120,
+    },
   },
   dFlex: {
     display: "flex",
@@ -107,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-381px",
     marginBottom: 150,
     [theme.breakpoints.only("lg")]: {
-      top: "-350px",
+      top: "-472px",
     },
     [theme.breakpoints.down("md")]: {
       top: -391,
@@ -117,38 +120,42 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: -70,
     },
     [theme.breakpoints.up("xl")]: {
-      top: "-142px",
+      top: "-106px",
     },
   },
 }));
 export const GetReady = () => {
   const classes = useStyles();
   return (
-    <Grid container justifyContent="center" id="get-ready">
-      <Grid item md={11} lg={9} xs={11}>
-        <Box className={classes.textCenter}>
-          <Box className={classes.bgClr}>
-            <Box>
-              <Box className={classes.dFlex}>
-                <Box className={classes.text1}>Ready to </Box>
-                <Box className={classes.text2}> GET STARTED</Box>
-              </Box>
-              <Box className={classes.detail}>
-                It is easy to get started with pre-built AWS solutions, Wasm
-                modules and SDKs.
+    <Grid container justifyContent="center">
+      <Grid item xs={12} xl={7} lg={12}>
+        <Grid container justifyContent="center" id="get-ready">
+          <Grid item md={11} lg={10} xs={11}>
+            <Box className={classes.textCenter}>
+              <Box className={classes.bgClr}>
+                <Box>
+                  <Box className={classes.dFlex}>
+                    <Box className={classes.text1}>Ready to </Box>
+                    <Box className={classes.text2}> GET STARTED</Box>
+                  </Box>
+                  <Box className={classes.detail}>
+                    It is easy to get started with pre-built AWS solutions, Wasm
+                    modules and SDKs.
+                  </Box>
+                </Box>
+                <a
+                  href="https://aws.amazon.com/marketplace/pp/prodview-7llim6nzt656u"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box>
+                    <Button className={classes.btn}>Sign up</Button>
+                  </Box>
+                </a>
               </Box>
             </Box>
-            <a
-              href="https://aws.amazon.com/marketplace/pp/prodview-7llim6nzt656u"
-              target="_blank"
-              style={{ textDecoration: "none" }}
-            >
-              <Box>
-                <Button className={classes.btn}>Sign up</Button>
-              </Box>
-            </a>
-          </Box>
-        </Box>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );

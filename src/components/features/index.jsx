@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 700,
       lineHeight: "60px",
     },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 30,
+      fontWeight: 700,
+    },
   },
   padding: {
     padding: 55,
@@ -77,6 +81,9 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("xl")]: {
       top: "-153px",
+    },
+    [theme.breakpoints.only("lg")]: {
+      top: "-520px",
     },
   },
 }));
@@ -224,7 +231,7 @@ export const Features = () => {
       className={classes.position}
       id="cards-container"
     >
-      <Grid item xs={12} xl={6} lg={6}>
+      <Grid item xs={12} xl={6} lg={9}>
         <Box>
           <Box className={classes.dFlex}>
             <Box className={classes.title}>Features</Box>

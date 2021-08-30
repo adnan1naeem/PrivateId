@@ -8,13 +8,13 @@ import {
   withWidth,
 } from "@material-ui/core";
 import React, { useState } from "react";
-import letstalk from "../../assets/letstalk.png";
+import talk from "../../assets/talk.png";
 import customerPhone from "../../assets/callweb.png";
 import customer from "../../assets/customer.png";
 import Axios from "axios";
 const useStyles = makeStyles((theme) => ({
   bgImage: {
-    backgroundImage: `url(${letstalk})`,
+    backgroundImage: `url(${talk})`,
     backgroundColor: "#2A3D80",
     minHeight: "100vh",
     position: "relative",
@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       minHeight: "24vh",
       top: -150,
+    },
+    [theme.breakpoints.only("lg")]: {
+      top: -563,
     },
   },
   btnFonts: {
@@ -48,6 +51,10 @@ const useStyles = makeStyles((theme) => ({
       width: 135,
       marginTop: 22,
     },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 14,
+      width: 168,
+    },
   },
   title: {
     fontWeight: 600,
@@ -65,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 32,
   },
   customerImg: {
+    width: "100%",
     borderRadius: 62,
     [theme.breakpoints.down("md")]: {
       width: "100%",
@@ -87,6 +95,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       top: -60,
       borderRadius: 14,
+    },
+    [theme.breakpoints.only("lg")]: {
+      left: -52,
     },
   },
   input: {
@@ -112,6 +123,9 @@ const useStyles = makeStyles((theme) => ({
       padding: 9,
       fontSize: 12,
     },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+    },
   },
   emailInput: {
     color: "#797979",
@@ -131,6 +145,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 23,
     [theme.breakpoints.down("xs")]: {
       padding: 9,
+      fontSize: 12,
+    },
+    [theme.breakpoints.only("lg")]: {
       fontSize: 12,
     },
   },
@@ -154,6 +171,9 @@ const useStyles = makeStyles((theme) => ({
       padding: 9,
       fontSize: 12,
     },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+    },
   },
   messageInput: {
     color: "#797979",
@@ -173,6 +193,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     [theme.breakpoints.down("xs")]: {
       padding: 9,
+      fontSize: 12,
+    },
+    [theme.breakpoints.only("lg")]: {
       fontSize: 12,
     },
   },
@@ -200,8 +223,8 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "DM Sans",
       marginTop: 23,
     },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 80,
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 32,
     },
   },
   detail: {
@@ -220,8 +243,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 12,
       textAlign: "center",
     },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 30,
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 20,
+      marginTop: 9,
     },
   },
   dflex: {
@@ -277,81 +301,95 @@ export const LetsTalk = withWidth()(({ width }) => {
     customerImg = customerPhone;
   }
   return (
-    <Box className={classes.bgImage} id="letstalk">
-      <Box className={classes.dflex}>
-        <Box className={classes.inqiury}>Let’s Talk!</Box>
-        <Box className={classes.detail}>Start a conversation.</Box>
-      </Box>
+    <Grid container justifyContent="center">
+      <Grid item xs={12} xl={6} lg={9}>
+        <Box className={classes.bgImage} id="letstalk">
+          <Box className={classes.dflex}>
+            <Box className={classes.inqiury}>Let’s Talk!</Box>
+            <Box className={classes.detail}>Start a conversation.</Box>
+          </Box>
 
-      <Grid container className={classes.dFlex} justifyContent="center">
-        <Grid item xs={11} lg={4} xl={3}>
-          <img className={classes.customerImg} src={customerImg} alt="logo" />
-        </Grid>
-        <Grid item xs={9} lg={5} xl={4} className={classes.boxShadow}>
-          <Paper
-            component={Box}
-            p={4}
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            borderRadius={14}
-          >
-            <input
-              placeholder="Name"
-              className={classes.input}
-              value={name}
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
-            />
-            {name.length > 0 && name.length < 3 && (
-              <Box className={classes.message}>
-                Name must have minimum three characters
-              </Box>
-            )}
-            <input
-              placeholder="Email"
-              className={classes.emailInput}
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />
-            {email.length > 0 && !email.includes("@") && (
-              <Box className={classes.message}>Please enter valid email</Box>
-            )}
-            <input
-              placeholder="Phone"
-              className={classes.phoneInput}
-              value={phone}
-              onChange={(e) => {
-                setPhone(e.target.value);
-              }}
-            />
-            {phone.length > 0 && phone.length < 12 && (
-              <Box className={classes.message}>Please enter valid number</Box>
-            )}
-            <input
-              placeholder="Message"
-              value={msg}
-              className={classes.messageInput}
-              onChange={(e) => {
-                setMsg(e.target.value);
-              }}
-            />
-            <Button
-              className={classes.btnFonts}
-              onClick={handleSendMessage}
-              disabled={sendingMessage}
-            >
-              Send{" "}
-              {sendingMessage && (
-                <CircularProgress style={{ color: "white", marginLeft: 16 }} />
-              )}
-            </Button>
-          </Paper>
-        </Grid>
+          <Grid container className={classes.dFlex} justifyContent="center">
+            <Grid item xs={11} lg={5} xl={4}>
+              <img
+                className={classes.customerImg}
+                src={customerImg}
+                alt="logo"
+              />
+            </Grid>
+            <Grid item xs={9} lg={5} xl={5} className={classes.boxShadow}>
+              <Paper
+                component={Box}
+                p={4}
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                borderRadius={14}
+              >
+                <input
+                  placeholder="Name"
+                  className={classes.input}
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
+                {name.length > 0 && name.length < 3 && (
+                  <Box className={classes.message}>
+                    Name must have minimum three characters
+                  </Box>
+                )}
+                <input
+                  placeholder="Email"
+                  className={classes.emailInput}
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
+                {email.length > 0 && !email.includes("@") && (
+                  <Box className={classes.message}>
+                    Please enter valid email
+                  </Box>
+                )}
+                <input
+                  placeholder="Phone"
+                  className={classes.phoneInput}
+                  value={phone}
+                  onChange={(e) => {
+                    setPhone(e.target.value);
+                  }}
+                />
+                {phone.length > 0 && phone.length < 12 && (
+                  <Box className={classes.message}>
+                    Please enter valid number
+                  </Box>
+                )}
+                <input
+                  placeholder="Message"
+                  value={msg}
+                  className={classes.messageInput}
+                  onChange={(e) => {
+                    setMsg(e.target.value);
+                  }}
+                />
+                <Button
+                  className={classes.btnFonts}
+                  onClick={handleSendMessage}
+                  disabled={sendingMessage}
+                >
+                  Send{" "}
+                  {sendingMessage && (
+                    <CircularProgress
+                      style={{ color: "white", marginLeft: 16 }}
+                    />
+                  )}
+                </Button>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Box>
       </Grid>
-    </Box>
+    </Grid>
   );
 });

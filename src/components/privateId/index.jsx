@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontFamily: "DM Sans",
     textTransform: "inherit",
-    [theme.breakpoints.up("xl")]: {
+    [theme.breakpoints.only("xl")]: {
       fontSize: 50,
     },
   },

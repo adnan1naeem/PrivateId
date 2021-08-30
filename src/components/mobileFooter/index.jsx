@@ -6,19 +6,22 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { Box, Grid, Hidden } from "@material-ui/core";
+import { Box, ButtonBase, Grid, Hidden } from "@material-ui/core";
 import stack from "../../assets/stack.png";
 import tracker from "../../assets/tracker.png";
 import api from "../../assets/api.png";
-import patent from "../../assets/patent.png";
-import phn from "../../assets/phn.png";
-import en from "../../assets/envelop.png";
-import yt from "../../assets/youtube.png";
 
 const styles = (theme) => ({
   root: {
     width: "100%",
     paddingTop: 48,
+  },
+  circle: {
+    width: 10,
+    marginTop: 13,
+    height: 10,
+    background: "#C4C4C4",
+    borderRadius: 10,
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -30,13 +33,7 @@ const styles = (theme) => ({
     color: "#0B216E",
     fontWeight: 500,
   },
-  bullots: {
-    fontFamily: "Dm Sans",
-    fontSize: 16,
-    color: "#0B216E",
-    fontWeight: 500,
-    marginTop: 5,
-  },
+
   position: {
     position: "relative",
     top: -30,
@@ -64,6 +61,10 @@ const styles = (theme) => ({
     fontWeight: 500,
     marginLeft: 10,
   },
+  dflex: {
+    display: "flex",
+    width: 450,
+  },
   footerfonts: {
     fontFamily: "Dm Sans",
     fontSize: 17,
@@ -81,6 +82,18 @@ const styles = (theme) => ({
     marginBottom: 20,
     marginTop: 20,
   },
+  privateitems: {
+    padding: 10,
+    fontFamily: " DM Sans",
+    fontStyle: "normal",
+    textAlign: "left",
+    fontWeight: 500,
+    fontSize: 20,
+    lineHeight: "100%",
+    color: "#4E4E4E",
+    marginLeft: 5,
+    width: "38%",
+  },
 });
 
 function MobileFooter(props) {
@@ -95,35 +108,35 @@ function MobileFooter(props) {
                 <Typography className={classes.heading}>Private Id </Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
-                <Typography>
-                  <Box>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.circle}></Box>
-                      <Box className={classes.privateitems}>Overview</Box>
-                    </Box>
+                <Box>
+                  <Box
+                    className={classes.dflex}
+                    href="#introduction"
+                    component={ButtonBase}
+                  >
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>Overview</Box>
+                  </Box>
 
-                    <Box className={classes.dflex}>
-                      <Box className={classes.circle}></Box>
-                      <Box className={classes.privateitems}>Features</Box>
-                    </Box>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.circle}></Box>
-                      <Box className={classes.privateitems}>
-                        Private ID for Amazon Connect®{" "}
-                      </Box>
-                    </Box>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.circle}></Box>
-                      <Box className={classes.privateitems}>Pricing</Box>
-                      <Box className={classes.privateitems}>Let’s Talk!</Box>
-                    </Box>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.circle}></Box>
-
-                      <Box className={classes.privateitems}>Let’s Talk!</Box>
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>Features</Box>
+                  </Box>
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>
+                      Private ID for Amazon Connect®
                     </Box>
                   </Box>
-                </Typography>
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>Pricing</Box>
+                  </Box>
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>Let’s Talk!</Box>
+                  </Box>
+                </Box>
               </ExpansionPanelDetails>
             </ExpansionPanel>
           </Grid>

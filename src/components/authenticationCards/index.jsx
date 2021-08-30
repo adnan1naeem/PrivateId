@@ -24,6 +24,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#2A3D80",
     lineHeight: "22px",
     fontFamily: "DM Sans",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 10,
+      lineHeight: "10px",
+      marginTop: 5,
+    },
   },
   historyDetail: {
     fontWeight: 700,
@@ -32,6 +37,12 @@ const useStyles = makeStyles((theme) => ({
     color: "#595E64",
     lineHeight: "15px",
     marginTop: 15,
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 10,
+      lineHeight: "15px",
+      marginTop: 5,
+      fontWeight: 500,
+    },
   },
   conectDetail: {
     fontFamily: "DM Sans",
@@ -41,19 +52,33 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "15px",
     marginTop: 10,
     fontSize: 14,
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 7,
+      marginTop: 5,
+      lineHeight: "13px",
+      fontWeight: 700,
+    },
   },
   conectTitle: {
     fontWeight: 700,
     fontSize: 16,
-
     lineHeight: "15px",
     color: "#2A3D80",
     fontFamily: "DM Sans",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 10,
+    },
   },
   conectImg: {
     width: 232,
     height: 202,
     marginTop: 15,
+
+    [theme.breakpoints.only("lg")]: {
+      width: "100%",
+
+      marginTop: "0px",
+    },
   },
   laptopImg: {
     width: "100%",
@@ -67,6 +92,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     fontSize: 18,
     color: "#2A3D80",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 10,
+      lineHeight: "13px",
+      marginTop: 5,
+    },
   },
   vipDetail: {
     fontWeight: 700,
@@ -76,6 +106,12 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
     marginTop: 15,
     marginBottom: 30,
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 7,
+      marginTop: 5,
+      lineHeight: "13px",
+      fontWeight: 700,
+    },
   },
   dFlex: {
     display: "flex",

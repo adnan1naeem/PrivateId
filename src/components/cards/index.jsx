@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 8,
       fontWeight: 400,
       lineHeight: " 13px",
-      marginTop: "-21px",
+      marginTop: "-35px",
     },
   },
   btnFonts: {

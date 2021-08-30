@@ -41,9 +41,9 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.only("lg")]: {
-      fontSize: 35,
+      fontSize: 40,
       lineHeight: "45px",
-      width: "109%",
+      width: "92%",
     },
   },
   btn: {
@@ -102,14 +102,14 @@ export const Introduction = () => {
   return (
     <Box className={classes.container} id="introduction">
       <Grid container justifyContent="center">
-        <Grid item xs={12} xl={7} lg={7}>
+        <Grid item xs={12} xl={7} lg={8}>
           <Grid
             container
             justifyContent="center"
             alignItems="center"
             className={classes.pt}
           >
-            <Grid item xs={10} md={10} lg={5} xl={5}>
+            <Grid item xs={10} md={10} lg={6} xl={5}>
               <Box className={classes.description}>
                 Decentralized biometrics  for a surprising and delightful
                 customer experience
@@ -118,8 +118,8 @@ export const Introduction = () => {
                 <Button className={classes.btn}>Get Started</Button>
               </Hidden>
             </Grid>
-            <Grid item lg={1} />
-            <Grid item xs={10} md={7} lg={4}>
+
+            <Grid item xs={10} md={7} lg={5}>
               <Hidden xsDown>
                 <img src={webIntro} width="100%" alt="logo" />
               </Hidden>

@@ -50,9 +50,15 @@ const rows = [
 const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 700,
-    marginTop: 30,
+    marginTop: 60,
     [theme.breakpoints.down("sm")]: {
       minWidth: 280,
+    },
+    [theme.breakpoints.down("sm")]: {
+      minWidth: 280,
+    },
+    [theme.breakpoints.only("lg")]: {
+      marginTop: 25,
     },
   },
   header: {
@@ -64,14 +70,12 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
     [theme.breakpoints.down("lg")]: {
       marginTop: 1,
+      fontSize: 30,
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: 18,
       marginTop: "0px",
       lineHeight: "15px",
-    },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 70,
     },
   },
   detail: {
@@ -120,6 +124,11 @@ const useStyles = makeStyles((theme) => ({
       height: 20,
       width: 20,
     },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 20,
+      height: 42,
+      width: 42,
+    },
   },
   requestItem: {
     fontWeight: 700,
@@ -137,6 +146,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 8,
       lineHeight: "13px",
     },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 15,
+    },
   },
   headerRadiusLastColumn: {
     borderTopRightRadius: 20,
@@ -153,6 +165,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: 8,
     },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 8,
+    },
   },
   dot: {
     width: 17,
@@ -163,6 +178,10 @@ const useStyles = makeStyles((theme) => ({
       width: 8,
       height: 8,
     },
+    [theme.breakpoints.only("lg")]: {
+      width: 10,
+      height: 10,
+    },
   },
   dflex: {
     display: "flex",
@@ -170,7 +189,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 49,
     marginBottom: 49,
     [theme.breakpoints.down("lg")]: {
-      marginLeft: 33,
+      marginTop: 20,
     },
     [theme.breakpoints.down("sm")]: {
       marginLeft: 14,
@@ -185,7 +204,10 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: -305,
     },
     [theme.breakpoints.up("xl")]: {
-      top: -210,
+      top: -158,
+    },
+    [theme.breakpoints.only("lg")]: {
+      top: -544,
     },
   },
 }));
@@ -194,62 +216,71 @@ export default function GoPricing() {
   const classes = useStyles();
 
   return (
-    <TableContainer
-      component={Paper}
-      className={classes.containerPosition}
-      elevation={0}
-    >
-      <Grid container justifyContent="center" id="pricing">
-        <Grid xs={10} item lg={9}>
-          <Box className={classes.dFlex}>
-            <Box className={classes.header}>PAY-AS-YOU-GO PRICING</Box>
-          </Box>
-
-          <Table className={classes.table} aria-label="customized table">
-            <TableHead>
-              <TableRow>
-                <StyledTableCell className={classes.headerRadiusFirstColumn}>
-                  Tier
-                </StyledTableCell>
-                <StyledTableCell>Description</StyledTableCell>
-
-                <StyledTableCell className={classes.headerRadiusLastColumn}>
-                  Each Request
-                </StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row, i) => (
-                <StyledTableRow key={row.name}>
-                  <StyledTableCell component="th" scope="row">
-                    <Box className={classes.countStyles}>{i + 1}</Box>
-                  </StyledTableCell>
-                  <StyledTableCell className={classes.requestItem}>
-                    {row.name}
-                  </StyledTableCell>
-                  <StyledTableCell className={classes.requestItem} align="left">
-                    {row.calories}
-                  </StyledTableCell>
-                </StyledTableRow>
-              ))}
-            </TableBody>
-          </Table>
-          <Box className={classes.dflex}>
-            <Box className={classes.dot}></Box>
-            <Hidden mdDown>
-              <Box className={classes.message}>
-                There are no upfront costs and no hardware to buy. Click here
-                for details.
+    <Grid container justifyContent="center">
+      <Grid item xs={12} xl={7} lg={9}>
+        <TableContainer
+          component={Paper}
+          className={classes.containerPosition}
+          elevation={0}
+        >
+          <Grid container justifyContent="center" id="pricing">
+            <Grid xs={10} item lg={9}>
+              <Box className={classes.dFlex}>
+                <Box className={classes.header}>PAY-AS-YOU-GO PRICING</Box>
               </Box>
-            </Hidden>
-            <Hidden lgUp>
-              <Box className={classes.message}>
-                There are no upfront costs and no hardware to buy.
+
+              <Table className={classes.table} aria-label="customized table">
+                <TableHead>
+                  <TableRow>
+                    <StyledTableCell
+                      className={classes.headerRadiusFirstColumn}
+                    >
+                      Tier
+                    </StyledTableCell>
+                    <StyledTableCell>Description</StyledTableCell>
+
+                    <StyledTableCell className={classes.headerRadiusLastColumn}>
+                      Each Request
+                    </StyledTableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.map((row, i) => (
+                    <StyledTableRow key={row.name}>
+                      <StyledTableCell component="th" scope="row">
+                        <Box className={classes.countStyles}>{i + 1}</Box>
+                      </StyledTableCell>
+                      <StyledTableCell className={classes.requestItem}>
+                        {row.name}
+                      </StyledTableCell>
+                      <StyledTableCell
+                        className={classes.requestItem}
+                        align="left"
+                      >
+                        {row.calories}
+                      </StyledTableCell>
+                    </StyledTableRow>
+                  ))}
+                </TableBody>
+              </Table>
+              <Box className={classes.dflex}>
+                <Box className={classes.dot}></Box>
+                <Hidden mdDown>
+                  <Box className={classes.message}>
+                    There are no upfront costs and no hardware to buy. Click
+                    here for details.
+                  </Box>
+                </Hidden>
+                <Hidden lgUp>
+                  <Box className={classes.message}>
+                    There are no upfront costs and no hardware to buy.
+                  </Box>
+                </Hidden>
               </Box>
-            </Hidden>
-          </Box>
-        </Grid>
+            </Grid>
+          </Grid>
+        </TableContainer>
       </Grid>
-    </TableContainer>
+    </Grid>
   );
 }

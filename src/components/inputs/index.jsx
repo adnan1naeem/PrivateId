@@ -20,9 +20,8 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "18px",
       fontSize: 12,
     },
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 30,
-      lineHeight: "38px",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 10,
     },
   },
   circul: {
@@ -30,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
     height: 19,
     width: 19,
     borderRadius: 10,
+    [theme.breakpoints.only("lg")]: {
+      height: 10,
+      width: 10,
+    },
   },
   dFlex: {
     display: "flex",

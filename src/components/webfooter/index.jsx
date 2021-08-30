@@ -135,195 +135,218 @@ export const WebFooter = () => {
     pathname === "/about" ? classes.bgClrAboutUs : classes.bgClr;
 
   return (
-    <Box className={containerClass}>
-      {pathname === "/about" && <Box height={11} bgcolor="#2A3D80" />}
-      <Grid container justifyContent="center">
-        <Grid item xs={10} lg={9}>
-          <Hidden mdDown>
-            <Grid
-              container
-              className={classes.footer}
-              spacing={3}
-              justifyContent="center"
-            >
-              <Grid item lg={3}>
-                <Typography className={classes.heading}>Private ID</Typography>
-                <Box>
-                  <a
-                    href="/#introduction"
-                    component={ButtonBase}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Box className={classes.dflex}>
-                      <Box className={classes.circle}></Box>
-                      <Box className={classes.privateitems}>Overview</Box>
+    <Grid container justifyContent="center">
+      <Grid item xs={12} xl={6} lg={9}>
+        <Box className={containerClass}>
+          {pathname === "/about" && <Box height={11} bgcolor="#2A3D80" />}
+          <Grid container justifyContent="center">
+            <Grid item xs={10} lg={9}>
+              <Hidden mdDown>
+                <Grid
+                  container
+                  className={classes.footer}
+                  spacing={3}
+                  justifyContent="center"
+                >
+                  <Grid item lg={3}>
+                    <Typography className={classes.heading}>
+                      Private ID
+                    </Typography>
+                    <Box>
+                      <a
+                        href="/#introduction"
+                        component={ButtonBase}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Box className={classes.dflex}>
+                          <Box className={classes.circle}></Box>
+                          <Box className={classes.privateitems}>Overview</Box>
+                        </Box>
+                      </a>
+                      <a
+                        href="/#cards-container"
+                        component={ButtonBase}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Box className={classes.dflex}>
+                          <Box className={classes.circle}></Box>
+                          <Box className={classes.privateitems}>Features</Box>
+                        </Box>
+                      </a>
+                      <a
+                        href="/#authentication"
+                        component={ButtonBase}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Box className={classes.dflex}>
+                          <Box className={classes.circle}></Box>
+                          <Box className={classes.privateitems}>
+                            {" "}
+                            Continuous Voice Authentication for Amazon Connect®
+                          </Box>
+                        </Box>
+                      </a>
+                      <a
+                        href="/#pricing"
+                        component={ButtonBase}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Box className={classes.dflex}>
+                          <Box className={classes.circle}></Box>
+                          <Box className={classes.privateitems}>Pricing</Box>
+                        </Box>
+                      </a>
                     </Box>
-                  </a>
-                  <a
-                    href="/#cards-container"
-                    component={ButtonBase}
-                    style={{ textDecoration: "none" }}
-                  >
+                  </Grid>
+
+                  <Grid item lg={3}>
+                    <Box className={classes.heading}>Company</Box>
+                    <a
+                      href="/about"
+                      component={ButtonBase}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Box className={classes.dflex}>
+                        <Box className={classes.circle}></Box>
+                        <Box className={classes.companyitems}>About Us</Box>
+                      </Box>
+                    </a>
+                    <a
+                      href="/about/#key-relationship"
+                      component={ButtonBase}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Box className={classes.dflex}>
+                        <Box className={classes.circle}></Box>
+                        <Box className={classes.companyitems}>
+                          Key Relationships
+                        </Box>
+                      </Box>
+                    </a>
+                    <a
+                      href="/about#leadership"
+                      component={ButtonBase}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Box className={classes.dflex}>
+                        <Box className={classes.circle}></Box>
+                        <Box className={classes.companyitems}>Leadership</Box>
+                      </Box>
+                    </a>
+                    <a
+                      href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy"
+                      target="_blank"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Box className={classes.dflex}>
+                        <Box className={classes.circle}></Box>
+                        <Box className={classes.companyitems}>
+                          Privacy Policy
+                        </Box>
+                      </Box>
+                    </a>
                     <Box className={classes.dflex}>
                       <Box className={classes.circle}></Box>
-                      <Box className={classes.privateitems}>Features</Box>
+                      <Box className={classes.companyitems}>Terms of Use</Box>
                     </Box>
-                  </a>
-                  <a
-                    href="/#authentication"
-                    component={ButtonBase}
-                    style={{ textDecoration: "none" }}
-                  >
                     <Box className={classes.dflex}>
                       <Box className={classes.circle}></Box>
-                      <Box className={classes.privateitems}>
-                        {" "}
-                        Continuous Voice Authentication for Amazon Connect®
+                      <Box className={classes.companyitems}>
+                        Intellectual Property
                       </Box>
                     </Box>
-                  </a>
-                  <a
-                    href="/#pricing"
-                    component={ButtonBase}
-                    style={{ textDecoration: "none" }}
-                  >
+
                     <Box className={classes.dflex}>
                       <Box className={classes.circle}></Box>
-                      <Box className={classes.privateitems}>Pricing</Box>
+                      <Box className={classes.companyitems}>
+                        sales@private.id{" "}
+                      </Box>
                     </Box>
-                  </a>
-                </Box>
-              </Grid>
+                  </Grid>
 
-              <Grid item lg={3}>
-                <Box className={classes.heading}>Company</Box>
-                <a
-                  href="/about"
-                  component={ButtonBase}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.companyitems}>About Us</Box>
-                  </Box>
-                </a>
-                <a
-                  href="/about/#key-relationship"
-                  component={ButtonBase}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.companyitems}>
-                      Key Relationships
+                  <Grid item lg={3}>
+                    <Typography className={classes.heading}>
+                      Stay Connected
+                    </Typography>
+
+                    <Box className={classes.dflex}>
+                      <img src={phn} className={classes.image} alt="logo" />
+                      <Box className={classes.connecteditems}>
+                        {" "}
+                        +1-301-938-6300
+                      </Box>
                     </Box>
-                  </Box>
-                </a>
-                <a
-                  href="/about#leadership"
-                  component={ButtonBase}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.companyitems}>Leadership</Box>
-                  </Box>
-                </a>
-                <a
-                  href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy"
-                  target="_blank"
-                  style={{ textDecoration: "none" }}
-                >
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.companyitems}>Privacy Policy</Box>
-                  </Box>
-                </a>
-                <Box className={classes.dflex}>
-                  <Box className={classes.circle}></Box>
-                  <Box className={classes.companyitems}>Terms of Use</Box>
-                </Box>
-                <Box className={classes.dflex}>
-                  <Box className={classes.circle}></Box>
-                  <Box className={classes.companyitems}>
-                    Intellectual Property
-                  </Box>
-                </Box>
 
-                <Box className={classes.dflex}>
-                  <Box className={classes.circle}></Box>
-                  <Box className={classes.companyitems}>sales@private.id </Box>
-                </Box>
-              </Grid>
+                    <Box className={classes.dflex}>
+                      <img src={en} className={classes.image} alt="logo" />
+                      <Box className={classes.connecteditems}>
+                        api@private.id
+                      </Box>
+                    </Box>
+                  </Grid>
 
-              <Grid item lg={3}>
-                <Typography className={classes.heading}>
-                  Stay Connected
-                </Typography>
+                  <Grid item lg={3}>
+                    <Typography className={classes.heading}>Support</Typography>
+                    <a>
+                      <Box className={classes.dflex}>
+                        <img src={api} className={classes.image} alt="logo" />
+                        <Box className={classes.connecteditems}>
+                          API Documentation
+                        </Box>
+                      </Box>
+                    </a>
+                    <a
+                      href="https://github.com/openinfer/PrivateIdentity/issues"
+                      target="_blank"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Box className={classes.dflex}>
+                        <img
+                          src={tracker}
+                          className={classes.image}
+                          alt="logo"
+                        />
+                        <Box className={classes.connecteditems}>
+                          Issue Tracker
+                        </Box>
+                      </Box>
+                    </a>
+                    <a
+                      href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
+                      target="_blank "
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Box className={classes.dflex}>
+                        <img src={stack} className={classes.image} alt="logo" />
+                        <Box className={classes.connecteditems}>
+                          Stack Overflow
+                        </Box>
+                      </Box>
+                    </a>
+                  </Grid>
 
-                <Box className={classes.dflex}>
-                  <img src={phn} className={classes.image} alt="logo" />
-                  <Box className={classes.connecteditems}> +1-301-938-6300</Box>
-                </Box>
-
-                <Box className={classes.dflex}>
-                  <img src={en} className={classes.image} alt="logo" />
-                  <Box className={classes.connecteditems}>api@private.id</Box>
-                </Box>
-              </Grid>
-
-              <Grid item lg={3}>
-                <Typography className={classes.heading}>Support</Typography>
-                <a>
-                  <Box className={classes.dflex}>
-                    <img src={api} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>
-                      API Documentation
+                  <Box className={classes.line}></Box>
+                  <Box>
+                    <Box className={classes.lowertext1}>
+                      © 2021 Private Identity LLC All Rights Reserved.
+                    </Box>
+                    <Box className={classes.lowertext2}>
+                      Private ID and Private Identity are registered trademarks
+                      of Private Identity LLC.
+                    </Box>
+                    <Box className={classes.lowertext3}>
+                      All other trademarks, service marks, trade names, trade
+                      dress, product names and logos are the property of their
+                      respective owners.
                     </Box>
                   </Box>
-                </a>
-                <a
-                  href="https://github.com/openinfer/PrivateIdentity/issues"
-                  target="_blank"
-                  style={{ textDecoration: "none" }}
-                >
-                  <Box className={classes.dflex}>
-                    <img src={tracker} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>Issue Tracker</Box>
-                  </Box>
-                </a>
-                <a
-                  href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
-                  target="_blank "
-                  style={{ textDecoration: "none" }}
-                >
-                  <Box className={classes.dflex}>
-                    <img src={stack} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>Stack Overflow</Box>
-                  </Box>
-                </a>
-              </Grid>
-
-              <Box className={classes.line}></Box>
-              <Box>
-                <Box className={classes.lowertext1}>
-                  © 2021 Private Identity LLC All Rights Reserved.
-                </Box>
-                <Box className={classes.lowertext2}>
-                  Private ID and Private Identity are registered trademarks of
-                  Private Identity LLC.
-                </Box>
-                <Box className={classes.lowertext3}>
-                  All other trademarks, service marks, trade names, trade dress,
-                  product names and logos are the property of their respective
-                  owners.
-                </Box>
-              </Box>
+                </Grid>
+              </Hidden>
+              <MobileFooter styling={classes} />
             </Grid>
-          </Hidden>
-          <MobileFooter styling={classes} />
-        </Grid>
+          </Grid>
+        </Box>
       </Grid>
-    </Box>
+    </Grid>
   );
 };
