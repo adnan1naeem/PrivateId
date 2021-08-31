@@ -35,10 +35,11 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("xl")]: {
       top: "-55px",
-      minHeight: "0vh",
+      minHeight: "116vh",
     },
     [theme.breakpoints.only("lg")]: {
       top: "-439px",
+      minHeight: "110vh",
     },
   },
   iPadView: {
@@ -144,13 +145,8 @@ export const VoiceAuthentication = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} xl={6} lg={9}>
-        <Grid
-          container
-          justifyContent="center"
-          className={classes.minHeight}
-          id="authentication"
-        >
+      <Grid item xs={12} lg={9} xl={7}>
+        <Grid container justifyContent="center" id="authentication">
           <Box>
             <Box className={classes.bgImg}>
               <Grid

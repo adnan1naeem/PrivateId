@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "#000000",
     marginTop: 32,
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+    },
   },
   lowertext2: {
     fontFamily: "DM Sans",
@@ -40,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     textAlign: "center",
     color: "#000000",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 8,
+    },
   },
   lowertext3: {
     fontFamily: "DM Sans",
@@ -49,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "#000000",
     marginBottom: "5rem",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 8,
+    },
   },
 
   heading: {
@@ -64,11 +73,18 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     textAlign: "center",
     color: "#000000",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 15,
+    },
   },
   image: {
     width: 32,
     height: 20,
     marginTop: 10,
+    [theme.breakpoints.only("lg")]: {
+      width: 16,
+      height: 16,
+    },
   },
   privateitems: {
     padding: 10,
@@ -77,10 +93,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     fontWeight: 500,
     fontSize: 20,
-    lineHeight: "100%",
+    lineHeight: "16px",
     color: "#4E4E4E",
     marginLeft: 5,
     width: "38%",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+      width: "23%",
+    },
   },
   companyitems: {
     padding: 10,
@@ -89,10 +109,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     fontWeight: 500,
     fontSize: 20,
-    lineHeight: "100%",
     color: " #565656",
     marginLeft: 5,
     width: "43%",
+    lineHeight: "16px",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+    },
   },
   connecteditems: {
     padding: 10,
@@ -105,6 +128,9 @@ const useStyles = makeStyles((theme) => ({
     color: " #747474",
     marginLeft: 5,
     width: "63%",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+    },
   },
   circle: {
     width: 10,
@@ -112,6 +138,10 @@ const useStyles = makeStyles((theme) => ({
     height: 10,
     background: "#C4C4C4",
     borderRadius: 10,
+    [theme.breakpoints.only("lg")]: {
+      width: 7,
+      height: 7,
+    },
   },
   bgClr: {
     backgroundColor: "#DEDEDE",
@@ -120,6 +150,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: -303,
     [theme.breakpoints.up("xl")]: {
       top: "-173px",
+    },
+    [theme.breakpoints.only("lg")]: {
+      top: "-565px",
+      marginBottom: "-570px",
     },
   },
   bgClrAboutUs: {
@@ -136,7 +170,7 @@ export const WebFooter = () => {
 
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} xl={6} lg={9}>
+      <Grid item xs={12} lg={9} xl={7}>
         <Box className={containerClass}>
           {pathname === "/about" && <Box height={11} bgcolor="#2A3D80" />}
           <Grid container justifyContent="center">

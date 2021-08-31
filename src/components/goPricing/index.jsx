@@ -43,8 +43,8 @@ function createData(name, calories, fat, carbs, protein) {
 const rows = [
   createData("0-1M Requests/Month  ", "$0.0010"),
   createData("1M-10M Requests/Month", "$0.0008"),
-  createData("10M-100M Requests/Month", ".$0.0006"),
-  createData("Over 100M Requests/Month", "$0.004"),
+  createData("10M-100M Requests/Month", "$0.0006"),
+  createData("Over 100M Requests/Month", "$0.0004"),
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -207,7 +207,7 @@ const useStyles = makeStyles((theme) => ({
       top: -158,
     },
     [theme.breakpoints.only("lg")]: {
-      top: -544,
+      top: -581,
     },
   },
 }));
@@ -217,7 +217,7 @@ export default function GoPricing() {
 
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} xl={7} lg={9}>
+      <Grid item xs={12} lg={9} xl={7}>
         <TableContainer
           component={Paper}
           className={classes.containerPosition}

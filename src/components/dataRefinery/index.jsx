@@ -116,10 +116,10 @@ export const DataRefinery = ({
 
   return (
     <Grid container justifyContent="center" className={containerClass}>
-      <Grid item xs={12} xl={8} lg={6}>
+      <Grid item xs={12} lg={6} xl={8}>
         <Grid container spacing={4} justifyContent="center">
           <Hidden mdDown>
-            <Grid item xs={6} lg={5} xl={5}>
+            <Grid item xs={6} lg={5} xl={7}>
               <Box>
                 <iframe
                   width="560"

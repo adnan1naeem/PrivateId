@@ -70,6 +70,9 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       textAlign: "center",
     },
+    [theme.breakpoints.only("xl")]: {
+      width: "74%",
+    },
   },
   btn: {
     width: 370,
@@ -110,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-381px",
     marginBottom: 150,
     [theme.breakpoints.only("lg")]: {
-      top: "-472px",
+      top: "-500px",
     },
     [theme.breakpoints.down("md")]: {
       top: -391,
@@ -120,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: -70,
     },
     [theme.breakpoints.up("xl")]: {
-      top: "-106px",
+      top: "-182px",
     },
   },
 }));
@@ -128,7 +131,7 @@ export const GetReady = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} xl={7} lg={12}>
+      <Grid item xs={12} lg={12} xl={7}>
         <Grid container justifyContent="center" id="get-ready">
           <Grid item md={11} lg={10} xs={11}>
             <Box className={classes.textCenter}>

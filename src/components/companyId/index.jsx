@@ -38,7 +38,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
     textTransform: "inherit",
     [theme.breakpoints.up("xl")]: {
-      fontSize: 50,
+      fontSize: 25,
+    },
+    [theme.breakpoints.only("lg")]: {
+      fontSize: "16px",
     },
   },
   dflex: {
@@ -55,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     fontSize: "1.5rem",
     [theme.breakpoints.up("xl")]: {
-      fontSize: "3.5rem",
+      fontSize: "2.5rem",
     },
   },
   flex: {

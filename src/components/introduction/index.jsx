@@ -1,22 +1,26 @@
 import { Box, Button, Grid, Hidden, makeStyles } from "@material-ui/core";
 import React from "react";
 import webIntro from "../../assets/webIntro.png";
-import bgGradient from "../../assets/bgGradient.svg";
+import lgBg from "../../assets/lgBg.png";
 import bgGradientMd from "../../assets/bgGradient-md.svg";
 import mobileIcons from "../../assets/mobileIcons.png";
 const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundImage: `url(${bgGradient})`,
+    backgroundImage: `url(${lgBg})`,
     backgroundSize: `101%`,
     backgroundRepeat: `no-repeat`,
     backgroundPositionX: "-3px",
     backgroundPositionY: "bottom",
 
-    [theme.breakpoints.down("lg")]: {
-      backgroundImage: `url(${bgGradientMd})`,
-      backgroundPositionY: "top",
+    [theme.breakpoints.only("lg")]: {
+      backgroundPositionY: "bottom",
+      backgroundSize: `cover`,
     },
+
     [theme.breakpoints.down("md")]: {
+      backgroundSize: `cover`,
+    },
+    [theme.breakpoints.only("xl")]: {
       backgroundSize: `cover`,
     },
   },
@@ -41,9 +45,13 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.only("lg")]: {
-      fontSize: 40,
+      fontSize: 36,
       lineHeight: "45px",
-      width: "92%",
+    },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 60,
+      lineHeight: "75px",
+      width: "115%",
     },
   },
   btn: {
@@ -100,44 +108,48 @@ const useStyles = makeStyles((theme) => ({
 export const Introduction = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.container} id="introduction">
-      <Grid container justifyContent="center">
-        <Grid item xs={12} xl={7} lg={8}>
-          <Grid
-            container
-            justifyContent="center"
-            alignItems="center"
-            className={classes.pt}
-          >
-            <Grid item xs={10} md={10} lg={6} xl={5}>
-              <Box className={classes.description}>
-                Decentralized biometrics  for a surprising and delightful
-                customer experience
-              </Box>
-              <Hidden mdDown>
-                <Button className={classes.btn}>Get Started</Button>
-              </Hidden>
-            </Grid>
+    <Grid container justifyContent="center">
+      <Grid item xs={12} xl={7} lg={9}>
+        <Box className={classes.container} id="introduction">
+          <Grid container justifyContent="center">
+            <Grid item xs={12} lg={9} xl={7}>
+              <Grid
+                container
+                justifyContent="center"
+                alignItems="center"
+                className={classes.pt}
+              >
+                <Grid item xs={10} md={10} lg={6} xl={6}>
+                  <Box className={classes.description}>
+                    Decentralized biometrics for a surprising and delightful
+                    customer experience
+                  </Box>
+                  <Hidden mdDown>
+                    <Button className={classes.btn}>Get Started</Button>
+                  </Hidden>
+                </Grid>
 
-            <Grid item xs={10} md={7} lg={5}>
-              <Hidden xsDown>
-                <img src={webIntro} width="100%" alt="logo" />
-              </Hidden>
-              <Hidden smUp>
-                <Box className={classes.dFlex}>
-                  <img src={mobileIcons} alt="" />
-                </Box>
-              </Hidden>
+                <Grid item xs={10} md={7} lg={6} xl={6}>
+                  <Hidden xsDown>
+                    <img src={webIntro} width="100%" alt="logo" />
+                  </Hidden>
+                  <Hidden smUp>
+                    <Box className={classes.dFlex}>
+                      <img src={mobileIcons} alt="" />
+                    </Box>
+                  </Hidden>
 
-              <Hidden lgUp>
-                <Box display="flex" justifyContent="center">
-                  <Button className={classes.btn}>Get Started</Button>
-                </Box>
-              </Hidden>
+                  <Hidden lgUp>
+                    <Box display="flex" justifyContent="center">
+                      <Button className={classes.btn}>Get Started</Button>
+                    </Box>
+                  </Hidden>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
+        </Box>
       </Grid>
-    </Box>
+    </Grid>
   );
 };

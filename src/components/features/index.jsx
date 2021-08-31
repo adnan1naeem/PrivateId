@@ -231,7 +231,7 @@ export const Features = () => {
       className={classes.position}
       id="cards-container"
     >
-      <Grid item xs={12} xl={6} lg={9}>
+      <Grid item xs={12} lg={9} xl={7}>
         <Box>
           <Box className={classes.dFlex}>
             <Box className={classes.title}>Features</Box>

@@ -13,7 +13,7 @@ import webLogo from "../../assets/webLogo.svg";
 import PrivateId from "../privateId";
 import CompanyId from "../companyId";
 import SalesId from "../saleId";
-import { Box, Button, Hidden } from "@material-ui/core";
+import { Box, Button, Grid, Hidden } from "@material-ui/core";
 import { MenuDrawer } from "../drawer";
 import { Link } from "react-router-dom";
 
@@ -42,11 +42,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       height: 30,
       width: 152,
+      paddingLeft: 43,
     },
     [theme.breakpoints.up("xl")]: {
-      height: 150,
-      width: 400,
-      paddingLeft: 225,
+      height: 135,
+      width: 313,
+    },
+    [theme.breakpoints.only("lg")]: {
+      width: 150,
     },
   },
   padding: {
@@ -55,8 +58,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       padding: "0px",
     },
-    [theme.breakpoints.down("lg")]: {
-      padding: "20",
+    [theme.breakpoints.only("lg")]: {
+      padding: "10px",
+    },
+    [theme.breakpoints.only("xl")]: {
+      padding: "unset",
     },
   },
 
@@ -121,14 +127,22 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     marginLeft: 100,
     [theme.breakpoints.up("xl")]: {
-      fontSize: 30,
-      padding: 30,
+      fontSize: 20,
+      padding: 20,
+      marginRight: 60,
+    },
+    [theme.breakpoints.only("lg")]: {
+      marginRight: 30,
     },
   },
   dFlex: {
     display: "flex",
     [theme.breakpoints.only("xs")]: {
       display: "flex",
+    },
+    [theme.breakpoints.only("xl")]: {
+      display: "flex",
+      alignItems: "center",
     },
   },
   flex: {
@@ -219,51 +233,57 @@ export default function Appbar({ hidecontent }) {
   );
 
   return (
-    <div className={classes.grow}>
-      <AppBar position="static" style={{ backgroundColor: "#0B216F" }}>
-        <Box className={classes.dFlex}>
-          <Toolbar className={classes.padding}>
-            <Link to="/" style={{ flex: 1 }}>
-              <img className={classes.logo} src={webLogo} alt="logo" />
-            </Link>
-            <Hidden lgUp>
-              <MenuDrawer />
-            </Hidden>
-            <div className={classes.dFlex}>
-              <Hidden mdDown className={classes.flex}>
-                {!hidecontent && (
-                  <>
+    <Grid container justifyContent="center">
+      <Grid item xs={12} lg={9} xl={7}>
+        <div className={classes.grow}>
+          <AppBar position="static" style={{ backgroundColor: "#0B216F" }}>
+            <Box className={classes.dFlex}>
+              <Toolbar className={classes.padding}>
+                <Link to="/" style={{ flex: 1 }}>
+                  <img className={classes.logo} src={webLogo} alt="logo" />
+                </Link>
+                <Hidden lgUp>
+                  <MenuDrawer />
+                </Hidden>
+                <div className={classes.dFlex}>
+                  <Hidden mdDown className={classes.flex}>
+                    {!hidecontent && (
+                      <>
+                        <div>
+                          <PrivateId />
+                        </div>
+                        <div>
+                          <CompanyId />
+                        </div>
+                      </>
+                    )}
                     <div>
-                      <PrivateId />
+                      <SalesId />
                     </div>
-                    <div>
-                      <CompanyId />
-                    </div>
-                  </>
-                )}
-                <div>
-                  <SalesId />
+                  </Hidden>
+                  <Hidden mdDown>
+                    <a
+                      href="https://aws.amazon.com/marketplace/pp/prodview-7llim6nzt656u"
+                      target="_blank"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <div>
+                        <Button className={classes.btnFonts}>
+                          GET AN API KEY
+                        </Button>
+                      </div>
+                    </a>
+                  </Hidden>
                 </div>
-              </Hidden>
-              <Hidden mdDown>
-                <a
-                  href="https://aws.amazon.com/marketplace/pp/prodview-7llim6nzt656u"
-                  target="_blank"
-                  style={{ textDecoration: "none" }}
-                >
-                  <div>
-                    <Button className={classes.btnFonts}>GET AN API KEY</Button>
-                  </div>
-                </a>
-              </Hidden>
-            </div>
 
-            <div className={classes.sectionMobile}></div>
-          </Toolbar>
-        </Box>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
-    </div>
+                <div className={classes.sectionMobile}></div>
+              </Toolbar>
+            </Box>
+          </AppBar>
+          {renderMobileMenu}
+          {renderMenu}
+        </div>
+      </Grid>
+    </Grid>
   );
 }

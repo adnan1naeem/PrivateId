@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
   bgImage: {
     backgroundImage: `url(${talk})`,
     backgroundColor: "#2A3D80",
-    minHeight: "100vh",
     position: "relative",
     top: -303,
     padding: "5%",
@@ -302,7 +301,7 @@ export const LetsTalk = withWidth()(({ width }) => {
   }
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} xl={6} lg={9}>
+      <Grid item xs={12} lg={9} xl={7}>
         <Box className={classes.bgImage} id="letstalk">
           <Box className={classes.dflex}>
             <Box className={classes.inqiury}>Let’s Talk!</Box>
