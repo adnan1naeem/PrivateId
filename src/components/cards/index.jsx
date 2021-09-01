@@ -10,9 +10,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       height: 280,
     },
-    [theme.breakpoints.up("xl")]: {
-      width: 405,
-    },
   },
   heading: {
     color: "#2A3D80",

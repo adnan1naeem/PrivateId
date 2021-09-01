@@ -26,7 +26,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 18,
       fontWeight: 400,
       lineHeight: "25px",
-      width: "133%",
+    },
+    [theme.breakpoints.only("xl")]: {
+      width: "85%",
     },
   },
   detail: {
@@ -44,7 +46,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
       lineHeight: "20px",
-      width: "139%",
+    },
+    [theme.breakpoints.only("xl")]: {
+      width: "84%",
     },
   },
   bgImg: {
@@ -62,6 +66,9 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("xl")]: {
       top: "-350px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      backgroundPositionY: -108,
     },
   },
   bgImgAboutUs: {
@@ -115,11 +122,16 @@ export const DataRefinery = ({
     pathname === "/about" ? classes.bgImgAboutUs : classes.bgImg;
 
   return (
-    <Grid container justifyContent="center" className={containerClass}>
-      <Grid item xs={12} lg={6} xl={8}>
-        <Grid container spacing={4} justifyContent="center">
+    <Grid container justifyContent="center">
+      <Grid item lg={9} xl={8}>
+        <Grid
+          container
+          spacing={4}
+          justifyContent="center"
+          className={containerClass}
+        >
           <Hidden mdDown>
-            <Grid item xs={6} lg={5} xl={7}>
+            <Grid item xs={6} lg={5} xl={6}>
               <Box>
                 <iframe
                   width="560"

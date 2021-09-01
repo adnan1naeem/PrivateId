@@ -29,6 +29,11 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "10px",
       marginTop: 5,
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 10,
+      lineHeight: "10px",
+      marginTop: 5,
+    },
   },
   historyDetail: {
     fontWeight: 700,
@@ -38,6 +43,12 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "15px",
     marginTop: 15,
     [theme.breakpoints.only("lg")]: {
+      fontSize: 10,
+      lineHeight: "15px",
+      marginTop: 5,
+      fontWeight: 500,
+    },
+    [theme.breakpoints.down("md")]: {
       fontSize: 10,
       lineHeight: "15px",
       marginTop: 5,
@@ -58,6 +69,12 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "13px",
       fontWeight: 700,
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 7,
+      marginTop: 5,
+      lineHeight: "13px",
+      fontWeight: 700,
+    },
   },
   conectTitle: {
     fontWeight: 700,
@@ -68,6 +85,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 10,
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 10,
+    },
   },
   conectImg: {
     width: 232,
@@ -75,6 +95,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 15,
 
     [theme.breakpoints.only("lg")]: {
+      width: "100%",
+
+      marginTop: "0px",
+    },
+    [theme.breakpoints.down("md")]: {
       width: "100%",
 
       marginTop: "0px",
@@ -97,6 +122,11 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "13px",
       marginTop: 5,
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 10,
+      lineHeight: "13px",
+      marginTop: 5,
+    },
   },
   vipDetail: {
     fontWeight: 700,
@@ -107,6 +137,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 15,
     marginBottom: 30,
     [theme.breakpoints.only("lg")]: {
+      fontSize: 7,
+      marginTop: 5,
+      lineHeight: "13px",
+      fontWeight: 700,
+    },
+    [theme.breakpoints.down("md")]: {
       fontSize: 7,
       marginTop: 5,
       lineHeight: "13px",

@@ -33,13 +33,20 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       top: -651,
     },
-    [theme.breakpoints.up("xl")]: {
+    [theme.breakpoints.down("xl")]: {
       top: "-55px",
-      minHeight: "116vh",
+      minHeight: "99vh",
     },
     [theme.breakpoints.only("lg")]: {
       top: "-439px",
-      minHeight: "110vh",
+      minHeight: "68vh",
+    },
+    [theme.breakpoints.down("md")]: {
+      minHeight: "unset",
+    },
+    [theme.breakpoints.only("sm")]: {
+      minHeight: "148vh",
+      top: "-376x",
     },
   },
   iPadView: {
@@ -55,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "55px",
     fontFamily: "DM Sans",
     [theme.breakpoints.down("md")]: {
-      fontSize: 41,
+      fontSize: 25,
       marginTop: 50,
     },
 
@@ -76,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
     marginTop: 8,
     [theme.breakpoints.down("md")]: {
-      fontSize: 36,
+      fontSize: 22,
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: 24,
@@ -101,6 +108,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "93%",
     [theme.breakpoints.down("md")]: {
       fontWeight: 700,
+      fontSize: 13,
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: 12,
@@ -121,6 +129,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "5%",
     [theme.breakpoints.down("md")]: {
       paddingBottom: 200,
+    },
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: 23,
     },
   },
   width: {

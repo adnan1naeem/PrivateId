@@ -45,8 +45,9 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: 43,
     },
     [theme.breakpoints.up("xl")]: {
-      height: 135,
-      width: 313,
+      height: 183,
+      width: 300,
+      paddingLeft: 0,
     },
     [theme.breakpoints.only("lg")]: {
       width: 150,
@@ -63,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.only("xl")]: {
       padding: "unset",
+      flex: 0.58,
     },
   },
 
@@ -127,9 +129,10 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     marginLeft: 100,
     [theme.breakpoints.up("xl")]: {
-      fontSize: 20,
+      fontSize: 22,
       padding: 20,
-      marginRight: 60,
+      marginLeft: 50,
+      marginRight: 0,
     },
     [theme.breakpoints.only("lg")]: {
       marginRight: 30,
@@ -143,6 +146,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xl")]: {
       display: "flex",
       alignItems: "center",
+      justifyContent: "center",
     },
   },
   flex: {
@@ -233,57 +237,51 @@ export default function Appbar({ hidecontent }) {
   );
 
   return (
-    <Grid container justifyContent="center">
-      <Grid item xs={12} lg={9} xl={7}>
-        <div className={classes.grow}>
-          <AppBar position="static" style={{ backgroundColor: "#0B216F" }}>
-            <Box className={classes.dFlex}>
-              <Toolbar className={classes.padding}>
-                <Link to="/" style={{ flex: 1 }}>
-                  <img className={classes.logo} src={webLogo} alt="logo" />
-                </Link>
-                <Hidden lgUp>
-                  <MenuDrawer />
-                </Hidden>
-                <div className={classes.dFlex}>
-                  <Hidden mdDown className={classes.flex}>
-                    {!hidecontent && (
-                      <>
-                        <div>
-                          <PrivateId />
-                        </div>
-                        <div>
-                          <CompanyId />
-                        </div>
-                      </>
-                    )}
+    <div className={classes.grow}>
+      <AppBar position="static" style={{ backgroundColor: "#0B216F" }}>
+        <Box className={classes.dFlex}>
+          <Toolbar className={classes.padding}>
+            <Link to="/" style={{ flex: 1 }}>
+              <img className={classes.logo} src={webLogo} alt="logo" />
+            </Link>
+            <Hidden lgUp>
+              <MenuDrawer />
+            </Hidden>
+            <div className={classes.dFlex}>
+              <Hidden mdDown className={classes.flex}>
+                {!hidecontent && (
+                  <>
                     <div>
-                      <SalesId />
+                      <PrivateId />
                     </div>
-                  </Hidden>
-                  <Hidden mdDown>
-                    <a
-                      href="https://aws.amazon.com/marketplace/pp/prodview-7llim6nzt656u"
-                      target="_blank"
-                      style={{ textDecoration: "none" }}
-                    >
-                      <div>
-                        <Button className={classes.btnFonts}>
-                          GET AN API KEY
-                        </Button>
-                      </div>
-                    </a>
-                  </Hidden>
+                    <div>
+                      <CompanyId />
+                    </div>
+                  </>
+                )}
+                <div>
+                  <SalesId />
                 </div>
+              </Hidden>
+              <Hidden mdDown>
+                <a
+                  href="https://aws.amazon.com/marketplace/pp/prodview-7llim6nzt656u"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <div>
+                    <Button className={classes.btnFonts}>GET AN API KEY</Button>
+                  </div>
+                </a>
+              </Hidden>
+            </div>
 
-                <div className={classes.sectionMobile}></div>
-              </Toolbar>
-            </Box>
-          </AppBar>
-          {renderMobileMenu}
-          {renderMenu}
-        </div>
-      </Grid>
-    </Grid>
+            <div className={classes.sectionMobile}></div>
+          </Toolbar>
+        </Box>
+      </AppBar>
+      {renderMobileMenu}
+      {renderMenu}
+    </div>
   );
 }

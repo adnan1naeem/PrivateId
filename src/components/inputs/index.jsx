@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 10,
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 10,
+    },
   },
   circul: {
     backgroundColor: " #2A3D80",
@@ -30,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
     width: 19,
     borderRadius: 10,
     [theme.breakpoints.only("lg")]: {
+      height: 10,
+      width: 10,
+    },
+    [theme.breakpoints.down("md")]: {
       height: 10,
       width: 10,
     },

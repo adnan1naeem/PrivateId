@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 20,
     },
     [theme.breakpoints.down("md")]: {
-      fontSize: 33,
+      fontSize: 20,
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: 22,
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 25,
     },
     [theme.breakpoints.down("md")]: {
-      fontSize: 33,
+      fontSize: 25,
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: 25,
@@ -60,6 +60,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
 
     [theme.breakpoints.only("lg")]: {
+      fontSize: 15,
+      width: "72%",
+    },
+    [theme.breakpoints.down("md")]: {
       fontSize: 15,
       width: "72%",
     },
@@ -99,6 +103,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 15,
       width: 120,
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 15,
+      width: 120,
+    },
   },
   dFlex: {
     display: "flex",
@@ -113,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-381px",
     marginBottom: 150,
     [theme.breakpoints.only("lg")]: {
-      top: "-500px",
+      top: "-465px",
     },
     [theme.breakpoints.down("md")]: {
       top: -391,

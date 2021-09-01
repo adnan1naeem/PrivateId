@@ -2,7 +2,8 @@ import { Box, Button, Grid, Hidden, makeStyles } from "@material-ui/core";
 import React from "react";
 import webIntro from "../../assets/webIntro.png";
 import lgBg from "../../assets/lgBg.png";
-import bgGradientMd from "../../assets/bgGradient-md.svg";
+import mdBg from "../../assets/mdBg.svg";
+
 import mobileIcons from "../../assets/mobileIcons.png";
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -19,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down("md")]: {
       backgroundSize: `cover`,
+      backgroundImage: `url(${mdBg})`,
     },
     [theme.breakpoints.only("xl")]: {
       backgroundSize: `cover`,
@@ -32,18 +34,16 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     color: "#FFFFFF",
-    fontSize: 70,
+    fontSize: 24,
     fontWeight: 400,
-    lineHeight: "90px",
+
     fontFamily: "Abel",
     width: "97%",
-    [theme.breakpoints.down("md")]: { textAlign: "center" },
     [theme.breakpoints.down("xs")]: {
       fontSize: 24,
       lineHeight: "28px",
       width: "100%",
     },
-
     [theme.breakpoints.only("lg")]: {
       fontSize: 36,
       lineHeight: "45px",
@@ -52,6 +52,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 60,
       lineHeight: "75px",
       width: "115%",
+    },
+    [theme.breakpoints.between(960, 1280)]: {
+      textAlign: "center",
+      fontSize: 30,
     },
   },
   btn: {
@@ -119,7 +123,7 @@ export const Introduction = () => {
                 alignItems="center"
                 className={classes.pt}
               >
-                <Grid item xs={10} md={10} lg={6} xl={6}>
+                <Grid item xs={10} md={8} lg={6} xl={6}>
                   <Box className={classes.description}>
                     Decentralized biometrics for a surprising and delightful
                     customer experience
@@ -129,7 +133,7 @@ export const Introduction = () => {
                   </Hidden>
                 </Grid>
 
-                <Grid item xs={10} md={7} lg={6} xl={6}>
+                <Grid item xs={10} md={5} lg={6} xl={6}>
                   <Hidden xsDown>
                     <img src={webIntro} width="100%" alt="logo" />
                   </Hidden>
