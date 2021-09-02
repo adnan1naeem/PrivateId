@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "inherit",
     [theme.breakpoints.only("xl")]: {
       fontSize: 22,
+      marginLeft: 32,
     },
     [theme.breakpoints.only("lg")]: {
       fontSize: "16px",

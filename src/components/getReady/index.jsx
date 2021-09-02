@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
       top: "-468px",
     },
     [theme.breakpoints.down("md")]: {
-      top: -391,
+      top: -347,
     },
     [theme.breakpoints.only("xs")]: {
       top: "-721px",

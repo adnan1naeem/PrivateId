@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       minHeight: "unset",
+      top: "-247px",
     },
     [theme.breakpoints.only("sm")]: {
       minHeight: "148vh",

@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("xl")]: {
       height: 183,
-      width: 300,
+      width: 289,
       paddingLeft: 0,
     },
     [theme.breakpoints.only("lg")]: {
