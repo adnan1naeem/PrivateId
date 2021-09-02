@@ -88,7 +88,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       paddingTop: 30,
     },
-
     [theme.breakpoints.only("lg")]: {
       backgroundSize: "none",
     },
@@ -104,6 +103,10 @@ const useStyles = makeStyles((theme) => ({
       height: 200,
       minHeight: 0,
     },
+    [theme.breakpoints.down(1920, 3200)]: {
+      height: 315,
+      width: 560,
+    },
   },
   handleMargin: {
     marginTop: "200px !important",
@@ -117,6 +120,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
 export const DataRefinery = ({
   title1,
   title2,
@@ -136,7 +140,7 @@ export const DataRefinery = ({
 
   return (
     <Grid container justifyContent="center">
-      <Grid item lg={9} xl={8}>
+      <Grid item lg={9} xl={7}>
         <Grid
           container
           spacing={4}
@@ -144,7 +148,7 @@ export const DataRefinery = ({
           className={[containerClass, classes.flexDirection]}
         >
           <Hidden mdDown>
-            <Grid item xs={6} lg={5} xl={6}>
+            <Grid item xs={6} lg={5} xl={4}>
               <Box>
                 <iframe
                   width="560"
@@ -165,7 +169,7 @@ export const DataRefinery = ({
             </Grid>
             <Grid item lg={1} />
           </Hidden>
-          <Grid item xs={10} lg={5} xl={5} md={4}>
+          <Grid item xs={10} lg={5} md={4} xl={6}>
             <Box className={classes.heading}>{title1}</Box>
 
             <Box className={classes.detail}>{heading1}</Box>
@@ -181,7 +185,7 @@ export const DataRefinery = ({
           </Grid>
 
           <Hidden lgUp>
-            <Grid item xs={10} lg={5} xl={4} md={4}>
+            <Grid item xs={10} md={4} lg={5} xl={4}>
               <Box>
                 <iframe
                   width="560"

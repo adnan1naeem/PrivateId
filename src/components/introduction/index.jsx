@@ -130,12 +130,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     marginTop: 20,
   },
+  manageUI: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1120,
+    },
+  },
 }));
 export const Introduction = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} xl={7} lg={9}>
+      <Grid item xs={12} lg={9} className={classes.manageUI}>
         <Box className={classes.container} id="introduction">
           <Grid container justifyContent="center">
             <Grid item xs={12} lg={9} xl={7}>

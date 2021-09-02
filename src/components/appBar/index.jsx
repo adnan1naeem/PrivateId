@@ -62,9 +62,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       padding: "10px",
     },
-    [theme.breakpoints.only("xl")]: {
+    [theme.breakpoints.up("xl")]: {
       padding: "unset",
-      flex: 0.58,
+      flex: 1,
     },
   },
 
@@ -143,10 +143,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       display: "flex",
     },
-    [theme.breakpoints.only("xl")]: {
+    [theme.breakpoints.up("xl")]: {
       display: "flex",
       alignItems: "center",
+      alignSelf: "center",
       justifyContent: "center",
+      maxWidth: 1120,
     },
   },
   flex: {
