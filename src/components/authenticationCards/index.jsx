@@ -34,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "10px",
       marginTop: 5,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 12,
+      lineHeight: "18px",
+    },
   },
   historyDetail: {
     fontWeight: 700,
@@ -53,6 +57,10 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "15px",
       marginTop: 5,
       fontWeight: 500,
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 10,
+      lineHeight: "15px",
     },
   },
   conectDetail: {
@@ -75,6 +83,10 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "13px",
       fontWeight: 700,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 10,
+      lineHeight: "15px",
+    },
   },
   conectTitle: {
     fontWeight: 700,
@@ -88,11 +100,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       fontSize: 10,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 12,
+      lineHeight: "18px",
+    },
   },
   conectImg: {
-    width: 232,
-    height: 202,
-    marginTop: 15,
+    width: "100%",
 
     [theme.breakpoints.only("lg")]: {
       width: "100%",
@@ -127,6 +141,10 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "13px",
       marginTop: 5,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 12,
+      lineHeight: "18px",
+    },
   },
   vipDetail: {
     fontWeight: 700,
@@ -147,6 +165,10 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 5,
       lineHeight: "13px",
       fontWeight: 700,
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 10,
+      lineHeight: "15px",
     },
   },
   dFlex: {

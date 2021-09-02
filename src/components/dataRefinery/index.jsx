@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "25px",
     },
     [theme.breakpoints.only("xl")]: {
-      width: "85%",
+      width: "unset",
     },
   },
   detail: {
@@ -53,9 +53,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       fontSize: 12,
       lineHeight: "20px",
-    },
-    [theme.breakpoints.only("xl")]: {
-      width: "84%",
     },
   },
   bgImg: {
@@ -95,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
   imgStyle: {
     boxShadow: "29px 20px 0px #0060d5",
     width: "100%",
-    minHeight: 400,
+
     [theme.breakpoints.only("xs")]: {
       boxShadow: "13px 14px 0px #0060d5",
     },
@@ -104,8 +101,17 @@ const useStyles = makeStyles((theme) => ({
       minHeight: 0,
     },
     [theme.breakpoints.down(1920, 3200)]: {
+      width: 400,
+      height: 282,
+    },
+
+    [theme.breakpoints.down(1280, 1920)]: {
       height: 315,
       width: 560,
+    },
+    [theme.breakpoints.only(960, 1980)]: {
+      height: 282,
+      width: 400,
     },
   },
   handleMargin: {
@@ -121,7 +127,11 @@ const useStyles = makeStyles((theme) => ({
   },
   manageUI: {
     [theme.breakpoints.up("xl")]: {
-      maxWidth: 1675,
+      maxWidth: 1424,
+      width: "none",
+    },
+    [theme.breakpoints.down("lg")]: {
+      maxWidth: 947,
     },
   },
 }));
@@ -145,15 +155,15 @@ export const DataRefinery = ({
 
   return (
     <Grid container justifyContent="center">
-      <Grid item lg={9} className={classes.manageUI}>
+      <Grid item className={classes.manageUI}>
         <Grid
           container
-          spacing={4}
+          spacing={10}
           justifyContent="center"
           className={[containerClass, classes.flexDirection]}
         >
           <Hidden mdDown>
-            <Grid item xs={6} lg={5} xl={4}>
+            <Grid item xs={6} md={8} lg={6} xl={4}>
               <Box>
                 <iframe
                   width="560"
@@ -172,9 +182,8 @@ export const DataRefinery = ({
                 </Box>
               )}
             </Grid>
-            <Grid item lg={1} />
           </Hidden>
-          <Grid item xs={10} lg={5} md={4} xl={6}>
+          <Grid item xs={10} lg={5} md={7} xl={6}>
             <Box className={classes.heading}>{title1}</Box>
 
             <Box className={classes.detail}>{heading1}</Box>
@@ -190,7 +199,7 @@ export const DataRefinery = ({
           </Grid>
 
           <Hidden lgUp>
-            <Grid item xs={10} md={4} lg={5} xl={4}>
+            <Grid item xs={10} md={8} lg={5} xl={4}>
               <Box>
                 <iframe
                   width="560"

@@ -167,6 +167,11 @@ const useStyles = makeStyles((theme) => ({
   bgClrAboutUs: {
     backgroundColor: "#DEDEDE",
   },
+  manageUI: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1120,
+    },
+  },
 }));
 export const WebFooter = () => {
   const classes = useStyles();
@@ -180,7 +185,7 @@ export const WebFooter = () => {
     <Box className={containerClass}>
       {pathname === "/about" && <Box height={11} bgcolor="#2A3D80" />}
       <Grid container justifyContent="center">
-        <Grid item xs={10} lg={7}>
+        <Grid item xs={10} lg={7} className={classes.manageUI}>
           <Hidden mdDown>
             <Grid container justifyContent="center">
               <Grid
@@ -303,7 +308,7 @@ export const WebFooter = () => {
                   </Box>
                 </Grid>
 
-                <Grid item lg={3} xl={2}>
+                <Grid item lg={3} xl={3}>
                   <Typography className={classes.heading}>
                     Stay Connected
                   </Typography>

@@ -25,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       fontSize: 10,
+      width: "unset",
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 12,
     },
   },
   circul: {

@@ -258,6 +258,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Dm Sans",
     color: "red",
   },
+  manageUI: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1120,
+    },
+  },
 }));
 export const LetsTalk = withWidth()(({ width }) => {
   const classes = useStyles();
@@ -301,7 +306,7 @@ export const LetsTalk = withWidth()(({ width }) => {
   }
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} lg={9} xl={7}>
+      <Grid item xs={12} lg={9} className={classes.manageUI}>
         <Box className={classes.bgImage} id="letstalk">
           <Box className={classes.dflex}>
             <Box className={classes.inqiury}>Let’s Talk!</Box>

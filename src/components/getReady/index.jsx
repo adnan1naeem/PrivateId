@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       fontSize: 22,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 30,
+    },
   },
   text2: {
     fontWeight: 700,
@@ -52,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       fontSize: 25,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 30,
+    },
   },
   detail: {
     fontWeight: 500,
@@ -60,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
 
     [theme.breakpoints.only("lg")]: {
-      fontSize: 15,
+      fontSize: 20,
       width: "72%",
     },
     [theme.breakpoints.down("md")]: {
@@ -75,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
     },
     [theme.breakpoints.only("xl")]: {
-      width: "74%",
+      fontSize: 20,
     },
   },
   btn: {
@@ -121,7 +127,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-381px",
     marginBottom: 150,
     [theme.breakpoints.only("lg")]: {
-      top: "-465px",
+      top: "-468px",
     },
     [theme.breakpoints.down("md")]: {
       top: -391,
@@ -134,12 +140,17 @@ const useStyles = makeStyles((theme) => ({
       top: "-182px",
     },
   },
+  manageUI: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1120,
+    },
+  },
 }));
 export const GetReady = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} lg={12} xl={7}>
+      <Grid item xs={12} lg={12} className={classes.manageUI}>
         <Grid container justifyContent="center" id="get-ready">
           <Grid item md={11} lg={10} xs={11}>
             <Box className={classes.textCenter}>

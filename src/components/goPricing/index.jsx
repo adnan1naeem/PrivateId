@@ -209,6 +209,17 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       top: -581,
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 7,
+      marginTop: 5,
+      lineHeight: "13px",
+      fontWeight: 700,
+    },
+  },
+  manageUI: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1120,
+    },
   },
 }));
 
@@ -217,7 +228,7 @@ export default function GoPricing() {
 
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} lg={9} xl={7}>
+      <Grid item xs={12} lg={9} className={classes.manageUI}>
         <TableContainer
           component={Paper}
           className={classes.containerPosition}

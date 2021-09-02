@@ -35,11 +35,11 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xl")]: {
       top: "-55px",
-      minHeight: "99vh",
+      minHeight: "73vh",
     },
     [theme.breakpoints.only("lg")]: {
       top: "-439px",
-      minHeight: "68vh",
+      minHeight: "55vh",
     },
     [theme.breakpoints.down("md")]: {
       minHeight: "unset",
@@ -74,6 +74,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 25,
       lineHeight: "32px",
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 40,
+      lineHeight: "58px",
+    },
   },
   subTitle: {
     fontWeight: 700,
@@ -96,6 +100,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 22,
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 33,
+    },
   },
   detail: {
     fontWeight: 400,
@@ -108,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "93%",
     [theme.breakpoints.down("md")]: {
       fontWeight: 700,
-      fontSize: 13,
+      fontSize: 23,
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: 12,
@@ -123,6 +130,10 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "19px",
       maxWidth: "100%",
       marginTop: "0px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 18,
+      lineHeight: "25px",
     },
   },
   mt: {
@@ -143,6 +154,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       marginRight: 0,
     },
+    [theme.breakpoints.down("md")]: {
+      width: "unset",
+    },
   },
   minHeight: {
     minHeight: "135vh",
@@ -151,12 +165,17 @@ const useStyles = makeStyles((theme) => ({
       minHeight: "0vh",
     },
   },
+  manageUI: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1120,
+    },
+  },
 }));
 export const VoiceAuthentication = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} lg={9} xl={7}>
+      <Grid item xs={12} lg={9} xl={7} className={classes.manageUI}>
         <Grid container justifyContent="center" id="authentication">
           <Box>
             <Box className={classes.bgImg}>
