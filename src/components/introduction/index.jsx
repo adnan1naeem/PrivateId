@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.only("xl")]: {
       backgroundSize: `cover`,
+      backgroundPositionX: "center",
     },
   },
   heading: {
@@ -43,19 +44,26 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 24,
       lineHeight: "28px",
       width: "100%",
+      textAlign: "center",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 26,
+      lineHeight: "36px",
+      width: "100%",
+      textAlign: "center",
     },
     [theme.breakpoints.only("lg")]: {
       fontSize: 36,
       lineHeight: "45px",
     },
+
     [theme.breakpoints.only("xl")]: {
-      fontSize: 60,
-      lineHeight: "75px",
-      width: "115%",
+      fontSize: 29,
+      lineHeight: "42px",
     },
     [theme.breakpoints.between(960, 1280)]: {
       textAlign: "center",
-      fontSize: 30,
+      fontSize: 40,
     },
   },
   btn: {
@@ -84,6 +92,20 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.only("lg")]: {
+      width: 155,
+      height: 50,
+      fontSize: 12,
+      fontWeight: 400,
+      borderRadius: 49,
+    },
+    [theme.breakpoints.down("xl")]: {
+      width: 200,
+      height: 61,
+      fontSize: 20,
+      fontWeight: 400,
+      borderRadius: 49,
+    },
+    [theme.breakpoints.down("md")]: {
       width: 155,
       height: 50,
       fontSize: 12,
@@ -123,7 +145,7 @@ export const Introduction = () => {
                 alignItems="center"
                 className={classes.pt}
               >
-                <Grid item xs={10} md={8} lg={6} xl={6}>
+                <Grid item xs={8} md={9} lg={6} xl={6}>
                   <Box className={classes.description}>
                     Decentralized biometrics for a surprising and delightful
                     customer experience
@@ -133,7 +155,7 @@ export const Introduction = () => {
                   </Hidden>
                 </Grid>
 
-                <Grid item xs={10} md={5} lg={6} xl={6}>
+                <Grid item xs={10} sm={5} md={4} lg={6} xl={6}>
                   <Hidden xsDown>
                     <img src={webIntro} width="100%" alt="logo" />
                   </Hidden>

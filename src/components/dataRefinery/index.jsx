@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
       width: "100%",
+      fontSize: 16,
+      fontWeight: 500,
+      lineHeight: "19px",
     },
     [theme.breakpoints.only("xs")]: {
       fontSize: 16,
@@ -44,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "16px",
     },
     [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+      lineHeight: "20px",
+    },
+    [theme.breakpoints.down("md")]: {
       fontSize: 12,
       lineHeight: "20px",
     },
@@ -81,6 +88,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       paddingTop: 30,
     },
+
     [theme.breakpoints.only("lg")]: {
       backgroundSize: "none",
     },
@@ -101,6 +109,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "200px !important",
     [theme.breakpoints.down("xs")]: {
       marginTop: "40px !important",
+    },
+  },
+  flexDirection: {
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "row-reverse",
     },
   },
 }));
@@ -128,7 +141,7 @@ export const DataRefinery = ({
           container
           spacing={4}
           justifyContent="center"
-          className={containerClass}
+          className={[containerClass, classes.flexDirection]}
         >
           <Hidden mdDown>
             <Grid item xs={6} lg={5} xl={6}>
@@ -152,7 +165,7 @@ export const DataRefinery = ({
             </Grid>
             <Grid item lg={1} />
           </Hidden>
-          <Grid item xs={10} lg={5} xl={5}>
+          <Grid item xs={10} lg={5} xl={5} md={4}>
             <Box className={classes.heading}>{title1}</Box>
 
             <Box className={classes.detail}>{heading1}</Box>
@@ -168,7 +181,7 @@ export const DataRefinery = ({
           </Grid>
 
           <Hidden lgUp>
-            <Grid item xs={10} lg={5} xl={4}>
+            <Grid item xs={10} lg={5} xl={4} md={4}>
               <Box>
                 <iframe
                   width="560"
