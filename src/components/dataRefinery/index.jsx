@@ -119,6 +119,11 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "row-reverse",
     },
   },
+  manageUI: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1675,
+    },
+  },
 }));
 
 export const DataRefinery = ({
@@ -140,7 +145,7 @@ export const DataRefinery = ({
 
   return (
     <Grid container justifyContent="center">
-      <Grid item lg={9} xl={7}>
+      <Grid item lg={9} className={classes.manageUI}>
         <Grid
           container
           spacing={4}

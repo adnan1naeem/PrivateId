@@ -86,6 +86,11 @@ const useStyles = makeStyles((theme) => ({
       top: "-520px",
     },
   },
+  manageUI: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1424,
+    },
+  },
 }));
 const card = [
   {
@@ -231,7 +236,7 @@ export const Features = () => {
       className={classes.position}
       id="cards-container"
     >
-      <Grid item xs={12} lg={9} xl={7}>
+      <Grid item xs={12} lg={9} className={classes.manageUI}>
         <Box>
           <Box className={classes.dFlex}>
             <Box className={classes.title}>Features</Box>
