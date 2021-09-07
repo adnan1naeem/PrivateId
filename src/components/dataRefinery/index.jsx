@@ -100,18 +100,30 @@ const useStyles = makeStyles((theme) => ({
       height: 200,
       minHeight: 0,
     },
-    [theme.breakpoints.down(1920, 3200)]: {
+    [theme.breakpoints.only(1920, 3200)]: {
       width: 400,
       height: 282,
     },
 
-    [theme.breakpoints.down(1280, 1920)]: {
+    [theme.breakpoints.only(1280, 1920)]: {
       height: 315,
       width: 560,
     },
     [theme.breakpoints.only(960, 1980)]: {
       height: 282,
       width: 400,
+    },
+    [theme.breakpoints.only("xs")]: {
+      height: 164,
+      width: 280,
+    },
+    [theme.breakpoints.only("md")]: {
+      width: 520,
+      height: 268,
+    },
+    [theme.breakpoints.only("sm")]: {
+      width: 520,
+      height: 268,
     },
   },
   handleMargin: {
@@ -183,7 +195,7 @@ export const DataRefinery = ({
               )}
             </Grid>
           </Hidden>
-          <Grid item xs={10} lg={5} md={7} xl={6}>
+          <Grid item xs={8} lg={5} md={7} xl={6}>
             <Box className={classes.heading}>{title1}</Box>
 
             <Box className={classes.detail}>{heading1}</Box>

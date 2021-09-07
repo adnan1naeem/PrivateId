@@ -60,6 +60,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       marginTop: 25,
     },
+    [theme.breakpoints.only("xs")]: {
+      marginTop: 20,
+    },
   },
   header: {
     marginTop: 46,
@@ -200,7 +203,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: -415,
     [theme.breakpoints.only("xs")]: {
-      top: -605,
+      top: -549,
       marginBottom: -305,
     },
     [theme.breakpoints.up("xl")]: {
@@ -209,11 +212,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       top: -581,
     },
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.only("md")]: {
       fontSize: 7,
       marginTop: 5,
       lineHeight: "13px",
       fontWeight: 700,
+      top: "-606px",
     },
   },
   manageUI: {

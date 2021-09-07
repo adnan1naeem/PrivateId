@@ -21,12 +21,19 @@ const useStyles = makeStyles((theme) => ({
     padding: "5%",
     [theme.breakpoints.down("xs")]: {
       minHeight: "68vh",
+      top: -230,
     },
     [theme.breakpoints.up("xl")]: {
       minHeight: "24vh",
       top: -150,
     },
     [theme.breakpoints.only("lg")]: {
+      top: -563,
+    },
+    [theme.breakpoints.only("md")]: {
+      top: -545,
+    },
+    [theme.breakpoints.only("sm")]: {
       top: -563,
     },
   },

@@ -8,7 +8,20 @@ const useStyles = makeStyles((theme) => ({
     background: "#FFFFFF",
     boxShadow: "2px 1px 36px 8px rgba(56, 125, 255, 0.11)",
     [theme.breakpoints.only("lg")]: {
-      height: 280,
+      height: 245,
+      padding: 14,
+    },
+    [theme.breakpoints.only("md")]: {
+      height: 345,
+      padding: 22,
+    },
+    [theme.breakpoints.only("sm")]: {
+      height: 350,
+      padding: 27,
+    },
+    [theme.breakpoints.only("xs")]: {
+      height: 320,
+      padding: 39,
     },
   },
   heading: {
@@ -21,16 +34,25 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "30px",
     textAlign: "center",
     marginTop: 28,
+
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+      fontWeight: 600,
+      lineHeight: "15px",
+      marginTop: 10,
+    },
+    [theme.breakpoints.only("md")]: {
+      fontSize: 16,
+      fontWeight: 600,
+      lineHeight: "18px",
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: 18,
-      lineHeight: "23px",
-      marginLeft: 24,
-      marginRight: 24,
+      lineHeight: "22px",
     },
-    [theme.breakpoints.only("lg")]: {
-      fontSize: 11,
-      fontWeight: 500,
-      lineHeight: "17px",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 15,
+      lineHeight: "19px",
     },
   },
   Detail: {
@@ -41,16 +63,32 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 13,
     fontFamily: "DM Sans",
     textAlign: "center",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 12,
-      lineHeight: "15px",
-      marginTop: "0px",
-    },
+
     [theme.breakpoints.only("lg")]: {
       fontSize: 8,
       fontWeight: 400,
-      lineHeight: " 13px",
-      marginTop: "-35px",
+      width: "unset",
+      marginTop: "-30px",
+      lineHeight: "11px",
+    },
+    [theme.breakpoints.only("sm")]: {
+      fontSize: 10,
+      fontWeight: 500,
+      width: "unset",
+      marginTop: "-8px",
+      lineHeight: "18px",
+    },
+    [theme.breakpoints.only("md")]: {
+      fontSize: 10,
+      fontWeight: 500,
+      width: "unset",
+      marginTop: "-16px",
+    },
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 12,
+      lineHeight: "15px",
+      marginTop: "-20px",
+      width: "unset",
     },
   },
   btnFonts: {
@@ -91,7 +129,20 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     [theme.breakpoints.only("lg")]: {
-      width: 82,
+      width: 120,
+      height: 120,
+    },
+    [theme.breakpoints.only("md")]: {
+      width: 170,
+      height: 170,
+    },
+    [theme.breakpoints.only("sm")]: {
+      width: 160,
+      height: 160,
+    },
+    [theme.breakpoints.only("xs")]: {
+      width: 140,
+      height: 140,
     },
   },
 }));

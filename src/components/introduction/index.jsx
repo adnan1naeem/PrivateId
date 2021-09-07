@@ -98,19 +98,30 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 400,
       borderRadius: 49,
     },
-    [theme.breakpoints.down("xl")]: {
+    [theme.breakpoints.only("xl")]: {
       width: 200,
       height: 61,
       fontSize: 20,
       fontWeight: 400,
       borderRadius: 49,
     },
-    [theme.breakpoints.down("md")]: {
-      width: 155,
-      height: 50,
-      fontSize: 12,
+    [theme.breakpoints.only("md")]: {
+      width: 200,
+      height: 60,
+      fontSize: 20,
       fontWeight: 400,
       borderRadius: 49,
+      position: "relative",
+      top: 139,
+    },
+    [theme.breakpoints.only("sm")]: {
+      width: 200,
+      height: 60,
+      fontSize: 20,
+      fontWeight: 400,
+      borderRadius: 49,
+      position: "relative",
+      top: 139,
     },
   },
   pt: {
@@ -133,6 +144,15 @@ const useStyles = makeStyles((theme) => ({
   manageUI: {
     [theme.breakpoints.up("xl")]: {
       maxWidth: 1120,
+    },
+  },
+  img: {
+    width: "100%",
+    [theme.breakpoints.only("md")]: {
+      marginTop: 50,
+    },
+    [theme.breakpoints.only("sm")]: {
+      marginTop: 50,
     },
   },
 }));
@@ -162,7 +182,7 @@ export const Introduction = () => {
 
                 <Grid item xs={10} sm={5} md={4} lg={6} xl={6}>
                   <Hidden xsDown>
-                    <img src={webIntro} width="100%" alt="logo" />
+                    <img src={webIntro} className={classes.img} alt="logo" />
                   </Hidden>
                   <Hidden smUp>
                     <Box className={classes.dFlex}>

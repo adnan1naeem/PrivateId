@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 20,
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: 22,
+      fontSize: 10,
     },
     [theme.breakpoints.up("xl")]: {
       fontSize: 30,
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 25,
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: 25,
+      fontSize: 10,
     },
     [theme.breakpoints.up("xl")]: {
       fontSize: 30,
@@ -74,11 +74,12 @@ const useStyles = makeStyles((theme) => ({
       width: "72%",
     },
 
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 12,
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 10,
       marginTop: 4,
       display: "flex",
       textAlign: "center",
+      width: "unset",
     },
     [theme.breakpoints.only("xl")]: {
       fontSize: 20,
@@ -113,6 +114,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 15,
       width: 120,
     },
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 10,
+      width: 100,
+    },
   },
   dFlex: {
     display: "flex",
@@ -130,10 +135,13 @@ const useStyles = makeStyles((theme) => ({
       top: "-468px",
     },
     [theme.breakpoints.down("md")]: {
-      top: -347,
+      top: -509,
+    },
+    [theme.breakpoints.down("sm")]: {
+      top: -512,
     },
     [theme.breakpoints.only("xs")]: {
-      top: "-721px",
+      top: "-644px",
       marginBottom: -70,
     },
     [theme.breakpoints.up("xl")]: {

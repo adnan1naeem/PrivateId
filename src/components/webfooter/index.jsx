@@ -163,6 +163,18 @@ const useStyles = makeStyles((theme) => ({
       top: "-565px",
       marginBottom: "-570px",
     },
+    [theme.breakpoints.only("md")]: {
+      top: "-548px",
+      marginBottom: "-548px",
+    },
+    [theme.breakpoints.only("sm")]: {
+      top: "-565px",
+      marginBottom: "-570px",
+    },
+    [theme.breakpoints.only("xs")]: {
+      top: "-234px",
+      marginBottom: "-236px",
+    },
   },
   bgClrAboutUs: {
     backgroundColor: "#DEDEDE",

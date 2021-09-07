@@ -5,6 +5,7 @@ import { AuthenticationCards } from "../authenticationCards";
 import { Inputs } from "../inputs";
 import voiceIPad from "../../assets/voiceIPad.png";
 import { Link } from "react-router-dom";
+import authMob from "../../assets/authMob.png";
 const input = [
   { text: " Routes VIPs and blocks unwanted callers" },
   { text: "Search any voice in call recordings" },
@@ -31,9 +32,10 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: -300,
     [theme.breakpoints.only("xs")]: {
-      top: -651,
+      backgroundImage: `url(${authMob})`,
+      top: -600,
     },
-    [theme.breakpoints.down("xl")]: {
+    [theme.breakpoints.only("xl")]: {
       top: "-55px",
       minHeight: "73vh",
     },
@@ -41,13 +43,13 @@ const useStyles = makeStyles((theme) => ({
       top: "-439px",
       minHeight: "55vh",
     },
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.only("md")]: {
       minHeight: "unset",
-      top: "-247px",
+      top: "-434px",
     },
     [theme.breakpoints.only("sm")]: {
       minHeight: "148vh",
-      top: "-376x",
+      top: "-434px",
     },
   },
   iPadView: {

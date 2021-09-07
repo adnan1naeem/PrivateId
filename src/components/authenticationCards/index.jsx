@@ -187,7 +187,7 @@ const useStyles = makeStyles((theme) => ({
   },
   manageMargin: {
     [theme.breakpoints.down("xs")]: {
-      marginBottom: 100,
+      marginBottom: 47,
     },
   },
 }));

@@ -85,9 +85,27 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       top: "-520px",
     },
+    [theme.breakpoints.only("md")]: {
+      top: "-550px",
+    },
+    [theme.breakpoints.only("sm")]: {
+      top: "-550px",
+    },
   },
   manageUI: {
     [theme.breakpoints.up("xl")]: {
+      maxWidth: 1424,
+    },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: 1424,
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: 1424,
+    },
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: 1424,
+    },
+    [theme.breakpoints.up("xs")]: {
       maxWidth: 1424,
     },
   },
@@ -236,7 +254,7 @@ export const Features = () => {
       className={classes.position}
       id="cards-container"
     >
-      <Grid item xs={12} lg={9} className={classes.manageUI}>
+      <Grid item xs={12} lg={7} md={10} sm={12} className={classes.manageUI}>
         <Box>
           <Box className={classes.dFlex}>
             <Box className={classes.title}>Features</Box>
