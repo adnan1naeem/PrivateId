@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     height: 348,
     width: "100%",
     [theme.breakpoints.down("md")]: {
-      height: 432,
+      height: 358,
     },
     [theme.breakpoints.down("xs")]: {
       height: 170,
