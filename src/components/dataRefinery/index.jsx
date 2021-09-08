@@ -137,6 +137,12 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "row-reverse",
     },
   },
+  aboutUsimg: {
+    [theme.breakpoints.only("lg")]: {
+      height: 230,
+      width: 222,
+    },
+  },
   manageUI: {
     [theme.breakpoints.up("xl")]: {
       maxWidth: 1424,
@@ -204,7 +210,7 @@ export const DataRefinery = ({
               <Box className={classes.detail}>{heading2}</Box>
               <Hidden mdDown>
                 <Box mt={"74px"}>
-                  <img src={image} alt="" />
+                  <img src={image} className={classes.aboutUsimg} alt="" />
                 </Box>
               </Hidden>
             </Box>

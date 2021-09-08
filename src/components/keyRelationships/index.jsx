@@ -18,15 +18,18 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       padding: 35,
     },
+    [theme.breakpoints.only("lg")]: {
+      minHeight: "836px",
+    },
   },
   paper: {
     padding: 22,
     paddingBottom: 60,
     borderRadius: 33,
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.only("md")]: {
       borderRadius: 56,
     },
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.only("sm")]: {
       borderRadius: 30,
     },
   },
@@ -34,16 +37,20 @@ const useStyles = makeStyles((theme) => ({
 export const KeyRelationships = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.container} id="key-relationship">
-      <Grid container justifyContent="center">
-        <Grid item xs={12} md={12} lg={9}>
-          <Box>
-            <Paper className={classes.paper} elevation={0}>
-              <KeyCard />
-            </Paper>
-          </Box>
-        </Grid>
+    <Grid container justifyContent="center">
+      <Grid item lg={12}>
+        <Box className={classes.container} id="key-relationship">
+          <Grid container justifyContent="center">
+            <Grid item xs={12} md={12} lg={9}>
+              <Box>
+                <Paper className={classes.paper} elevation={0}>
+                  <KeyCard />
+                </Paper>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
       </Grid>
-    </Box>
+    </Grid>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 import { LeadershipCard } from "../../components/leadershipCard";
 import mikeweb from "../../assets/mikeweb.png";
 import webscott from "../../assets/webscott.png";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   heading: {
     fontFamily: "Dm Sans",
     fontWeight: 500,
@@ -12,8 +12,22 @@ const useStyles = makeStyles({
     paddingTop: 62,
     textAlign: "center",
     paddingBottom: "2rem",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 24,
+    },
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 20,
+    },
   },
-});
+  mt: {
+    [theme.breakpoints.only("sm")]: {
+      marginTop: 20,
+    },
+    [theme.breakpoints.only("md")]: {
+      marginTop: 30,
+    },
+  },
+}));
 export const Leadership = () => {
   const classes = useStyles();
   return (
@@ -21,10 +35,10 @@ export const Leadership = () => {
       <Box>
         <Box className={classes.heading}>Leadership</Box>
       </Box>
-      <Grid container justifyContent="center">
-        <Grid item xs={11} sm={10} lg={11} xl={9}>
-          <Grid container justifyContent="space-around" spacing={6}>
-            <Grid item lg={6}>
+      <Grid container justifyContent="center" spacing={4}>
+        <Grid item xs={11} sm={10} lg={8} xl={9} md={12}>
+          <Grid container spacing={5} justifyContent="center">
+            <Grid item md={8} lg={6}>
               <LeadershipCard
                 image={mikeweb}
                 name="Mike Pollard"
@@ -33,7 +47,7 @@ export const Leadership = () => {
                 detail="Mike is an entrepreneur experienced in high-growth technology ventures in biometrics, AI/ML, big data and cyber security. Prior to co-founding Private Identity, Mike served as VP and General Manager at Thomson Reuters, Executive VP and co-founder of Discovery Logic, CEO of thinkXML and CEO of Science Management Corp."
               />
             </Grid>
-            <Grid item lg={6}>
+            <Grid item md={8} lg={6}>
               <LeadershipCard
                 image={webscott}
                 name="Scott Streit"

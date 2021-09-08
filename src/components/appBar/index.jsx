@@ -13,152 +13,151 @@ import webLogo from "../../assets/webLogo.svg";
 import PrivateId from "../privateId";
 import CompanyId from "../companyId";
 import SalesId from "../saleId";
-import { Box, Button, Grid, Hidden } from "@material-ui/core";
+import { Box, Button, Hidden } from "@material-ui/core";
 import { MenuDrawer } from "../drawer";
-import { Link } from "react-router-dom";
-
-const useStyles = makeStyles((theme) => ({
-  grow: {
-    flexGrow: 1,
-  },
-  flex: {
-    display: "flex",
-    justifyContent: "center",
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "block",
-    },
-  },
-  logo: {
-    height: 61,
-    width: 311,
-    flex: 1,
-    paddingLeft: 80,
-    [theme.breakpoints.only("xs")]: {
-      height: 30,
-      width: 152,
-      paddingLeft: 43,
-    },
-    [theme.breakpoints.up("xl")]: {
-      height: 183,
-      width: 278,
-      paddingLeft: 0,
-    },
-    [theme.breakpoints.only("lg")]: {
-      width: 150,
-    },
-  },
-  padding: {
-    padding: 40,
-    flex: 1,
-    [theme.breakpoints.only("xs")]: {
-      padding: "0px",
-    },
-    [theme.breakpoints.only("lg")]: {
-      padding: "10px",
-    },
-    [theme.breakpoints.up("xl")]: {
-      padding: "unset",
-      flex: 1,
-    },
-  },
-
-  search: {
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    "&:hover": {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(3),
-      width: "auto",
-    },
-  },
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  inputRoot: {
-    color: "inherit",
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      width: "20ch",
-    },
-  },
-  sectionDesktop: {
-    display: "none",
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
-    },
-  },
-  sectionMobile: {
-    display: "flex",
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
-  },
-  btnFonts: {
-    color: "#39ACE8",
-    fontSize: 16,
-    lineHeight: "16px",
-    fontWeight: 500,
-    fontFamily: "DM Sans",
-    backgroundColor: "#0B216F",
-    border: "1px solid #39ACE8",
-    borderRadius: 180,
-    padding: 10,
-    marginLeft: 100,
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 22,
-      padding: 20,
-      marginLeft: 50,
-      marginRight: 0,
-    },
-    [theme.breakpoints.only("lg")]: {
-      marginRight: 30,
-    },
-  },
-  dFlex: {
-    display: "flex",
-    [theme.breakpoints.only("xs")]: {
-      display: "flex",
-    },
-    [theme.breakpoints.up("xl")]: {
-      display: "flex",
-      alignItems: "center",
-      alignSelf: "center",
-      justifyContent: "center",
-      maxWidth: 1120,
-    },
-  },
-  flex: {
-    [theme.breakpoints.only("xs")]: {
-      flex: 1,
-    },
-  },
-}));
+import { Link, useHistory } from "react-router-dom";
 
 export default function Appbar({ hidecontent }) {
+  const history = useHistory();
+
+  const useStyles = makeStyles((theme) => ({
+    grow: {
+      flexGrow: 1,
+    },
+    flex: {
+      display: "flex",
+      justifyContent: "center",
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      display: "none",
+      [theme.breakpoints.up("sm")]: {
+        display: "block",
+      },
+    },
+    logo: {
+      height: 61,
+      width: 311,
+      flex: 1,
+      paddingLeft: 80,
+      [theme.breakpoints.only("xs")]: {
+        height: 30,
+        width: 152,
+        paddingLeft: 43,
+      },
+      [theme.breakpoints.up("xl")]: {
+        height: 183,
+        width: 278,
+        paddingLeft: 0,
+      },
+      [theme.breakpoints.only("lg")]: {
+        width: 150,
+        paddingLeft: 0,
+      },
+    },
+    padding: {
+      padding: 40,
+      flex: 1,
+      [theme.breakpoints.only("xs")]: {
+        padding: "0px",
+      },
+      [theme.breakpoints.up("lg")]: {
+        padding: "unset",
+        flex: 0.74,
+      },
+      [theme.breakpoints.up("xl")]: {
+        padding: "unset",
+        flex: history.location.pathname.includes("about") ? 0.74 : 1,
+      },
+    },
+
+    search: {
+      position: "relative",
+      borderRadius: theme.shape.borderRadius,
+      backgroundColor: alpha(theme.palette.common.white, 0.15),
+      "&:hover": {
+        backgroundColor: alpha(theme.palette.common.white, 0.25),
+      },
+      marginRight: theme.spacing(2),
+      marginLeft: 0,
+      width: "100%",
+      [theme.breakpoints.up("sm")]: {
+        marginLeft: theme.spacing(3),
+        width: "auto",
+      },
+    },
+    searchIcon: {
+      padding: theme.spacing(0, 2),
+      height: "100%",
+      position: "absolute",
+      pointerEvents: "none",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    inputRoot: {
+      color: "inherit",
+    },
+    inputInput: {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      transition: theme.transitions.create("width"),
+      width: "100%",
+      [theme.breakpoints.up("md")]: {
+        width: "20ch",
+      },
+    },
+    sectionDesktop: {
+      display: "none",
+      [theme.breakpoints.up("md")]: {
+        display: "flex",
+      },
+    },
+    sectionMobile: {
+      display: "flex",
+      [theme.breakpoints.up("md")]: {
+        display: "none",
+      },
+    },
+    btnFonts: {
+      color: "#39ACE8",
+      fontSize: 16,
+      lineHeight: "16px",
+      fontWeight: 500,
+      fontFamily: "DM Sans",
+      backgroundColor: "#0B216F",
+      border: "1px solid #39ACE8",
+      borderRadius: 180,
+      padding: 10,
+      marginLeft: 100,
+      [theme.breakpoints.up("xl")]: {
+        fontSize: 22,
+        padding: 20,
+        marginLeft: 50,
+        marginRight: 0,
+      },
+    },
+    dFlex: {
+      display: "flex",
+      [theme.breakpoints.up("lg")]: {
+        justifyContent: "center",
+      },
+      [theme.breakpoints.up("xl")]: {
+        alignItems: "center",
+        alignSelf: history.location.pathname.includes("about") ? "" : "center",
+        justifyContent: "center",
+        maxWidth: history.location.pathname.includes("about") ? "" : 1120,
+      },
+    },
+    flex: {
+      [theme.breakpoints.only("xs")]: {
+        flex: 1,
+      },
+    },
+  }));
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);

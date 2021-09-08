@@ -212,6 +212,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       top: -581,
     },
+    [theme.breakpoints.only("sm")]: {
+      top: -583,
+    },
     [theme.breakpoints.only("md")]: {
       fontSize: 7,
       marginTop: 5,
