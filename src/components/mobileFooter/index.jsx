@@ -10,6 +10,8 @@ import { Box, ButtonBase, Grid, Hidden } from "@material-ui/core";
 import stack from "../../assets/stack.png";
 import tracker from "../../assets/tracker.png";
 import api from "../../assets/api.png";
+import phn from "../../assets/phn.png";
+import en from "../../assets/envelop.png";
 
 const styles = (theme) => ({
   root: {
@@ -33,14 +35,13 @@ const styles = (theme) => ({
     color: "#0B216E",
     fontWeight: 500,
   },
+  items: {
+    marginTop: 20,
+  },
 
   position: {
     position: "relative",
     top: -30,
-  },
-  dflex: {
-    display: "flex",
-    marginTop: 10,
   },
   stay: {
     fontFamily: "Dm Sans",
@@ -109,38 +110,54 @@ function MobileFooter(props) {
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Box>
-                  {/* <Box
-                    className={classes.dflex}
-                    href="#introduction"
+                  <a
+                    href="/#introduction"
                     component={ButtonBase}
+                    style={{ textDecoration: "none" }}
                   >
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.privateitems}>Overview</Box>
-                  </Box> */}
+                    <Box className={classes.dflex}>
+                      <Box className={classes.circle}></Box>
+                      <Box className={classes.privateitems}>Overview</Box>
+                    </Box>
+                  </a>
 
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.privateitems}>Overview</Box>
-                  </Box>
-
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.privateitems}>Features</Box>
-                  </Box>
+                  <a
+                    href="/#cards-container"
+                    component={ButtonBase}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <Box className={classes.circle}></Box>
+                      <Box className={classes.privateitems}>Features</Box>
+                    </Box>
+                  </a>
                   <Box className={classes.dflex}>
                     <Box className={classes.circle}></Box>
                     <Box className={classes.privateitems}>
                       Private ID for Amazon Connect®
                     </Box>
                   </Box>
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.privateitems}>Pricing</Box>
-                  </Box>
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.privateitems}>Let’s Talk!</Box>
-                  </Box>
+                  <a
+                    href="/#pricing"
+                    component={ButtonBase}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <Box className={classes.circle}></Box>
+                      <Box className={classes.privateitems}>Pricing</Box>
+                    </Box>
+                  </a>
+
+                  <a
+                    href="/#letstalk"
+                    component={ButtonBase}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <Box className={classes.circle}></Box>
+                      <Box className={classes.privateitems}>Let’s Talk!</Box>
+                    </Box>
+                  </a>
                 </Box>
               </ExpansionPanelDetails>
             </ExpansionPanel>
@@ -178,58 +195,23 @@ function MobileFooter(props) {
                   </a>
 
                   <Box className={classes.dflex}>
+                    <img
+                      src={en}
+                      className={{ width: 20, height: 20 }}
+                      alt="logo"
+                    />
+
                     <Box className={classes.suppport}> support@private.id</Box>
                   </Box>
                   <Box className={classes.dflex}>
+                    <img
+                      src={phn}
+                      className={{ width: 20, height: 20 }}
+                      alt="logo"
+                    />
                     <Box className={classes.suppport}> +1-301-938-6300</Box>
                   </Box>
                 </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-          </Grid>
-
-          <Grid item xs={10} md={5}>
-            <ExpansionPanel>
-              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography className={classes.heading}>Company</Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <ul>
-                  <li>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.companyitems}>About Us</Box>
-                    </Box>
-                  </li>
-                  <li>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.companyitems}>
-                        Key Relationships
-                      </Box>
-                    </Box>
-                  </li>
-                  <li>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.companyitems}>Leadership</Box>
-                    </Box>
-                  </li>
-                  <li>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.companyitems}>Privacy Policy</Box>
-                    </Box>
-                  </li>
-                  <li>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.companyitems}>Terms of Use</Box>
-                    </Box>
-                  </li>
-                  <li>
-                    <Box className={classes.dflex}>
-                      <Box className={classes.companyitems}>
-                        Intellectual Property
-                      </Box>
-                    </Box>
-                  </li>
-                </ul>
               </ExpansionPanelDetails>
             </ExpansionPanel>
           </Grid>
