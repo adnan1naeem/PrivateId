@@ -96,17 +96,15 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     fontWeight: 500,
     fontSize: 20,
-    lineHeight: "16px",
-    color: "#4E4E4E",
+    color: " #565656",
     marginLeft: 5,
-    width: "38%",
+    width: "43%",
+    lineHeight: "16px",
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
-      width: "23%",
     },
-    [theme.breakpoints.down("xl")]: {
-      lineHeight: "27px",
-      width: "25%",
+    [theme.breakpoints.only("xl")]: {
+      lineHeight: 1,
     },
   },
   companyitems: {
