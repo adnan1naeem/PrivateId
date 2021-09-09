@@ -23,11 +23,10 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "100%",
     color: " #565656",
     marginLeft: 5,
-    width: "43%",
   },
   privateitems: {
     padding: 10,
-    fontFamily: " DM Sans",
+    fontFamily: "DM Sans",
     fontStyle: "normal",
     textAlign: "left",
     fontWeight: 500,
@@ -35,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "100%",
     color: "#4E4E4E",
     marginLeft: 5,
-    width: "38%",
   },
   circle: {
     width: 10,
@@ -46,11 +44,9 @@ const useStyles = makeStyles((theme) => ({
   },
   dflex: {
     display: "flex",
-    width: 450,
   },
   dFlex: {
     display: "flex",
-    width: 450,
     marginTop: 10,
   },
   heading: {
@@ -77,11 +73,17 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "100%",
     color: " #747474",
     marginLeft: 5,
-    width: "63%",
   },
   logoFonts: {
     marginTop: 20,
-    height: 58,
+    marginRight: 10,
+    height: 38,
+
+    [theme.breakpoints.up("sm")]: {
+      marginRight: 20,
+      marginTop: 20,
+      height: 48,
+    },
   },
 }));
 
@@ -101,6 +103,7 @@ export default function DrawerList({ onClose }) {
         <Box>
           <img className={classes.logoFonts} src={webLogo} alt="" />
         </Box>
+
         <Box>
           <a
             href="/#introduction"
@@ -108,10 +111,12 @@ export default function DrawerList({ onClose }) {
             style={{ textDecoration: "none" }}
             onClick={onClose}
           >
-            <Box className={classes.dFlex}>
-              <Box className={classes.circle}></Box>
-              <Box className={classes.privateitems}>Overview</Box>
-            </Box>
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>OverView</Box>
+              </Box>
+            </ListItem>
           </a>
         </Box>
 
@@ -122,49 +127,43 @@ export default function DrawerList({ onClose }) {
             style={{ textDecoration: "none" }}
             onClick={onClose}
           >
-            <Box className={classes.dflex}>
-              <Box className={classes.circle}></Box>
-              <Box className={classes.privateitems}>Features</Box>
-            </Box>
-          </a>
-        </Box>
-        <Box>
-          <a
-            href="#authentication"
-            component={ButtonBase}
-            style={{ textDecoration: "none" }}
-          >
-            <Box className={classes.dflex}>
-              <Box className={classes.circle}></Box>
-              <Box className={classes.privateitems}>
-                {" "}
-                Continuous Voice Authentication for Amazon Connect®
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>Features</Box>
               </Box>
-            </Box>
+            </ListItem>
           </a>
         </Box>
         <Box>
           <a
-            href="#pricing"
+            href="/#pricing"
             component={ButtonBase}
             style={{ textDecoration: "none" }}
+            onClick={onClose}
           >
-            <Box className={classes.dflex}>
-              <Box className={classes.circle}></Box>
-              <Box className={classes.privateitems}>Pricing</Box>
-            </Box>
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>Pricing</Box>
+              </Box>
+            </ListItem>
           </a>
         </Box>
+
         <Box>
           <a
-            href="#pricing"
+            href="/#letstalk"
             component={ButtonBase}
             style={{ textDecoration: "none" }}
+            onClick={onClose}
           >
-            <Box className={classes.dflex}>
-              <Box className={classes.circle}></Box>
-              <Box className={classes.privateitems}>Contact Us</Box>
-            </Box>
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>Contact Us</Box>
+              </Box>
+            </ListItem>
           </a>
         </Box>
       </Box>
@@ -172,36 +171,59 @@ export default function DrawerList({ onClose }) {
       <Box button onClick={() => handleClick(1)}>
         <Box>
           <Box className={classes.heading}>Support</Box>
-          <Box>
+          {/* <Box>
             <a>
               <Box className={classes.dflex}>
                 <Box className={classes.circle}></Box>
                 <Box className={classes.connecteditems}>API Documentation</Box>
               </Box>
             </a>
-          </Box>
+          </Box> */}
+
           <Box>
             <a
-              href="https://github.com/openinfer/PrivateIdentity/issues"
-              target="_blank"
+              href="/#letstalk"
+              component={ButtonBase}
               style={{ textDecoration: "none" }}
+              onClick={onClose}
             >
-              <Box className={classes.dflex}>
-                <Box className={classes.circle}></Box>
-                <Box className={classes.connecteditems}>Issue Tracker</Box>
-              </Box>
+              <ListItem style={{ padding: 0 }}>
+                <Box className={classes.dflex}>
+                  <Box className={classes.circle}></Box>
+                  <Box className={classes.privateitems}>API Documentation</Box>
+                </Box>
+              </ListItem>
             </a>
           </Box>
           <Box>
             <a
-              href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
-              target="_blank "
+              href="https://github.com/openinfer/PrivateIdentity/issues"
+              component={ButtonBase}
               style={{ textDecoration: "none" }}
+              onClick={onClose}
             >
-              <Box className={classes.dflex}>
-                <Box className={classes.circle}></Box>
-                <Box className={classes.connecteditems}>Stack Overflow</Box>
-              </Box>
+              <ListItem style={{ padding: 0 }}>
+                <Box className={classes.dflex}>
+                  <Box className={classes.circle}></Box>
+                  <Box className={classes.privateitems}>Issue Tracker</Box>
+                </Box>
+              </ListItem>
+            </a>
+          </Box>
+
+          <Box>
+            <a
+              href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
+              component={ButtonBase}
+              style={{ textDecoration: "none" }}
+              onClick={onClose}
+            >
+              <ListItem style={{ padding: 0 }}>
+                <Box className={classes.dflex}>
+                  <Box className={classes.circle}></Box>
+                  <Box className={classes.privateitems}>Stack Overflow</Box>
+                </Box>
+              </ListItem>
             </a>
           </Box>
         </Box>
@@ -214,56 +236,100 @@ export default function DrawerList({ onClose }) {
             href="/about"
             component={ButtonBase}
             style={{ textDecoration: "none" }}
+            onClick={onClose}
           >
-            <Box className={classes.dflex}>
-              <Box className={classes.circle}></Box>
-              <Box className={classes.companyitems}>About Us</Box>
-            </Box>
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>About Us</Box>
+              </Box>
+            </ListItem>
           </a>
         </Box>
+
         <Box>
           <a
             href="/about#key-relationship"
             component={ButtonBase}
             style={{ textDecoration: "none" }}
+            onClick={onClose}
           >
-            <Box className={classes.dflex}>
-              <Box className={classes.circle}></Box>
-              <Box className={classes.companyitems}>Key Relationships</Box>
-            </Box>
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>Key Relationships</Box>
+              </Box>
+            </ListItem>
           </a>
         </Box>
+
         <Box>
           <a
             href="/about#leadership"
             component={ButtonBase}
             style={{ textDecoration: "none" }}
+            onClick={onClose}
           >
-            <Box className={classes.dflex}>
-              <Box className={classes.circle}></Box>
-              <Box className={classes.companyitems}>Leadership</Box>
-            </Box>
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>Leadership</Box>
+              </Box>
+            </ListItem>
           </a>
         </Box>
+
         <Box>
           <a
             href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy"
             target="_blank"
+            component={ButtonBase}
             style={{ textDecoration: "none" }}
+            onClick={onClose}
           >
-            <Box className={classes.dflex}>
-              <Box className={classes.circle}></Box>
-              <Box className={classes.companyitems}>Privacy Policy</Box>
-            </Box>
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>Privacy Policy</Box>
+              </Box>
+            </ListItem>
           </a>
         </Box>
-        <Box className={classes.dflex}>
-          <Box className={classes.circle}></Box>
-          <Box className={classes.companyitems}>Terms of Use</Box>
+
+        <Box>
+          <a
+            href="https://github.com/openinfer/PrivateIdentity/wiki/Terms-of-Use"
+            target="_blank"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+            onClick={onClose}
+          >
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>Terms of Use</Box>
+              </Box>
+            </ListItem>
+          </a>
         </Box>
-        <Box className={classes.dflex}>
-          <Box className={classes.circle}></Box>
-          <Box className={classes.companyitems}>Intellectual Property</Box>
+
+        <Box>
+          <a
+            href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy"
+            target="_blank"
+            component={ButtonBase}
+            style={{ textDecoration: "none" }}
+            onClick={onClose}
+          >
+            <ListItem style={{ padding: 0 }}>
+              <Box className={classes.dflex}>
+                <Box className={classes.circle}></Box>
+                <Box className={classes.privateitems}>
+                  Intellectual Property
+                </Box>
+              </Box>
+            </ListItem>
+          </a>
         </Box>
       </Box>
     </ul>

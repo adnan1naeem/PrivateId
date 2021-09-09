@@ -9,7 +9,7 @@ import Menu from "@material-ui/core/Menu";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import webLogo from "../../assets/webLogo.svg";
+import webLogo from "../../assets/webLogo.jpg";
 import PrivateId from "../privateId";
 import CompanyId from "../companyId";
 import SalesId from "../saleId";
@@ -41,14 +41,13 @@ export default function Appbar({ hidecontent }) {
       height: 61,
       width: 311,
       flex: 1,
-      paddingLeft: 80,
       [theme.breakpoints.only("xs")]: {
         height: 30,
         width: 152,
-        paddingLeft: 43,
+        // paddingLeft: 43,
       },
       [theme.breakpoints.up("xl")]: {
-        height: 183,
+        height: 123,
         width: 278,
         paddingLeft: 0,
       },

@@ -31,6 +31,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardItem: {
+    padding: 0,
+
     [theme.breakpoints.up("lg")]: {
       width: 400,
     },
@@ -58,14 +60,7 @@ export const Leadership = () => {
             </Box>
 
             <Grid container spacing={8} justifyContent="center">
-              <Grid
-                item
-                xs={11}
-                md={11}
-                lg={6}
-                xl={6}
-                className={classes.cardItem}
-              >
+              <Grid xs={11} md={11} lg={6} xl={6} className={classes.cardItem}>
                 <LeadershipCard
                   image={mikeweb}
                   name="Mike Pollard"
@@ -74,14 +69,7 @@ export const Leadership = () => {
                   detail="Mike is an entrepreneur experienced in high-growth technology ventures in biometrics, AI/ML, big data and cyber security. Prior to co-founding Private Identity, Mike served as VP and General Manager at Thomson Reuters, Executive VP and co-founder of Discovery Logic, CEO of thinkXML and CEO of Science Management Corp."
                 />
               </Grid>
-              <Grid
-                item
-                xs={11}
-                md={11}
-                lg={6}
-                xl={6}
-                className={classes.cardItem}
-              >
+              <Grid xs={11} md={11} lg={6} xl={6} className={classes.cardItem}>
                 <LeadershipCard
                   image={webscott}
                   name="Scott Streit"

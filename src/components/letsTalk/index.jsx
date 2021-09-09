@@ -31,10 +31,10 @@ const useStyles = makeStyles((theme) => ({
       top: -563,
     },
     [theme.breakpoints.only("md")]: {
-      top: -545,
+      // top: -545,
     },
     [theme.breakpoints.only("sm")]: {
-      top: -563,
+      // top: -563,
     },
   },
   btnFonts: {
@@ -365,9 +365,9 @@ export const LetsTalk = withWidth()(({ width }) => {
     customerImg = customerPhone;
   }
   return (
-    <Grid container justifyContent="center">
-      <Grid item xs={12} sm={8} lg={9} className={classes.manageUI}>
-        <Box className={classes.bgImage} id="letstalk">
+    <Grid container justifyContent="center" id="letstalk">
+      <Grid item xs={12} lg={9} className={classes.manageUI}>
+        <Box className={classes.bgImage}>
           <Box className={classes.dflex}>
             <Box className={classes.inqiury}>Let’s Talk!</Box>
             <Box className={classes.detail}>Start a conversation.</Box>

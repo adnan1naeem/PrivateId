@@ -5,6 +5,10 @@ const useStyles = makeStyles((theme) => ({
   imgStyling: {
     height: 348,
     width: "100%",
+    objectFit: "cover",
+    borderTopLeftRadius: 19,
+    borderTopRightRadius: 19,
+
     [theme.breakpoints.up("xs")]: {
       height: 170,
     },

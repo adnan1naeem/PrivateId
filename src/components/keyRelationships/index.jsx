@@ -2,6 +2,7 @@ import { Box, Grid, makeStyles, Paper } from "@material-ui/core";
 import React from "react";
 import keyrelationship from "../../assets/keyrelationship.png";
 import { KeyCard } from "../keyCard";
+
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundImage: `url(${keyrelationship})`,
