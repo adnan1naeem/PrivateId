@@ -104,9 +104,21 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
       width: "23%",
     },
-    [theme.breakpoints.down("xl")]: {
-      lineHeight: "27px",
-      width: "25%",
+  },
+
+  continousItems: {
+    padding: 10,
+    fontFamily: " DM Sans",
+    fontStyle: "normal",
+    textAlign: "left",
+    fontWeight: 500,
+    fontSize: 20,
+    color: "#4E4E4E",
+    marginLeft: 5,
+    width: "38%",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+      width: "23%",
     },
   },
   companyitems: {
@@ -222,15 +234,7 @@ export const WebFooter = () => {
                       href="/#authentication"
                       component={ButtonBase}
                       style={{ textDecoration: "none" }}
-                    >
-                      <Box className={classes.dflex}>
-                        <Box className={classes.circle}></Box>
-                        <Box className={classes.privateitems}>
-                          {" "}
-                          Continuous Voice Authentication for Amazon Connect®
-                        </Box>
-                      </Box>
-                    </a>
+                    ></a>
                     <a
                       href="/#pricing"
                       component={ButtonBase}
@@ -241,6 +245,13 @@ export const WebFooter = () => {
                         <Box className={classes.privateitems}>Pricing</Box>
                       </Box>
                     </a>
+                  </Box>
+                  <Box className={classes.dflex}>
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.continousItems}>
+                      {" "}
+                      Continuous Voice Authentication for Amazon Connect®
+                    </Box>
                   </Box>
                 </Grid>
 
