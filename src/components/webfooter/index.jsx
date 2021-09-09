@@ -299,10 +299,16 @@ export const WebFooter = () => {
                       <Box className={classes.companyitems}>Privacy Policy</Box>
                     </Box>
                   </a>
-                  <Box className={classes.dflex}>
-                    <Box className={classes.circle}></Box>
-                    <Box className={classes.companyitems}>Terms of Use</Box>
-                  </Box>
+                  <a
+                    href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy"
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box className={classes.dflex}>
+                      <Box className={classes.circle}></Box>
+                      <Box className={classes.companyitems}>Terms of Use</Box>
+                    </Box>
+                  </a>
                   <Box className={classes.dflex}>
                     <Box className={classes.circle}></Box>
                     <Box className={classes.companyitems}>
