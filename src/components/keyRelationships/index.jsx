@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       minHeight: "836px",
     },
+    [theme.breakpoints.up("xl")]: {
+      justifyContent: "center",
+    },
   },
   paper: {
     padding: 22,
@@ -34,15 +37,24 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: 30,
     },
   },
+  containerChild: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1200,
+    },
+  },
 }));
 export const KeyRelationships = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item lg={12}>
+      <Grid item lg={12} xl={12}>
         <Box className={classes.container} id="key-relationship">
-          <Grid container justifyContent="center">
-            <Grid item xs={12} md={12} lg={9}>
+          <Grid
+            container
+            justifyContent="center"
+            className={classes.containerChild}
+          >
+            <Grid item xs={12} md={12} lg={9} xl={11}>
               <Box>
                 <Paper className={classes.paper} elevation={0}>
                   <KeyCard />

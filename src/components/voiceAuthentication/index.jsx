@@ -172,6 +172,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       maxWidth: 1120,
     },
+    [theme.breakpoints.down("xl")]: {
+      maxWidth: 1120,
+    },
   },
 }));
 export const VoiceAuthentication = () => {

@@ -12,11 +12,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     textAlign: "center",
     flexDirection: "column",
+    [theme.breakpoints.only("xs")]: {
+      fontSize: 18,
+    },
     [theme.breakpoints.only("lg")]: {
       fontSize: 20,
     },
-    [theme.breakpoints.only("xs")]: {
-      fontSize: 18,
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 30,
     },
   },
   details: {
@@ -26,15 +29,15 @@ const useStyles = makeStyles((theme) => ({
     color: "#000000",
     marginTop: 17,
     width: "85%",
+
     [theme.breakpoints.down("lg")]: {
       fontSize: 10,
       marginTop: 10,
     },
-    width: "66%",
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 12,
+    [theme.breakpoints.down("xl")]: {
+      fontSize: 16,
       marginTop: 10,
-      width: "none",
+      width: 278,
     },
   },
   members: {
@@ -61,16 +64,18 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontSize: 22,
     color: "#000000",
-
-    [theme.breakpoints.only("lg")]: {
-      fontSize: 12,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 10,
+      lineHeight: "20px",
     },
     [theme.breakpoints.only("sm")]: {
       fontSize: 15,
     },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 10,
-      lineHeight: "20px",
+    [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 18,
     },
   },
   detail: {
@@ -78,6 +83,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontSize: 22,
     color: "#898989",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 18,
+    },
     [theme.breakpoints.only("lg")]: {
       fontSize: 10,
     },
@@ -160,7 +168,7 @@ const useStyles = makeStyles((theme) => ({
 export const KeyCard = () => {
   const classes = useStyles();
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center" className={classes.manageUI}>
       <Grid item xs={10} lg={6}>
         <Box>
           <Box className={classes.heading}>
