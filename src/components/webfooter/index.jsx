@@ -183,7 +183,6 @@ export const WebFooter = () => {
 
   return (
     <Box className={containerClass}>
-      {pathname === "/about" && <Box height={11} bgcolor="#2A3D80" />}
       <Grid container justifyContent="center">
         <Grid item xs={10} lg={7} className={classes.manageUI}>
           <Hidden mdDown>
