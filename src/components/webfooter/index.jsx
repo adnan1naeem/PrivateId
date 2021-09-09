@@ -96,15 +96,17 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     fontWeight: 500,
     fontSize: 20,
-    color: " #565656",
-    marginLeft: 5,
-    width: "43%",
     lineHeight: "16px",
+    color: "#4E4E4E",
+    marginLeft: 5,
+    width: "38%",
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
+      width: "23%",
     },
-    [theme.breakpoints.only("xl")]: {
-      lineHeight: 1,
+    [theme.breakpoints.down("xl")]: {
+      lineHeight: "27px",
+      width: "25%",
     },
   },
   companyitems: {
@@ -161,24 +163,9 @@ const useStyles = makeStyles((theme) => ({
       top: "-565px",
       marginBottom: "-570px",
     },
-    [theme.breakpoints.only("md")]: {
-      top: "-548px",
-      marginBottom: "-548px",
-    },
-    [theme.breakpoints.only("sm")]: {
-      top: "-565px",
-      marginBottom: "-570px",
-    },
-    [theme.breakpoints.only("xs")]: {
-      top: "-234px",
-      marginBottom: "-236px",
-    },
   },
   bgClrAboutUs: {
     backgroundColor: "#DEDEDE",
-    [theme.breakpoints.up("xl")]: {
-      position: "relative",
-    },
   },
   manageUI: {
     [theme.breakpoints.up("xl")]: {
