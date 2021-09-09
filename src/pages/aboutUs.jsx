@@ -65,7 +65,7 @@ export const AboutUs = () => {
     <Box id="about">
       <Appbar />
       <Grid container justifyContent="center">
-        <Grid item lg={9}>
+        <Grid item lg={9} xl={6}>
           <Box className={classes.bgImg}>
             <Grid container justifyContent="center">
               <Grid xs={10} item lg={9}>

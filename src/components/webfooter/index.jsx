@@ -178,6 +178,9 @@ const useStyles = makeStyles((theme) => ({
   },
   bgClrAboutUs: {
     backgroundColor: "#DEDEDE",
+    [theme.breakpoints.up("xl")]: {
+      position: "relative",
+    },
   },
   manageUI: {
     [theme.breakpoints.up("xl")]: {

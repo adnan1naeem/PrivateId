@@ -5,32 +5,42 @@ const useStyles = makeStyles((theme) => ({
   imgStyling: {
     height: 348,
     width: "100%",
-    [theme.breakpoints.down("md")]: {
-      height: "unset",
-    },
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.up("xs")]: {
       height: 170,
     },
-    [theme.breakpoints.only("lg")]: {
+    [theme.breakpoints.up("sm")]: {
+      height: "unset",
+    },
+    [theme.breakpoints.up("md")]: {
+      height: "unset",
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      height: "unset",
+    },
+    [theme.breakpoints.up("xl")]: {
       height: "unset",
     },
   },
   designationStyling: {
     fontFamily: "Dm Sans",
     fontWeight: 500,
-    fontSize: 30,
+
     color: "#66A5FE",
-    [theme.breakpoints.only("lg")]: {
-      [theme.breakpoints.only("md")]: {
-        fontSize: 14,
-      },
-      [theme.breakpoints.only("sm")]: {
-        fontSize: 14,
-      },
+    [theme.breakpoints.up("xs")]: {
+      fontSize: 12,
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 14,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 14,
+    },
+    [theme.breakpoints.up("lg")]: {
       fontSize: 15,
     },
-    [theme.breakpoints.only("xs")]: {
-      fontSize: 12,
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 24,
     },
   },
   detailStyling: {
@@ -38,36 +48,43 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontSize: 22,
     color: "#3E3E3E",
-    [theme.breakpoints.only("lg")]: {
+    [theme.breakpoints.up("xs")]: {
+      fontSize: 12,
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 14,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 14,
+    },
+    [theme.breakpoints.up("lg")]: {
       fontSize: 11,
       lineHeight: "16px",
     },
-    [theme.breakpoints.only("md")]: {
-      fontSize: 14,
-    },
-    [theme.breakpoints.only("sm")]: {
-      fontSize: 14,
-    },
-    [theme.breakpoints.only("xs")]: {
-      fontSize: 12,
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 16,
+      lineHeight: "22px",
     },
   },
   nameStyling: {
     fontFamily: "Dm Sans",
     fontWeight: 500,
-    fontSize: 22,
+
     color: "#000000",
-    [theme.breakpoints.only("lg")]: {
+    [theme.breakpoints.up("xs")]: {
+      fontSize: 12,
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 14,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 14,
+    },
+    [theme.breakpoints.up("lg")]: {
       fontSize: 15,
     },
-    [theme.breakpoints.only("md")]: {
-      fontSize: 14,
-    },
-    [theme.breakpoints.only("sm")]: {
-      fontSize: 14,
-    },
-    [theme.breakpoints.only("xs")]: {
-      fontSize: 12,
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 24,
     },
   },
   linkedinContainer: {
@@ -76,7 +93,12 @@ const useStyles = makeStyles((theme) => ({
     bottom: -37,
     right: 38,
     position: "absolute",
-    [theme.breakpoints.only("lg")]: {
+    [theme.breakpoints.up("xs")]: {
+      right: "-3px",
+      bottom: "-19px",
+      height: 44,
+    },
+    [theme.breakpoints.up("lg")]: {
       height: 38,
       right: 25,
       bottom: "-17px",
@@ -86,50 +108,48 @@ const useStyles = makeStyles((theme) => ({
       bottom: "-18px",
       height: 45,
     },
-    [theme.breakpoints.only("xs")]: {
-      right: "-3px",
-      bottom: "-19px",
-      height: 44,
-    },
   },
   bgHeight: {
-    [theme.breakpoints.up("xl")]: {
-      minHeight: 500,
-      padding: 30,
-    },
-    [theme.breakpoints.only("lg")]: {
-      minHeight: 220,
-      padding: 20,
-    },
-    [theme.breakpoints.only("md")]: {
-      minHeight: 190,
-    },
-    [theme.breakpoints.only("sm")]: {
-      padding: 20,
-      minHeight: 190,
-    },
-    [theme.breakpoints.only("xs")]: {
+    [theme.breakpoints.up("xs")]: {
       padding: 10,
       minHeight: 230,
+    },
+    [theme.breakpoints.up("sm")]: {
+      padding: 20,
+      minHeight: 190,
+    },
+    [theme.breakpoints.up("md")]: {
+      minHeight: 190,
+    },
+    [theme.breakpoints.up("lg")]: {
+      minHeight: 220,
+      padding: 20,
     },
   },
   bgWidth: {
     borderRadius: "19px",
-    [theme.breakpoints.only("lg")]: {
+    [theme.breakpoints.up("xs")]: {
+      marginTop: 20,
+    },
+    [theme.breakpoints.up("sm")]: {
+      width: "100%",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "100%",
+    },
+
+    [theme.breakpoints.up("lg")]: {
       width: 330,
     },
-    [theme.breakpoints.only("md")]: {
+    [theme.breakpoints.up("xl")]: {
+      borderRadius: "37px",
+      marginTop: 30,
       width: "100%",
-    },
-    [theme.breakpoints.only("sm")]: {
-      width: "100%",
-    },
-    [theme.breakpoints.only("xs")]: {
-      marginTop: 20,
+      height: 600,
     },
   },
   ml: {
-    [theme.breakpoints.only("xs")]: {
+    [theme.breakpoints.up("xs")]: {
       marginLeft: 20,
       marginRight: 20,
     },
