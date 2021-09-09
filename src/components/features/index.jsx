@@ -65,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
   dFlex: {
     display: "flex",
     justifyContent: "center",
+    textAlign: "",
   },
   position: {
     position: "relative",
