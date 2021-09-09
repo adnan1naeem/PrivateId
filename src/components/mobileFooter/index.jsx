@@ -109,11 +109,16 @@ function MobileFooter(props) {
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Box>
-                  <Box
+                  {/* <Box
                     className={classes.dflex}
                     href="#introduction"
                     component={ButtonBase}
                   >
+                    <Box className={classes.circle}></Box>
+                    <Box className={classes.privateitems}>Overview</Box>
+                  </Box> */}
+
+                  <Box className={classes.dflex}>
                     <Box className={classes.circle}></Box>
                     <Box className={classes.privateitems}>Overview</Box>
                   </Box>
