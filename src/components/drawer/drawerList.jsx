@@ -5,7 +5,7 @@ import tracker from "../../assets/tracker.png";
 import api from "../../assets/api.png";
 import ListItem from "@material-ui/core/ListItem";
 import { Box, ButtonBase } from "@material-ui/core";
-import webLogo from "../../assets/webLogo.jpg";
+import webLogo from "../../assets/webLogo.svg";
 const useStyles = makeStyles((theme) => ({
   font: {
     fontFamily: "Dm Sans",
