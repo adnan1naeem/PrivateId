@@ -41,7 +41,6 @@ export default function Appbar({ hidecontent }) {
       height: 61,
       width: 311,
       flex: 1,
-      paddingLeft: 80,
       [theme.breakpoints.only("xs")]: {
         height: 30,
         width: 152,
