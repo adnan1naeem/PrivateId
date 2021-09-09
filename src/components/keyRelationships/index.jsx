@@ -2,6 +2,7 @@ import { Box, Grid, makeStyles, Paper } from "@material-ui/core";
 import React from "react";
 import keyrelationship from "../../assets/keyrelationship.png";
 import { KeyCard } from "../keyCard";
+
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundImage: `url(${keyrelationship})`,
@@ -43,9 +44,9 @@ export const KeyRelationships = () => {
           <Grid container justifyContent="center">
             <Grid item xs={12} md={12} lg={9}>
               <Box>
-                <Paper className={classes.paper} elevation={0}>
+                {/* <Paper className={classes.paper} elevation={0}>
                   <KeyCard />
-                </Paper>
+                </Paper> */}
               </Box>
             </Grid>
           </Grid>

@@ -9,6 +9,7 @@ import { LetsTalk } from "../components/letsTalk";
 import { GetReady } from "../components/getReady";
 import { WebFooter } from "../components/webfooter";
 import { makeStyles } from "@material-ui/core";
+
 const useStyles = makeStyles((theme) => ({}));
 export const Home = () => {
   const classes = useStyles();

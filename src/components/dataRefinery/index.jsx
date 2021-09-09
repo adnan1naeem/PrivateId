@@ -145,7 +145,7 @@ const useStyles = makeStyles((theme) => ({
   },
   manageUI: {
     [theme.breakpoints.up("xl")]: {
-      maxWidth: 1424,
+      maxWidth: 1250,
       width: "none",
     },
     [theme.breakpoints.down("lg")]: {
