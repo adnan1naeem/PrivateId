@@ -23,11 +23,10 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "100%",
     color: " #565656",
     marginLeft: 5,
-    width: "43%",
   },
   privateitems: {
     padding: 10,
-    fontFamily: " DM Sans",
+    fontFamily: "DM Sans",
     fontStyle: "normal",
     textAlign: "left",
     fontWeight: 500,
@@ -35,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "100%",
     color: "#4E4E4E",
     marginLeft: 5,
-    width: "38%",
   },
   circle: {
     width: 10,
@@ -46,11 +44,9 @@ const useStyles = makeStyles((theme) => ({
   },
   dflex: {
     display: "flex",
-    width: 450,
   },
   dFlex: {
     display: "flex",
-    width: 450,
     marginTop: 10,
   },
   heading: {
@@ -77,11 +73,16 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "100%",
     color: " #747474",
     marginLeft: 5,
-    width: "63%",
   },
   logoFonts: {
     marginTop: 20,
-    height: 58,
+    height: 38,
+
+    [theme.breakpoints.up("sm")]: {
+      marginRight: 20,
+      marginTop: 20,
+      height: 48,
+    },
   },
 }));
 
@@ -128,7 +129,7 @@ export default function DrawerList({ onClose }) {
             </Box>
           </a>
         </Box>
-        <Box>
+        {/* <Box>
           <a
             href="#authentication"
             component={ButtonBase}
@@ -137,12 +138,11 @@ export default function DrawerList({ onClose }) {
             <Box className={classes.dflex}>
               <Box className={classes.circle}></Box>
               <Box className={classes.privateitems}>
-                {" "}
                 Continuous Voice Authentication for Amazon Connect®
               </Box>
             </Box>
           </a>
-        </Box>
+        </Box> */}
         <Box>
           <a
             href="#pricing"
