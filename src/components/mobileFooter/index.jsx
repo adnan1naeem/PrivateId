@@ -52,8 +52,8 @@ const styles = (theme) => ({
     marginLeft: 10,
   },
   image: {
-    width: 30,
-    height: 30,
+    width: 20,
+    height: 20,
   },
   suppport: {
     fontFamily: "Dm Sans",
@@ -195,20 +195,12 @@ function MobileFooter(props) {
                   </a>
 
                   <Box className={classes.dflex}>
-                    <img
-                      src={en}
-                      className={{ width: 20, height: 20 }}
-                      alt="logo"
-                    />
+                    <img src={en} className={classes.image} alt="logo" />
 
                     <Box className={classes.suppport}> support@private.id</Box>
                   </Box>
                   <Box className={classes.dflex}>
-                    <img
-                      src={phn}
-                      className={{ width: 20, height: 20 }}
-                      alt="logo"
-                    />
+                    <img src={phn} className={classes.image} alt="logo" />
                     <Box className={classes.suppport}> +1-301-938-6300</Box>
                   </Box>
                 </Typography>
