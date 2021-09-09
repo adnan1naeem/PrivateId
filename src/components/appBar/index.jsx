@@ -9,7 +9,7 @@ import Menu from "@material-ui/core/Menu";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import webLogo from "../../assets/webLogo.svg";
+import webLogo from "../../assets/webLogo.jpg";
 import PrivateId from "../privateId";
 import CompanyId from "../companyId";
 import SalesId from "../saleId";
