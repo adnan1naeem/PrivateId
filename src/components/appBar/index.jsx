@@ -39,7 +39,7 @@ export default function Appbar({ hidecontent }) {
     },
     logo: {
       height: 61,
-      width: 311,
+      width: 268,
       flex: 1,
       [theme.breakpoints.only("xs")]: {
         height: 30,
@@ -52,7 +52,7 @@ export default function Appbar({ hidecontent }) {
         paddingLeft: 0,
       },
       [theme.breakpoints.only("lg")]: {
-        width: 150,
+        // width: 150,
         paddingLeft: 0,
       },
     },

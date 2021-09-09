@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
     left: 60,
 
     [theme.breakpoints.up("xs")]: {
-      top: -25,
+      top: -71,
       borderRadius: 14,
     },
     [theme.breakpoints.up("sm")]: {
