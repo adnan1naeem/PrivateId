@@ -312,9 +312,9 @@ export const LetsTalk = withWidth()(({ width }) => {
     customerImg = customerPhone;
   }
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center" id="letstalk">
       <Grid item xs={12} lg={9} className={classes.manageUI}>
-        <Box className={classes.bgImage} id="letstalk">
+        <Box className={classes.bgImage}>
           <Box className={classes.dflex}>
             <Box className={classes.inqiury}>Let’s Talk!</Box>
             <Box className={classes.detail}>Start a conversation.</Box>
