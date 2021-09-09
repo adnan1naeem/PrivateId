@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   bgWidth: {
-    borderRadius: "33px",
+    borderRadius: "19px",
     [theme.breakpoints.only("lg")]: {
       width: 330,
     },
