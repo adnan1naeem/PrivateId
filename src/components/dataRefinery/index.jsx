@@ -208,11 +208,13 @@ export const DataRefinery = ({
             <Box className={classes.heading}> {title2}</Box>
             <Box>
               <Box className={classes.detail}>{heading2}</Box>
-              <Hidden mdDown>
-                <Box mt={"74px"}>
-                  <img src={image} className={classes.aboutUsimg} alt="" />
-                </Box>
-              </Hidden>
+              {pathname === "/about" ? (
+                <Hidden mdDown>
+                  <Box mt={"74px"}>
+                    <img src={image} className={classes.aboutUsimg} alt="" />
+                  </Box>
+                </Hidden>
+              ) : null}
             </Box>
           </Grid>
 
