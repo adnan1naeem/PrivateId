@@ -145,6 +145,18 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       maxWidth: 1120,
     },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: 1120,
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: 1120,
+    },
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: 1120,
+    },
+    [theme.breakpoints.up("xs")]: {
+      maxWidth: 1120,
+    },
   },
   img: {
     width: "100%",

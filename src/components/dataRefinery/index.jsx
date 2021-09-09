@@ -151,6 +151,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       maxWidth: 947,
     },
+    [theme.breakpoints.down("md")]: {
+      maxWidth: 947,
+    },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: 947,
+    },
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: 947,
+    },
   },
 }));
 

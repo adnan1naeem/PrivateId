@@ -36,14 +36,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 700,
     },
   },
-  padding: {
-    padding: 55,
-    paddingLeft: "10%",
-    paddingRight: "10%",
-    [theme.breakpoints.up("xl")]: {
-      padding: 75,
-    },
-  },
+
   seeMore: {
     fontWeight: 700,
     fontSize: 20,
@@ -79,34 +72,54 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       top: -716,
     },
-    [theme.breakpoints.up("xl")]: {
-      top: "-153px",
-    },
-    [theme.breakpoints.only("lg")]: {
-      top: "-520px",
+    [theme.breakpoints.only("sm")]: {
+      top: "-550px",
     },
     [theme.breakpoints.only("md")]: {
       top: "-550px",
     },
-    [theme.breakpoints.only("sm")]: {
-      top: "-550px",
+    [theme.breakpoints.only("lg")]: {
+      top: "-520px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      top: "-153px",
     },
   },
   manageUI: {
-    [theme.breakpoints.up("xl")]: {
-      maxWidth: 1424,
-    },
-    [theme.breakpoints.up("lg")]: {
-      maxWidth: 1424,
-    },
-    [theme.breakpoints.up("md")]: {
-      maxWidth: 1424,
+    [theme.breakpoints.up("xs")]: {
+      maxWidth: 800,
     },
     [theme.breakpoints.up("sm")]: {
-      maxWidth: 1424,
+      maxWidth: 815,
     },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: 947,
+    },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: 947,
+    },
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1120,
+    },
+  },
+  mt: {
     [theme.breakpoints.up("xs")]: {
-      maxWidth: 1424,
+      marginTop: 60,
+    },
+    [theme.breakpoints.up("sm")]: {
+      marginTop: 60,
+    },
+    [theme.breakpoints.up("md")]: {
+      marginTop: 60,
+    },
+    [theme.breakpoints.up("xl")]: {
+      marginTop: 60,
+    },
+  },
+  dflex: {
+    [theme.breakpoints.up("sm")]: {
+      display: "flex",
+      justifyContent: "center",
     },
   },
 }));
@@ -254,20 +267,27 @@ export const Features = () => {
       className={classes.position}
       id="cards-container"
     >
-      <Grid item xs={12} lg={7} md={10} sm={12} className={classes.manageUI}>
+      <Grid
+        item
+        xs={10}
+        sm={11}
+        md={10}
+        lg={7}
+        xl={8}
+        className={classes.manageUI}
+      >
         <Box>
           <Box className={classes.dFlex}>
             <Box className={classes.title}>Features</Box>
-            <Box></Box>
           </Box>
           <Grid
             container
             spacing={4}
-            className={classes.padding}
+            className={classes.mt}
             justifyContent="center"
           >
             {cardsData.map((item) => (
-              <Grid item lg={4} sm={6} xs={12}>
+              <Grid className={classes.dFlex} item xs={12} sm={6} lg={4}>
                 {" "}
                 <Cards
                   image={item.image}
