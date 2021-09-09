@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xs")]: {
       height: 170,
     },
+    [theme.breakpoints.up("sm")]: {
+      height: "unset",
+    },
     [theme.breakpoints.up("md")]: {
       height: "unset",
     },
