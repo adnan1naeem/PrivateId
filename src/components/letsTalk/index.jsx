@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
     left: 60,
 
     [theme.breakpoints.up("xs")]: {
-      top: -25,
+      top: -71,
       borderRadius: 14,
     },
     [theme.breakpoints.up("sm")]: {
@@ -449,13 +449,31 @@ export const LetsTalk = withWidth()(({ width }) => {
                   onClick={handleSendMessage}
                   disabled={sendingMessage}
                 >
-                  Send{" "}
+                  Send
                   {sendingMessage && (
                     <CircularProgress
                       style={{ color: "white", marginLeft: 16 }}
                     />
                   )}
                 </Button>
+                <Box
+                  style={{
+                    flex: 1,
+                    flexDirection: "row",
+                  }}
+                >
+                  <Box style={{ fontSize: "14px", marginTop: 10 }}>
+                    <a href="https://github.com/openinfer/PrivateIdentity/wiki/Privacy-Policy">
+                      {" "}
+                      Privacy Policy
+                    </a>
+                  </Box>
+                  <Box style={{ fontSize: "14px", marginTop: 10 }}>
+                    <a href="https://github.com/openinfer/PrivateIdentity/wiki/Terms-of-Use">
+                      Terms of Service
+                    </a>
+                  </Box>
+                </Box>
               </Paper>
             </Grid>
           </Grid>
