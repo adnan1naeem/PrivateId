@@ -31,10 +31,10 @@ const useStyles = makeStyles((theme) => ({
       top: -563,
     },
     [theme.breakpoints.only("md")]: {
-      // top: -545,
+      top: -545,
     },
     [theme.breakpoints.only("sm")]: {
-      // top: -563,
+      top: -563,
     },
   },
   btnFonts: {
