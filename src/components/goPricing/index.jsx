@@ -202,25 +202,27 @@ const useStyles = makeStyles((theme) => ({
   containerPosition: {
     position: "relative",
     top: -415,
-    [theme.breakpoints.only("xs")]: {
+    [theme.breakpoints.up("xs")]: {
       top: -549,
       marginBottom: -305,
     },
-    [theme.breakpoints.up("xl")]: {
-      top: -158,
+    [theme.breakpoints.up("sm")]: {
+      top: -360,
     },
-    [theme.breakpoints.only("lg")]: {
-      top: -581,
-    },
-    [theme.breakpoints.only("sm")]: {
-      top: -583,
-    },
-    [theme.breakpoints.only("md")]: {
+    [theme.breakpoints.up("md")]: {
       fontSize: 7,
       marginTop: 5,
       lineHeight: "13px",
       fontWeight: 700,
-      top: "-606px",
+      top: "-354px",
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      top: -388,
+    },
+
+    [theme.breakpoints.up("xl")]: {
+      top: -56,
     },
   },
   manageUI: {

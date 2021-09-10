@@ -201,7 +201,7 @@ export const AuthenticationCards = () => {
       justifyContent="center"
       className={classes.manageMargin}
     >
-      <Grid item className={classes.boxShadow} xs={11} sm={9} lg={6} xl={5}>
+      <Grid item className={classes.boxShadow} xs={9} sm={9} lg={6} xl={5}>
         <Paper
           square={false}
           elevation={7}
@@ -238,7 +238,7 @@ export const AuthenticationCards = () => {
           </Box>
         </Paper>
       </Grid>
-      <Grid item xs={11} sm={9} lg={5} className={classes.boxShadow}>
+      <Grid item xs={9} sm={9} lg={5} className={classes.boxShadow}>
         <Paper
           square={false}
           elevation={7}

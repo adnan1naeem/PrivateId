@@ -9,15 +9,25 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     borderRadius: 33,
     padding: 52,
-    [theme.breakpoints.only("lg")]: {
-      padding: 24,
-    },
-    [theme.breakpoints.down("xs")]: {
+
+    [theme.breakpoints.up("xs")]: {
       flexDirection: "column",
       padding: 12,
       marginLeft: 28,
       marginRight: 20,
       borderRadius: 22,
+      flexDirection: "unset",
+    },
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "unset",
+      padding: 24,
+    },
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "unset",
+      padding: 24,
+    },
+    [theme.breakpoints.up("lg")]: {
+      padding: 24,
     },
   },
   text1: {
@@ -33,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 20,
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: 10,
+      fontSize: 12,
     },
     [theme.breakpoints.up("xl")]: {
       fontSize: 30,
@@ -53,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 25,
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: 10,
+      fontSize: 12,
     },
     [theme.breakpoints.up("xl")]: {
       fontSize: 30,
@@ -67,19 +77,19 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.only("lg")]: {
       fontSize: 20,
-      width: "72%",
+      width: 637,
     },
     [theme.breakpoints.down("md")]: {
       fontSize: 15,
-      width: "72%",
+      width: 415,
     },
 
     [theme.breakpoints.only("xs")]: {
-      fontSize: 10,
+      fontSize: 12,
       marginTop: 4,
       display: "flex",
       textAlign: "center",
-      width: "unset",
+      width: 329,
     },
     [theme.breakpoints.only("xl")]: {
       fontSize: 20,
@@ -131,21 +141,21 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: "-381px",
     marginBottom: 150,
-    [theme.breakpoints.only("lg")]: {
-      top: "-468px",
-    },
-    [theme.breakpoints.down("md")]: {
-      top: -509,
-    },
-    [theme.breakpoints.down("sm")]: {
-      top: -512,
-    },
-    [theme.breakpoints.only("xs")]: {
+    [theme.breakpoints.up("xs")]: {
       top: "-644px",
       marginBottom: -70,
     },
+    [theme.breakpoints.up("sm")]: {
+      top: -480,
+    },
+    [theme.breakpoints.up("md")]: {
+      top: -480,
+    },
+    [theme.breakpoints.up("lg")]: {
+      top: "-498px",
+    },
     [theme.breakpoints.up("xl")]: {
-      top: "-182px",
+      top: "-140px",
     },
   },
   manageUI: {
@@ -158,9 +168,9 @@ export const GetReady = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} lg={12} className={classes.manageUI}>
+      <Grid item xs={12} sm={12} md={12} lg={12} className={classes.manageUI}>
         <Grid container justifyContent="center" id="get-ready">
-          <Grid item md={11} lg={10} xs={11}>
+          <Grid item sm={11} md={11} lg={10} xs={11}>
             <Box className={classes.textCenter}>
               <Box className={classes.bgClr}>
                 <Box>

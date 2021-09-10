@@ -165,15 +165,25 @@ const useStyles = makeStyles((theme) => ({
   bgClr: {
     backgroundColor: "#DEDEDE",
     position: "relative",
-    top: "-303px",
-    marginBottom: -303,
-    [theme.breakpoints.up("xl")]: {
-      top: "-148px",
-      marginBottom: "-166px",
+    top: "-281px",
+    marginBottom: -283,
+    [theme.breakpoints.up("sm")]: {
+      top: "-60px",
+      marginBottom: "-60px",
     },
-    [theme.breakpoints.only("lg")]: {
-      top: "-565px",
-      marginBottom: "-570px",
+    [theme.breakpoints.up("md")]: {
+      top: "-53px",
+      marginBottom: "-56px",
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      top: "-80px",
+      marginBottom: "-90px",
+    },
+
+    [theme.breakpoints.up("xl")]: {
+      top: 258,
+      marginBottom: 240,
     },
   },
   bgClrAboutUs: {

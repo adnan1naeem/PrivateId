@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${lgBg})`,
     backgroundSize: `101%`,
     backgroundRepeat: `no-repeat`,
-    backgroundPositionX: "-3px",
+
     backgroundPositionY: "bottom",
 
     [theme.breakpoints.only("lg")]: {

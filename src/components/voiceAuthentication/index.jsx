@@ -22,34 +22,37 @@ const useStyles = makeStyles((theme) => ({
   bgImg: {
     backgroundImage: `url(${callBg})`,
     backgroundColor: "#2A3D80",
-    [theme.breakpoints.only("md")]: {
-      backgroundImage: `url(${voiceIPad})`,
-    },
     backgroundPosition: "center",
     minHeight: "135vh",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     position: "relative",
     top: -300,
-    [theme.breakpoints.only("xs")]: {
+    [theme.breakpoints.up("xs")]: {
       backgroundImage: `url(${authMob})`,
       top: -600,
     },
-    [theme.breakpoints.only("xl")]: {
-      top: "-55px",
-      minHeight: "73vh",
+    [theme.breakpoints.up("sm")]: {
+      minHeight: "77vh",
+      top: "-434px",
+      backgroundImage: `url(${voiceIPad})`,
     },
-    [theme.breakpoints.only("lg")]: {
-      top: "-439px",
-      minHeight: "55vh",
-    },
-    [theme.breakpoints.only("md")]: {
+    [theme.breakpoints.up("md")]: {
+      backgroundImage: `url(${voiceIPad})`,
       minHeight: "unset",
       top: "-434px",
     },
-    [theme.breakpoints.only("sm")]: {
-      minHeight: "148vh",
-      top: "-434px",
+
+    [theme.breakpoints.up("lg")]: {
+      backgroundImage: `url(${callBg})`,
+
+      top: "-439px",
+      minHeight: "42vh",
+    },
+    [theme.breakpoints.up("xl")]: {
+      backgroundImage: `url(${callBg})`,
+      top: "-68px",
+      minHeight: "44vh",
     },
   },
   iPadView: {
@@ -64,16 +67,20 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF",
     lineHeight: "55px",
     fontFamily: "DM Sans",
-    [theme.breakpoints.down("md")]: {
-      fontSize: 25,
+    [theme.breakpoints.up("xs")]: {
+      fontSize: 22,
       marginTop: 50,
     },
 
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.up("sm")]: {
       fontSize: 22,
       lineHeight: "24px",
     },
-    [theme.breakpoints.only("lg")]: {
+    [theme.breakpoints.up("md")]: {
+      fontSize: 25,
+      marginTop: 50,
+    },
+    [theme.breakpoints.up("lg")]: {
       fontSize: 25,
       lineHeight: "32px",
     },
@@ -89,18 +96,21 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "66px",
     fontFamily: "DM Sans",
     marginTop: 8,
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.up("xs")]: {
+      fontSize: 22,
+      marginTop: "unset",
+      lineHeight: "unset",
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 22,
+      marginTop: "unset",
+      lineHeight: "unset",
+    },
+    [theme.breakpoints.up("md")]: {
       fontSize: 22,
     },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 24,
-      color: "#0B216E",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 48,
-      lineHeight: "68px",
-    },
-    [theme.breakpoints.only("lg")]: {
+
+    [theme.breakpoints.up("lg")]: {
       fontSize: 22,
     },
     [theme.breakpoints.up("xl")]: {
@@ -116,22 +126,26 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20,
     marginBottom: 32,
     maxWidth: "93%",
-    [theme.breakpoints.down("md")]: {
-      fontWeight: 700,
-      fontSize: 23,
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 12,
-      lineHeight: "18px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 25,
+    [theme.breakpoints.up("xs")]: {
+      fontSize: 16,
+
       lineHeight: "24px",
+      width: 378,
     },
-    [theme.breakpoints.only("lg")]: {
-      fontSize: 13,
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 16,
+      lineHeight: "24px",
+      width: 378,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 16,
+      width: 378,
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      fontSize: 16,
       lineHeight: "19px",
-      maxWidth: "100%",
+
       marginTop: "0px",
     },
     [theme.breakpoints.up("xl")]: {
@@ -141,11 +155,14 @@ const useStyles = makeStyles((theme) => ({
   },
   mt: {
     padding: "5%",
-    [theme.breakpoints.down("md")]: {
-      paddingBottom: 200,
+    [theme.breakpoints.up("sm")]: {
+      paddingBottom: 72,
     },
-    [theme.breakpoints.down("sm")]: {
-      paddingBottom: 23,
+    [theme.breakpoints.up("md")]: {
+      paddingBottom: 110,
+    },
+    [theme.breakpoints.up("xl")]: {
+      paddingBottom: 110,
     },
   },
   width: {

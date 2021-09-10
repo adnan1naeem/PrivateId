@@ -5,20 +5,26 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     fontFamily: "Dm Sans",
     fontWeight: 700,
-    fontSize: 48,
+
     color: "#0B216F",
     marginTop: 38,
     display: "flex",
     alignItems: "center",
     textAlign: "center",
     flexDirection: "column",
-    [theme.breakpoints.only("xs")]: {
+    [theme.breakpoints.up("xs")]: {
       fontSize: 18,
     },
-    [theme.breakpoints.only("lg")]: {
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 16,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 16,
+    },
+    [theme.breakpoints.up("lg")]: {
       fontSize: 20,
     },
-    [theme.breakpoints.only("xl")]: {
+    [theme.breakpoints.up("xl")]: {
       fontSize: 30,
     },
   },
@@ -29,12 +35,25 @@ const useStyles = makeStyles((theme) => ({
     color: "#000000",
     marginTop: 17,
     width: "85%",
-
-    [theme.breakpoints.down("lg")]: {
-      fontSize: 10,
-      marginTop: 10,
+    [theme.breakpoints.up("xs")]: {
+      fontSize: 15,
+      width: 278,
     },
-    [theme.breakpoints.down("xl")]: {
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 16,
+      width: 278,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 16,
+      width: 278,
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      fontSize: 16,
+      marginTop: 10,
+      width: 278,
+    },
+    [theme.breakpoints.up("xl")]: {
       fontSize: 16,
       marginTop: 10,
       width: 278,
@@ -151,17 +170,20 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     height: 330,
     marginTop: 168,
-    [theme.breakpoints.only("lg")]: {
-      height: 165,
-      position: "relative",
-      top: "-128px",
-    },
-    [theme.breakpoints.down("md")]: {
-      marginTop: 60,
-    },
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.up("xs")]: {
       height: 150,
       marginTop: 25,
+    },
+    [theme.breakpoints.up("md")]: {
+      marginTop: 30,
+      height: 190,
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      height: 200,
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: 269,
     },
   },
 }));

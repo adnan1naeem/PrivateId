@@ -158,7 +158,7 @@ export default function PrivateId() {
                       <MenuItem
                         className={classes.itemsText}
                         onClick={handleClose}
-                        href="#cards-container"
+                        href="/#cards-container"
                         component={ButtonBase}
                       >
                         Features
@@ -169,7 +169,7 @@ export default function PrivateId() {
                     <MenuItem
                       className={classes.itemsText}
                       onClick={handleClose}
-                      href="#authentication"
+                      href="/#authentication"
                       component={ButtonBase}
                     >
                       Continuous Voice Authentication for Amazon Connect®
@@ -178,7 +178,7 @@ export default function PrivateId() {
                     <MenuItem
                       className={classes.itemsText}
                       onClick={handleClose}
-                      href="#pricing"
+                      href="/#pricing"
                       component={ButtonBase}
                     >
                       Pricing

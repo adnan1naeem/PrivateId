@@ -19,22 +19,24 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: -303,
     padding: "5%",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.up("xs")]: {
       minHeight: "54vh",
       top: -230,
     },
+    [theme.breakpoints.up("sm")]: {
+      top: -55,
+    },
+    [theme.breakpoints.up("md")]: {
+      top: -50,
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      top: -78,
+    },
+
     [theme.breakpoints.up("xl")]: {
       minHeight: "24vh",
-      top: -150,
-    },
-    [theme.breakpoints.only("lg")]: {
-      top: -563,
-    },
-    [theme.breakpoints.only("md")]: {
-      top: -545,
-    },
-    [theme.breakpoints.only("sm")]: {
-      top: -563,
+      top: 260,
     },
   },
   btnFonts: {
