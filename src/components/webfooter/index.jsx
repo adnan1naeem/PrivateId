@@ -172,12 +172,12 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "-60px",
     },
     [theme.breakpoints.up("md")]: {
-      top: "-53px",
+      top: 0,
       marginBottom: "-56px",
     },
 
     [theme.breakpoints.up("lg")]: {
-      top: "-80px",
+      top: 0,
       marginBottom: "-90px",
     },
 

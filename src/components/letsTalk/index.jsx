@@ -27,11 +27,11 @@ const useStyles = makeStyles((theme) => ({
       top: -55,
     },
     [theme.breakpoints.up("md")]: {
-      top: -50,
+      top: 0,
     },
 
     [theme.breakpoints.up("lg")]: {
-      top: -78,
+      top: 0,
     },
 
     [theme.breakpoints.up("xl")]: {
