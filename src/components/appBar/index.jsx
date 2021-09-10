@@ -38,7 +38,7 @@ export default function Appbar({ hidecontent }) {
       },
     },
     logo: {
-      height: 46,
+      height: 37,
       flex: 1,
       [theme.breakpoints.only("xs")]: {
         height: 30,
