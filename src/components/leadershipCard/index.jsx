@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     borderTopRightRadius: 19,
 
     [theme.breakpoints.up("xs")]: {
-      height: 170,
+      height: "unset",
     },
     [theme.breakpoints.up("sm")]: {
       height: "unset",
