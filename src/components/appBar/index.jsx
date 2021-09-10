@@ -45,8 +45,7 @@ export default function Appbar({ hidecontent }) {
         paddingLeft: 10,
       },
       [theme.breakpoints.up("xl")]: {
-        height: 123,
-        paddingLeft: 0,
+        height: 51,
       },
       [theme.breakpoints.only("lg")]: {
         paddingLeft: 0,
