@@ -1,4 +1,4 @@
-import { Box, Grid, makeStyles } from "@material-ui/core";
+import { Box, ButtonBase, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import aboutus2 from "../../assets/aboutus2.jpg";
 const useStyles = makeStyles((theme) => ({
@@ -186,6 +186,9 @@ const useStyles = makeStyles((theme) => ({
       height: 269,
     },
   },
+  Dtext: {
+    textDecoration: "none",
+  },
 }));
 export const KeyCard = () => {
   const classes = useStyles();
@@ -215,7 +218,13 @@ export const KeyCard = () => {
           </Box>
           <Box style={{ flex: 1 }}>
             <Box className={classes.names}>TensorFlow Team</Box>
-            <Box className={classes.detail}>tensorflow.org</Box>
+            <a
+              className={classes.Dtext}
+              target="_blank"
+              href="https://www.tensorflow.org/"
+            >
+              <Box className={classes.detail}>tensorflow.org</Box>
+            </a>
           </Box>
         </Box>
         <Box className={classes.mt}>
@@ -232,7 +241,13 @@ export const KeyCard = () => {
           <Box style={{ flex: 1 }}>
             <Box className={classes.names}> Stephen Huttler</Box>
             <Box className={classes.detail}>Pillsbury Winthrop Shaw</Box>
-            <Box className={classes.detail}>Pittman LLP</Box>
+            <a
+              className={classes.Dtext}
+              target="_blank"
+              href="https://www.pillsburylaw.com/en/lawyers/stephen-huttler.html"
+            >
+              <Box className={classes.detail}>Pittman LLP</Box>
+            </a>
           </Box>
         </Box>
         <Box className={classes.mt}>
@@ -240,7 +255,15 @@ export const KeyCard = () => {
           <Box className={classes.divider}></Box>
           <Box style={{ flex: 1 }}>
             <Box className={classes.names}>Matthew Grady</Box>
-            <Box className={classes.detail}>Wolf, Greenfield & Sacks, P.C.</Box>
+            <a
+              className={classes.Dtext}
+              target="_blank"
+              href="https://www.wolfgreenfield.com/professionals/g/grady-matthew"
+            >
+              <Box className={classes.detail}>
+                Wolf, Greenfield & Sacks, P.C.
+              </Box>
+            </a>
           </Box>
         </Box>
         <Box className={classes.mt}>
@@ -248,7 +271,13 @@ export const KeyCard = () => {
           <Box className={classes.divider}></Box>
           <Box style={{ flex: 1 }}>
             <Box className={classes.names}>William Leffler</Box>
-            <Box className={classes.detail}>RSM US LLP</Box>
+            <a
+              className={classes.Dtext}
+              target="_blank"
+              href="https://rsmus.com/"
+            >
+              <Box className={classes.detail}>RSM US LLP</Box>
+            </a>
           </Box>
         </Box>
       </Grid>

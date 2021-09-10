@@ -135,12 +135,18 @@ export default function SalesId() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem
-                      className={classes.itemsText}
-                      onClick={handleClose}
+                    <a
+                      target="_blank"
+                      href="https://github.com/openinfer/PrivateIdentity/wiki/Intellectual-Property:---Private-Identity-LLC"
+                      style={{ textDecoration: "none" }}
                     >
-                      +1-301-938-6300
-                    </MenuItem>
+                      <MenuItem
+                        className={classes.itemsText}
+                        onClick={handleClose}
+                      >
+                        +1-301-938-6300
+                      </MenuItem>
+                    </a>
                     <Divider
                       middle
                       style={{
@@ -149,12 +155,18 @@ export default function SalesId() {
                         marginTop: 10,
                       }}
                     />
-                    <MenuItem
-                      className={classes.itemsText}
-                      onClick={handleClose}
+                    <a
+                      style={{ textDecoration: "none" }}
+                      target="_blank"
+                      href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=support@private.id"
                     >
-                      Email Us
-                    </MenuItem>
+                      <MenuItem
+                        className={classes.itemsText}
+                        onClick={handleClose}
+                      >
+                        Email Us
+                      </MenuItem>
+                    </a>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

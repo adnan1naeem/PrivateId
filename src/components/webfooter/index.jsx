@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
     color: " #565656",
     marginLeft: 5,
-    width: "43%",
+
     lineHeight: "16px",
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
@@ -146,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "100%",
     color: " #747474",
     marginLeft: 5,
-    width: "63%",
+
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
     },
@@ -317,14 +317,27 @@ export const WebFooter = () => {
                   >
                     <Box className={classes.dflex}>
                       <Box className={classes.circle}></Box>
-                      <Box className={classes.companyitems}>Terms of Use</Box>
+                      <a
+                        style={{ textDecoration: "none" }}
+                        target="_blank"
+                        href="https://github.com/openinfer/PrivateIdentity/wiki/Terms-of-Use"
+                      >
+                        <Box className={classes.companyitems}>Terms of Use</Box>
+                      </a>
                     </Box>
                   </a>
                   <Box className={classes.dflex}>
                     <Box className={classes.circle}></Box>
-                    <Box className={classes.companyitems}>
-                      Intellectual Property
-                    </Box>
+                    <a
+                      width="170px"
+                      style={{ textDecoration: "none" }}
+                      target="_blank"
+                      href="https://github.com/openinfer/PrivateIdentity/wiki/Intellectual-Property:---Private-Identity-LLC"
+                    >
+                      <Box className={classes.companyitems}>
+                        Intellectual Property
+                      </Box>
+                    </a>
                   </Box>
 
                   <Box className={classes.dflex}>
@@ -342,15 +355,28 @@ export const WebFooter = () => {
 
                   <Box className={classes.dflex}>
                     <img src={phn} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>
-                      {" "}
-                      +1-301-938-6300
-                    </Box>
+                    <a
+                      style={{ textDecoration: "none" }}
+                      target="_blank"
+                      href="https://github.com/openinfer/PrivateIdentity/wiki/Intellectual-Property:---Private-Identity-LLC"
+                    >
+                      <Box className={classes.connecteditems}>
+                        +1-301-938-6300
+                      </Box>
+                    </a>
                   </Box>
 
                   <Box className={classes.dflex}>
                     <img src={en} className={classes.image} alt="logo" />
-                    <Box className={classes.connecteditems}>api@private.id</Box>
+                    <a
+                      style={{ textDecoration: "none" }}
+                      target="_blank"
+                      href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=support@private.id"
+                    >
+                      <Box className={classes.connecteditems}>
+                        api@private.id
+                      </Box>
+                    </a>
                   </Box>
                 </Grid>
 
@@ -365,6 +391,7 @@ export const WebFooter = () => {
                     </Box>
                   </a>
                   <a
+                    style={{ textDecoration: "none" }}
                     href="https://github.com/openinfer/PrivateIdentity/issues"
                     target="_blank"
                     style={{ textDecoration: "none" }}
@@ -377,6 +404,7 @@ export const WebFooter = () => {
                     </Box>
                   </a>
                   <a
+                    style={{ textDecoration: "none" }}
                     href="https://stackoverflow.com/questions/tagged/privateid?tab=Newest"
                     target="_blank "
                     style={{ textDecoration: "none" }}
