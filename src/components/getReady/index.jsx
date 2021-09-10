@@ -4,7 +4,6 @@ import React from "react";
 const useStyles = makeStyles((theme) => ({
   bgClr: {
     backgroundColor: "#2A3D80",
-    display: "flex",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 33,
@@ -20,14 +19,19 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("sm")]: {
       flexDirection: "unset",
+      display: "flex",
+
       padding: 24,
     },
     [theme.breakpoints.up("md")]: {
       flexDirection: "unset",
+      display: "flex",
+
       padding: 24,
     },
     [theme.breakpoints.up("lg")]: {
       padding: 24,
+      display: "flex",
     },
   },
   text1: {
@@ -115,6 +119,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 14,
       width: 120,
       marginTop: 20,
+      marginLeft: 104,
     },
     [theme.breakpoints.only("lg")]: {
       fontSize: 15,
