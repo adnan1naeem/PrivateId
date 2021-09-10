@@ -52,7 +52,6 @@ const styles = (theme) => ({
     marginLeft: 10,
   },
   image: {
-    width: 20,
     height: 20,
   },
   suppport: {
@@ -65,6 +64,7 @@ const styles = (theme) => ({
   dflex: {
     display: "flex",
     width: 450,
+    marginBottom: 8,
   },
   footerfonts: {
     fontFamily: "Dm Sans",
