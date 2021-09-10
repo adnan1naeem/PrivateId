@@ -88,6 +88,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       backgroundSize: "none",
     },
+
+    [theme.breakpoints.only("md")]: {
+      paddingBottom: 91,
+    },
   },
   imgStyle: {
     boxShadow: "29px 20px 0px #0060d5",
