@@ -143,7 +143,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.up("lg")]: {
-      width: 330,
+      width: "unset",
     },
     [theme.breakpoints.up("xl")]: {
       borderRadius: "37px",
