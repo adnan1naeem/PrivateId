@@ -2,10 +2,20 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Home } from "./pages/home";
 import { AboutUs } from "./pages/aboutUs";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    [theme.breakpoints.down("sm")]: {
+      overflow: "hidden clip",
+    },
+  },
+}));
 
 function App() {
+  const classes = useStyles();
   return (
-    <div style={{ overflowX: "hidden", overflowY: "clip" }}>
+    <div className={classes.container}>
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Home} />
