@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({}));
 export const Home = () => {
   const classes = useStyles();
   return (
-    <>
+    <div style={{ overflow: "hidden" }}>
       <AppBar />
       <Introduction />
       <DataRefinery
@@ -31,6 +31,6 @@ export const Home = () => {
       <GoPricing />
       <LetsTalk />
       <WebFooter className={classes.footer} />
-    </>
+    </div>
   );
 };

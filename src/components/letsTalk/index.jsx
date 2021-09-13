@@ -107,10 +107,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xs")]: {
       top: -71,
       borderRadius: 14,
+      left: 19,
     },
     [theme.breakpoints.up("sm")]: {
       left: "unset",
-      top: "-24px",
+      top: "-80px",
     },
     [theme.breakpoints.up("md")]: {
       left: "unset",
@@ -376,7 +377,7 @@ export const LetsTalk = withWidth()(({ width }) => {
           </Box>
 
           <Grid container className={classes.dFlex} justifyContent="center">
-            <Grid item xs={11} sm={12} lg={5} xl={6}>
+            <Grid item xs={12} sm={12} lg={5} xl={6}>
               <img
                 className={classes.customerImg}
                 src={customerImg}
@@ -385,7 +386,7 @@ export const LetsTalk = withWidth()(({ width }) => {
             </Grid>
             <Grid
               item
-              xs={8}
+              xs={11}
               sm={11}
               lg={5}
               xl={6}

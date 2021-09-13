@@ -135,6 +135,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       marginTop: "40px !important",
     },
+    [theme.breakpoints.down("lg")]: {
+      marginTop: "124px !important",
+    },
   },
   flexDirection: {
     [theme.breakpoints.down("md")]: {

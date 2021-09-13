@@ -173,12 +173,11 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("md")]: {
       top: 0,
-      marginBottom: "-56px",
+      marginBottom: "0px",
     },
 
     [theme.breakpoints.up("lg")]: {
       top: 0,
-      marginBottom: "-90px",
     },
 
     [theme.breakpoints.up("xl")]: {

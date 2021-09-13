@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 4,
       display: "flex",
       textAlign: "center",
-      width: 329,
+      width: 166,
     },
     [theme.breakpoints.only("xl")]: {
       fontSize: 20,
@@ -170,7 +170,7 @@ export const GetReady = () => {
     <Grid container justifyContent="center">
       <Grid item xs={12} sm={12} md={12} lg={12} className={classes.manageUI}>
         <Grid container justifyContent="center" id="get-ready">
-          <Grid item sm={11} md={11} lg={10} xs={11}>
+          <Grid item xs={5} sm={11} md={11} lg={10}>
             <Box className={classes.textCenter}>
               <Box className={classes.bgClr}>
                 <Box>

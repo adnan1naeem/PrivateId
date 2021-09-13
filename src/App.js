@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    overflow: "hidden",
     [theme.breakpoints.down("sm")]: {
       overflow: "hidden clip",
     },

@@ -5,7 +5,7 @@ import { AuthenticationCards } from "../authenticationCards";
 import { Inputs } from "../inputs";
 import voiceIPad from "../../assets/voiceIPad.png";
 import { Link } from "react-router-dom";
-import authMob from "../../assets/authMob.png";
+import authMob from "../../assets/authMob.svg";
 const input = [
   { text: " Routes VIPs and blocks unwanted callers" },
   { text: "Search any voice in call recordings" },
