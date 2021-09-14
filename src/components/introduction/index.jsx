@@ -2,7 +2,8 @@ import { Box, Button, Grid, Hidden, makeStyles } from "@material-ui/core";
 import React from "react";
 import webIntro from "../../assets/webIntro.png";
 import lgBg from "../../assets/lgBg.png";
-import mdBg from "../../assets/mdBg.svg";
+import mdBg from "../../assets/lgBg.png";
+import smBg from "../../assets/smBg.svg";
 
 import mobileIcons from "../../assets/mobileIcons.png";
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +21,18 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down("md")]: {
       backgroundSize: `cover`,
+      backgroundPositionY: "unset",
       backgroundImage: `url(${mdBg})`,
+    },
+    [theme.breakpoints.down("sm")]: {
+      backgroundSize: `cover`,
+      backgroundPositionY: "bottom",
+      backgroundImage: `url(${smBg})`,
+    },
+    [theme.breakpoints.down("xs")]: {
+      backgroundSize: `cover`,
+      backgroundPositionY: "bottom",
+      backgroundImage: `url(${smBg})`,
     },
     [theme.breakpoints.only("xl")]: {
       backgroundSize: `cover`,
@@ -63,7 +75,8 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.between(960, 1280)]: {
       textAlign: "center",
-      fontSize: 40,
+      fontSize: 36,
+      width: 466,
     },
   },
   btn: {
@@ -112,7 +125,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 400,
       borderRadius: 49,
       position: "relative",
-      top: 139,
+      right: 450,
     },
     [theme.breakpoints.only("sm")]: {
       width: 200,
@@ -162,6 +175,8 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     [theme.breakpoints.only("md")]: {
       marginTop: 50,
+      width: 270,
+      height: 270,
     },
     [theme.breakpoints.only("sm")]: {
       marginTop: 50,
@@ -182,7 +197,7 @@ export const Introduction = () => {
                 alignItems="center"
                 className={classes.pt}
               >
-                <Grid item xs={8} md={9} lg={6} xl={6}>
+                <Grid item xs={8} md={6} lg={6} xl={6}>
                   <Box className={classes.description}>
                     Decentralized biometrics for a surprising and delightful
                     customer experience
