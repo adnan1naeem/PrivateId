@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundImage: `url(${mdBg})`,
     },
     [theme.breakpoints.only("xl")]: {
+      backgroundPositionY: "bottom",
       backgroundSize: `cover`,
-      backgroundPositionX: "center",
     },
   },
   heading: {
@@ -58,8 +58,8 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.only("xl")]: {
-      fontSize: 29,
-      lineHeight: "42px",
+      fontSize: 36,
+      lineHeight: "45px",
     },
     [theme.breakpoints.between(960, 1280)]: {
       textAlign: "center",
@@ -99,9 +99,9 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: 49,
     },
     [theme.breakpoints.only("xl")]: {
-      width: 200,
-      height: 61,
-      fontSize: 20,
+      width: 155,
+      height: 50,
+      fontSize: 12,
       fontWeight: 400,
       borderRadius: 49,
     },
@@ -131,10 +131,10 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 30,
       paddingBottom: 122,
     },
-    [theme.breakpoints.only("xl")]: {
+    /* [theme.breakpoints.only("xl")]: {
       paddingTop: 206,
       paddingBottom: 267,
-    },
+    }, */
   },
   dFlex: {
     display: "flex",
@@ -175,7 +175,7 @@ export const Introduction = () => {
       <Grid item xs={12} lg={9} className={classes.manageUI}>
         <Box className={classes.container} id="introduction">
           <Grid container justifyContent="center">
-            <Grid item xs={12} lg={9} xl={7}>
+            <Grid item xs={12} lg={9} xl={9}>
               <Grid
                 container
                 justifyContent="center"
