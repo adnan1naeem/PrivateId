@@ -44,9 +44,6 @@ export default function Appbar({ hidecontent }) {
         height: 30,
         paddingLeft: 10,
       },
-      [theme.breakpoints.up("xl")]: {
-        height: 51,
-      },
       [theme.breakpoints.only("lg")]: {
         paddingLeft: 0,
       },
@@ -60,10 +57,6 @@ export default function Appbar({ hidecontent }) {
       [theme.breakpoints.up("lg")]: {
         padding: "unset",
         flex: 0.74,
-      },
-      [theme.breakpoints.up("xl")]: {
-        padding: "unset",
-        flex: history.location.pathname.includes("about") ? 0.74 : 1,
       },
     },
 
@@ -127,23 +120,11 @@ export default function Appbar({ hidecontent }) {
       borderRadius: 180,
       padding: 10,
       marginLeft: 100,
-      [theme.breakpoints.up("xl")]: {
-        fontSize: 22,
-        padding: 20,
-        marginLeft: 50,
-        marginRight: 0,
-      },
     },
     dFlex: {
       display: "flex",
       [theme.breakpoints.up("lg")]: {
         justifyContent: "center",
-      },
-      [theme.breakpoints.up("xl")]: {
-        alignItems: "center",
-        alignSelf: history.location.pathname.includes("about") ? "" : "center",
-        justifyContent: "center",
-        maxWidth: history.location.pathname.includes("about") ? "" : 1120,
       },
     },
     flex: {

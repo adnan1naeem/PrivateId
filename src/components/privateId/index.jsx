@@ -9,14 +9,10 @@ import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import { ButtonBase, Divider } from "@material-ui/core";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    [theme.breakpoints.only("xl")]: {
-      flex: 1,
-    },
   },
   paper: {
     marginRight: theme.spacing(2),
@@ -29,10 +25,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "DM Sans",
     whiteSpace: "normal",
     maxWidth: 224,
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 21,
-      lineHeight: "35px",
-    },
   },
   idTitle: {
     color: "#FFFFFF",
@@ -41,11 +33,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontFamily: "DM Sans",
     textTransform: "inherit",
-    [theme.breakpoints.only("xl")]: {
-      fontSize: 22,
-      marginLeft: 32,
-    },
+
     [theme.breakpoints.only("lg")]: {
+      fontSize: "16px",
+    },
+
+    [theme.breakpoints.only("xl")]: {
       fontSize: "16px",
     },
   },
@@ -64,21 +57,11 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     fontSize: "1.5rem",
-    [theme.breakpoints.up("xl")]: {
-      fontSize: "1.5rem",
-    },
   },
 
-  popper: {
-    [theme.breakpoints.up("xl")]: {
-      top: 60,
-    },
-  },
+  popper: {},
   padding: {
     padding: 20,
-    [theme.breakpoints.up("xl")]: {
-      padding: 30,
-    },
   },
 }));
 

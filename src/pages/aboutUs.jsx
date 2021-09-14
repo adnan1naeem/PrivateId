@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
 export const AboutUs = () => {
   const classes = useStyles();
   return (
-    <Box id="about">
+    <div style={{ overflow: "hidden" }}>
       <Appbar />
       <Grid container justifyContent="center">
         <Grid item xs={5} sm={6} lg={9} xl={6} className={classes.manageUI}>
@@ -123,6 +123,6 @@ export const AboutUs = () => {
         </Grid>
       </Grid>
       <WebFooter />
-    </Box>
+    </div>
   );
 };

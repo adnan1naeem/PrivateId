@@ -13,9 +13,6 @@ import { Divider } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    [theme.breakpoints.only("xl")]: {
-      flex: 1,
-    },
   },
   paper: {
     marginRight: theme.spacing(2),
@@ -26,9 +23,6 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "16px",
     fontWeight: 500,
     fontFamily: "DM Sans",
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 21,
-    },
   },
   idTitle: {
     color: "#FFFFFF",
@@ -37,10 +31,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontFamily: "DM Sans",
     textTransform: "inherit",
-    [theme.breakpoints.up("xl")]: {
-      fontSize: 22,
-    },
+
     [theme.breakpoints.only("lg")]: {
+      fontSize: "16px",
+    },
+
+    [theme.breakpoints.only("xl")]: {
       fontSize: "16px",
     },
   },
@@ -58,9 +54,6 @@ const useStyles = makeStyles((theme) => ({
   },
   padding: {
     padding: 20,
-    [theme.breakpoints.up("xl")]: {
-      padding: 30,
-    },
   },
 }));
 
