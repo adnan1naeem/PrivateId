@@ -58,6 +58,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
       lineHeight: "20px",
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 12,
+      lineHeight: "20px",
+    },
     [theme.breakpoints.up("md")]: {
       fontSize: 12,
       lineHeight: "20px",
@@ -78,6 +82,10 @@ const useStyles = makeStyles((theme) => ({
       top: -508,
     },
     [theme.breakpoints.down("lg")]: {
+      backgroundPositionY: -108,
+    },
+
+    [theme.breakpoints.down("xl")]: {
       backgroundPositionY: -108,
     },
   },
@@ -151,6 +159,10 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "40px !important",
     },
     [theme.breakpoints.down("lg")]: {
+      marginTop: "124px !important",
+    },
+
+    [theme.breakpoints.down("xl")]: {
       marginTop: "124px !important",
     },
   },

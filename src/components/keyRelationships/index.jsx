@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       minHeight: "836px",
     },
     [theme.breakpoints.up("xl")]: {
-      justifyContent: "center",
+      minHeight: "836px",
     },
   },
   paper: {
@@ -54,7 +54,7 @@ export const KeyRelationships = () => {
             justifyContent="center"
             className={classes.containerChild}
           >
-            <Grid item xs={12} md={12} lg={9} xl={11}>
+            <Grid item xs={12} md={12} lg={9} xl={9}>
               <Box>
                 <Paper className={classes.paper} elevation={0}>
                   <KeyCard />

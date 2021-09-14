@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 20,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 30,
+      fontSize: 20,
     },
   },
   details: {
@@ -68,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 14,
     },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 14,
+    },
     [theme.breakpoints.only("md")]: {
       fontSize: 25,
     },
@@ -94,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 18,
+      fontSize: 12,
     },
   },
   detail: {
@@ -103,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 22,
     color: "#898989",
     [theme.breakpoints.up("xl")]: {
-      fontSize: 18,
+      fontSize: 10,
     },
     [theme.breakpoints.only("lg")]: {
       fontSize: 10,
@@ -128,6 +131,9 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 4px 4px rgba(42, 61, 128, 0.22)",
     borderRadius: 10,
     [theme.breakpoints.only("lg")]: {
+      padding: 10,
+    },
+    [theme.breakpoints.only("xl")]: {
       padding: 10,
     },
     [theme.breakpoints.only("md")]: {
@@ -161,6 +167,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       padding: 10,
     },
+    [theme.breakpoints.only("xl")]: {
+      padding: 10,
+    },
     [theme.breakpoints.only("xs")]: {
       padding: 10,
     },
@@ -183,7 +192,7 @@ const useStyles = makeStyles((theme) => ({
       height: 200,
     },
     [theme.breakpoints.up("xl")]: {
-      height: 269,
+      height: 200,
     },
   },
   Dtext: {
@@ -194,7 +203,7 @@ export const KeyCard = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center" className={classes.manageUI}>
-      <Grid item xs={10} lg={6}>
+      <Grid item xs={10} lg={6} xl={6}>
         <Box>
           <Box className={classes.heading}>
             Key Relationships
@@ -208,7 +217,7 @@ export const KeyCard = () => {
           <img src={aboutus2} alt="" />
         </Box>
       </Grid>
-      <Grid item xs={12} sm={10} lg={6}>
+      <Grid item xs={12} sm={10} lg={6} xl={6}>
         <Box className={classes.bgColor}>
           <Box style={{ flex: 1 }}>
             <Box className={classes.members}>Edge Computing</Box>

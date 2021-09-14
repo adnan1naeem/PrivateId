@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("xl")]: {
       height: 144,
-      width: 1100,
+      width: 1000,
     },
   },
 
@@ -47,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 50,
     },
     [theme.breakpoints.down("lg")]: {
+      fontSize: 50,
+    },
+
+    [theme.breakpoints.down("xl")]: {
       fontSize: 50,
     },
 
@@ -79,8 +83,7 @@ const useStyles = makeStyles((theme) => ({
   },
   manageUI: {
     [theme.breakpoints.up("xl")]: {
-      maxWidth: 1250,
-      width: "none",
+      maxWidth: 947,
     },
     [theme.breakpoints.up("lg")]: {
       maxWidth: 947,
@@ -102,7 +105,7 @@ export const AboutUs = () => {
     <div style={{ overflow: "hidden" }}>
       <Appbar />
       <Grid container justifyContent="center">
-        <Grid item xs={5} sm={6} lg={9} xl={6} className={classes.manageUI}>
+        <Grid item xs={5} sm={6} lg={9} xl={9} className={classes.manageUI}>
           <Box className={classes.bgImg}>
             <Grid container justifyContent="center">
               <Grid xs={10} item lg={9}>
