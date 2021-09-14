@@ -29,11 +29,11 @@ const useStyles = makeStyles((theme) => ({
       width: 700,
     },
     [theme.breakpoints.up("lg")]: {
-      height: 194,
+      height: 144,
       width: 1000,
     },
     [theme.breakpoints.up("xl")]: {
-      height: 170,
+      height: 144,
       width: 1100,
     },
   },
@@ -44,6 +44,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Dm Sans",
     color: "#ffffff",
     [theme.breakpoints.down("md")]: {
+      fontSize: 50,
+    },
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 50,
+    },
+
+    [theme.breakpoints.down("xl")]: {
       fontSize: 50,
     },
     [theme.breakpoints.down("sm")]: {
