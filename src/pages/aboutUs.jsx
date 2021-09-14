@@ -15,14 +15,26 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     display: "flex",
     alignItems: "center",
-    [theme.breakpoints.down("md")]: {
-      height: 194,
-    },
-    [theme.breakpoints.down("sm")]: {
-      height: 144,
-    },
-    [theme.breakpoints.down("xs")]: {
+
+    [theme.breakpoints.up("xs")]: {
       height: 80,
+    },
+    [theme.breakpoints.up("sm")]: {
+      height: 117,
+      width: 500,
+    },
+
+    [theme.breakpoints.up("md")]: {
+      height: 144,
+      width: 700,
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: 194,
+      width: 1000,
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: 170,
+      width: 1100,
     },
   },
 
@@ -58,6 +70,24 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: -230,
   },
+  manageUI: {
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 1250,
+      width: "none",
+    },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: 947,
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: 947,
+    },
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: 948,
+    },
+    [theme.breakpoints.up("xs")]: {
+      maxWidth: 947,
+    },
+  },
 }));
 export const AboutUs = () => {
   const classes = useStyles();
@@ -65,7 +95,7 @@ export const AboutUs = () => {
     <Box id="about">
       <Appbar />
       <Grid container justifyContent="center">
-        <Grid item lg={9} xl={6}>
+        <Grid item xs={5} sm={6} lg={9} xl={6} className={classes.manageUI}>
           <Box className={classes.bgImg}>
             <Grid container justifyContent="center">
               <Grid xs={10} item lg={9}>
@@ -80,6 +110,7 @@ export const AboutUs = () => {
             description_about="Our underlying technology was developed by a small group of computer scientists and ML engineers.  We converged on a solution to fully homomorphic encryption (FHE) in early 2018 and received our first cryptography patent in 2019."
             image={aboutus1}
           />
+
           <KeyRelationships />
           <Leadership />
         </Grid>

@@ -12,26 +12,27 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 13,
     fontFamily: "DM Sans",
     width: "85%",
+    [theme.breakpoints.up("xs")]: {
+      fontSize: 16,
+      fontWeight: 500,
+      lineHeight: "19px",
+    },
 
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-      width: "100%",
+    [theme.breakpoints.up("md")]: {
       fontSize: 16,
       fontWeight: 500,
       lineHeight: "19px",
     },
-    [theme.breakpoints.only("xs")]: {
-      fontSize: 16,
-      fontWeight: 500,
-      lineHeight: "19px",
-    },
-    [theme.breakpoints.only("lg")]: {
+
+    [theme.breakpoints.up("lg")]: {
       fontSize: 18,
       fontWeight: 400,
       lineHeight: "25px",
     },
-    [theme.breakpoints.only("xl")]: {
-      width: "unset",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: 18,
+      fontWeight: 700,
+      textAlign: "unset",
     },
   },
   detail: {
@@ -41,18 +42,30 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "37px",
     marginTop: 13,
     fontFamily: "DM Sans",
-    [theme.breakpoints.down("md")]: { textAlign: "center" },
-    [theme.breakpoints.only("xs")]: {
+
+    [theme.breakpoints.up("xs")]: {
       fontSize: 12,
       lineHeight: "16px",
+      width: 289,
     },
-    [theme.breakpoints.only("lg")]: {
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 12,
+      lineHeight: "16px",
+      width: 330,
+    },
+    [theme.breakpoints.up("lg")]: {
       fontSize: 12,
       lineHeight: "20px",
     },
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.up("md")]: {
       fontSize: 12,
       lineHeight: "20px",
+      width: 340,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 434,
+      fontSize: 16,
+      textAlign: "unset",
     },
   },
   bgImg: {
@@ -92,6 +105,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("md")]: {
       paddingBottom: 91,
     },
+    [theme.breakpoints.only("xl")]: {
+      paddingBottom: 91,
+    },
   },
   imgStyle: {
     boxShadow: "29px 20px 0px #0060d5",
@@ -122,12 +138,12 @@ const useStyles = makeStyles((theme) => ({
       width: 280,
     },
     [theme.breakpoints.only("md")]: {
-      width: 520,
-      height: 268,
+      width: 410,
+      height: 218,
     },
     [theme.breakpoints.only("sm")]: {
-      width: 520,
-      height: 268,
+      width: 410,
+      height: 218,
     },
   },
   handleMargin: {
@@ -168,6 +184,15 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: 947,
     },
   },
+  dFlex: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  width: {
+    [theme.breakpoints.up("sx")]: {
+      width: 330,
+    },
+  },
 }));
 
 export const DataRefinery = ({
@@ -197,7 +222,7 @@ export const DataRefinery = ({
           className={[containerClass, classes.flexDirection]}
         >
           <Hidden mdDown>
-            <Grid item xs={6} md={8} lg={6} xl={4}>
+            <Grid item xs={6} lg={6} xl={5}>
               <Box>
                 <iframe
                   width="560"
@@ -217,7 +242,7 @@ export const DataRefinery = ({
               )}
             </Grid>
           </Hidden>
-          <Grid item xs={8} lg={5} md={7} xl={6}>
+          <Grid item xs={9} sm={10} lg={5} md={7} xl={5}>
             <Box className={classes.heading}>{title1}</Box>
 
             <Box className={classes.detail}>{heading1}</Box>
@@ -235,8 +260,8 @@ export const DataRefinery = ({
           </Grid>
 
           <Hidden lgUp>
-            <Grid item xs={10} md={8} lg={5} xl={4}>
-              <Box>
+            <Grid item xs={10} sm={10} md={6} lg={5} xl={4}>
+              <Box className={classes.dFlex}>
                 <iframe
                   width="560"
                   height="315"

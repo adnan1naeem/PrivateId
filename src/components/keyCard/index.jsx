@@ -217,12 +217,13 @@ export const KeyCard = () => {
             <Box className={classes.divider}></Box>
           </Box>
           <Box style={{ flex: 1 }}>
-            <Box className={classes.names}>TensorFlow Team</Box>
             <a
               className={classes.Dtext}
               target="_blank"
               href="https://www.tensorflow.org/"
             >
+              <Box className={classes.names}>TensorFlow Team</Box>
+
               <Box className={classes.detail}>tensorflow.org</Box>
             </a>
           </Box>
@@ -239,13 +240,14 @@ export const KeyCard = () => {
           <Box className={classes.members}>Corporate Law</Box>
           <Box className={classes.divider}></Box>
           <Box style={{ flex: 1 }}>
-            <Box className={classes.names}> Stephen Huttler</Box>
-            <Box className={classes.detail}>Pillsbury Winthrop Shaw</Box>
             <a
               className={classes.Dtext}
               target="_blank"
               href="https://www.pillsburylaw.com/en/lawyers/stephen-huttler.html"
             >
+              <Box className={classes.names}> Stephen Huttler</Box>
+              <Box className={classes.detail}>Pillsbury Winthrop Shaw</Box>
+
               <Box className={classes.detail}>Pittman LLP</Box>
             </a>
           </Box>
@@ -254,12 +256,13 @@ export const KeyCard = () => {
           <Box className={classes.members}>Intellectual Property</Box>
           <Box className={classes.divider}></Box>
           <Box style={{ flex: 1 }}>
-            <Box className={classes.names}>Matthew Grady</Box>
             <a
               className={classes.Dtext}
               target="_blank"
               href="https://www.wolfgreenfield.com/professionals/g/grady-matthew"
             >
+              <Box className={classes.names}>Matthew Grady</Box>
+
               <Box className={classes.detail}>
                 Wolf, Greenfield & Sacks, P.C.
               </Box>
@@ -270,12 +273,13 @@ export const KeyCard = () => {
           <Box className={classes.members}>Audit</Box>
           <Box className={classes.divider}></Box>
           <Box style={{ flex: 1 }}>
-            <Box className={classes.names}>William Leffler</Box>
             <a
               className={classes.Dtext}
               target="_blank"
               href="https://rsmus.com/"
             >
+              <Box className={classes.names}>William Leffler</Box>
+
               <Box className={classes.detail}>RSM US LLP</Box>
             </a>
           </Box>
