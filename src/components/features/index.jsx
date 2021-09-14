@@ -27,9 +27,8 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "58px",
     fontFamily: "DM Sans",
     [theme.breakpoints.up("xl")]: {
-      fontSize: 75,
+      fontSize: 30,
       fontWeight: 700,
-      lineHeight: "60px",
     },
     [theme.breakpoints.only("lg")]: {
       fontSize: 30,
@@ -61,6 +60,13 @@ const useStyles = makeStyles((theme) => ({
       width: 160,
       height: 42,
     },
+
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 10,
+      fontWeight: 500,
+      width: 160,
+      height: 42,
+    },
   },
   dFlex: {
     display: "flex",
@@ -83,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
       top: "-520px",
     },
     [theme.breakpoints.up("xl")]: {
-      top: "-153px",
+      top: "-520px",
     },
   },
   manageUI: {
@@ -100,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: 947,
     },
     [theme.breakpoints.up("xl")]: {
-      maxWidth: 1120,
+      maxWidth: 947,
     },
   },
   mt: {
@@ -111,9 +117,6 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 60,
     },
     [theme.breakpoints.up("md")]: {
-      marginTop: 60,
-    },
-    [theme.breakpoints.up("xl")]: {
       marginTop: 60,
     },
   },
@@ -288,8 +291,7 @@ export const Features = () => {
             justifyContent="center"
           >
             {cardsData.map((item) => (
-              <Grid className={classes.dFlex} item xs={12} sm={6} lg={4}>
-                {" "}
+              <Grid className={classes.dFlex} item xs={12} sm={6} lg={4} xl={4}>
                 <Cards
                   image={item.image}
                   heading={item.heading}

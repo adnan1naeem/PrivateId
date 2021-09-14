@@ -29,10 +29,11 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 400,
       lineHeight: "25px",
     },
+
     [theme.breakpoints.up("xl")]: {
       fontSize: 18,
-      fontWeight: 700,
-      textAlign: "unset",
+      fontWeight: 400,
+      lineHeight: "25px",
     },
   },
   detail: {
@@ -62,11 +63,6 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "20px",
       width: 340,
     },
-    [theme.breakpoints.up("xl")]: {
-      width: 434,
-      fontSize: 16,
-      textAlign: "unset",
-    },
   },
   bgImg: {
     backgroundImage: `url(${webDataRef})`,
@@ -80,9 +76,6 @@ const useStyles = makeStyles((theme) => ({
     top: -422,
     [theme.breakpoints.only("xs")]: {
       top: -508,
-    },
-    [theme.breakpoints.up("xl")]: {
-      top: "-350px",
     },
     [theme.breakpoints.down("lg")]: {
       backgroundPositionY: -108,
@@ -102,10 +95,11 @@ const useStyles = makeStyles((theme) => ({
       backgroundSize: "none",
     },
 
-    [theme.breakpoints.only("md")]: {
-      paddingBottom: 91,
-    },
     [theme.breakpoints.only("xl")]: {
+      backgroundSize: "none",
+    },
+
+    [theme.breakpoints.only("md")]: {
       paddingBottom: 91,
     },
   },
@@ -117,6 +111,11 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: "13px 14px 0px #0060d5",
     },
     [theme.breakpoints.only("lg")]: {
+      height: 200,
+      minHeight: 0,
+    },
+
+    [theme.breakpoints.only("xl")]: {
       height: 200,
       minHeight: 0,
     },
@@ -165,13 +164,16 @@ const useStyles = makeStyles((theme) => ({
       height: 230,
       width: 222,
     },
+    [theme.breakpoints.only("xl")]: {
+      height: 230,
+      width: 222,
+    },
   },
   manageUI: {
-    [theme.breakpoints.up("xl")]: {
-      maxWidth: 1250,
-      width: "none",
-    },
     [theme.breakpoints.down("lg")]: {
+      maxWidth: 947,
+    },
+    [theme.breakpoints.down("xl")]: {
       maxWidth: 947,
     },
     [theme.breakpoints.down("md")]: {
@@ -222,7 +224,7 @@ export const DataRefinery = ({
           className={[containerClass, classes.flexDirection]}
         >
           <Hidden mdDown>
-            <Grid item xs={6} lg={6} xl={5}>
+            <Grid item xs={6} lg={6} xl={6}>
               <Box>
                 <iframe
                   width="560"
@@ -260,7 +262,7 @@ export const DataRefinery = ({
           </Grid>
 
           <Hidden lgUp>
-            <Grid item xs={10} sm={10} md={6} lg={5} xl={4}>
+            <Grid item xs={10} sm={10} md={6} lg={5} xl={5}>
               <Box className={classes.dFlex}>
                 <iframe
                   width="560"

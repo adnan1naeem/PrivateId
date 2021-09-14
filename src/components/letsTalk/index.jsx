@@ -35,8 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.up("xl")]: {
-      minHeight: "24vh",
-      top: 260,
+      top: 0,
     },
   },
   btnFonts: {
@@ -67,6 +66,10 @@ const useStyles = makeStyles((theme) => ({
       height: 60,
     },
     [theme.breakpoints.up("lg")]: {
+      fontSize: 14,
+      width: 168,
+    },
+    [theme.breakpoints.up("xl")]: {
       fontSize: 14,
       width: 168,
     },
@@ -150,6 +153,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
     },
+
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 12,
+    },
   },
   emailInput: {
     color: "#797979",
@@ -172,6 +179,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
     },
     [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+    },
+
+    [theme.breakpoints.only("xl")]: {
       fontSize: 12,
     },
   },
@@ -198,6 +209,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
     },
+
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 12,
+    },
   },
   messageInput: {
     color: "#797979",
@@ -220,6 +235,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
     },
     [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+    },
+
+    [theme.breakpoints.only("xl")]: {
       fontSize: 12,
     },
   },
@@ -258,6 +277,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 32,
     },
+
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 32,
+    },
   },
   detail: {
     fontWeight: 400,
@@ -285,6 +308,11 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
     },
     [theme.breakpoints.only("lg")]: {
+      fontSize: 20,
+      marginTop: 9,
+    },
+
+    [theme.breakpoints.only("xl")]: {
       fontSize: 20,
       marginTop: 9,
     },
@@ -323,7 +351,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: 40,
     },
     [theme.breakpoints.up("xl")]: {
-      borderRadius: 50,
+      borderRadius: 40,
     },
   },
 }));
@@ -369,7 +397,7 @@ export const LetsTalk = withWidth()(({ width }) => {
   }
   return (
     <Grid container justifyContent="center" id="letstalk">
-      <Grid item xs={12} lg={9} className={classes.manageUI}>
+      <Grid item xs={12} lg={9} xl={9} className={classes.manageUI}>
         <Box className={classes.bgImage}>
           <Box className={classes.dflex}>
             <Box className={classes.inqiury}>Let’s Talk!</Box>
@@ -377,7 +405,7 @@ export const LetsTalk = withWidth()(({ width }) => {
           </Box>
 
           <Grid container className={classes.dFlex} justifyContent="center">
-            <Grid item xs={12} sm={12} lg={5} xl={6}>
+            <Grid item xs={12} sm={12} lg={5} xl={5}>
               <img
                 className={classes.customerImg}
                 src={customerImg}
@@ -389,7 +417,7 @@ export const LetsTalk = withWidth()(({ width }) => {
               xs={11}
               sm={11}
               lg={5}
-              xl={6}
+              xl={5}
               className={classes.boxShadow}
             >
               <Paper

@@ -35,8 +35,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 5,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 12,
-      lineHeight: "18px",
+      fontSize: 10,
+      lineHeight: "10px",
+      marginTop: 5,
     },
   },
   historyDetail: {
@@ -61,6 +62,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       fontSize: 10,
       lineHeight: "15px",
+      marginTop: 5,
+      fontWeight: 500,
     },
   },
   conectDetail: {
@@ -84,8 +87,10 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 700,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 10,
-      lineHeight: "15px",
+      fontSize: 7,
+      marginTop: 5,
+      lineHeight: "13px",
+      fontWeight: 700,
     },
   },
   conectTitle: {
@@ -101,14 +106,18 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 10,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 12,
-      lineHeight: "18px",
+      fontSize: 10,
     },
   },
   conectImg: {
     width: "100%",
 
     [theme.breakpoints.only("lg")]: {
+      width: "100%",
+
+      marginTop: "0px",
+    },
+    [theme.breakpoints.only("xl")]: {
       width: "100%",
 
       marginTop: "0px",
@@ -142,8 +151,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 5,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 12,
-      lineHeight: "18px",
+      fontSize: 10,
+      lineHeight: "13px",
+      marginTop: 5,
     },
   },
   vipDetail: {
@@ -167,8 +177,10 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 700,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 10,
-      lineHeight: "15px",
+      fontSize: 7,
+      marginTop: 5,
+      lineHeight: "13px",
+      fontWeight: 700,
     },
   },
   dFlex: {
@@ -201,7 +213,7 @@ export const AuthenticationCards = () => {
       justifyContent="center"
       className={classes.manageMargin}
     >
-      <Grid item className={classes.boxShadow} xs={9} sm={9} lg={6} xl={5}>
+      <Grid item className={classes.boxShadow} xs={9} sm={9} lg={6} xl={6}>
         <Paper
           square={false}
           elevation={7}
@@ -238,7 +250,7 @@ export const AuthenticationCards = () => {
           </Box>
         </Paper>
       </Grid>
-      <Grid item xs={9} sm={9} lg={5} className={classes.boxShadow}>
+      <Grid item xs={9} sm={9} lg={5} xl={5} className={classes.boxShadow}>
         <Paper
           square={false}
           elevation={7}

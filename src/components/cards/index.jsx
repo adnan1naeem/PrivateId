@@ -28,8 +28,9 @@ const useStyles = makeStyles((theme) => ({
       width: 205,
     },
     [theme.breakpoints.up("xl")]: {
-      height: 480,
-      width: 320,
+      height: 300,
+      padding: 14,
+      width: 205,
     },
   },
   heading: {
@@ -101,13 +102,13 @@ const useStyles = makeStyles((theme) => ({
       color: "#595E64",
     },
     [theme.breakpoints.up("xl")]: {
-      fontWeight: 500,
-      fontSize: 14,
-      color: "#595E64",
-      padding: 20,
+      fontSize: 10,
+      fontWeight: 400,
+      width: "unset",
+      marginTop: "-26px",
+      lineHeight: "16px",
       fontFamily: "DM Sans",
-      textAlign: "center",
-      lineHeight: "20px",
+      color: "#595E64",
     },
   },
   btnFonts: {
@@ -148,6 +149,10 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     [theme.breakpoints.only("lg")]: {
+      width: 120,
+      height: 120,
+    },
+    [theme.breakpoints.only("xl")]: {
       width: 120,
       height: 120,
     },

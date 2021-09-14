@@ -51,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("xl")]: {
       backgroundImage: `url(${callBg})`,
-      top: "-68px",
-      minHeight: "44vh",
+      top: "-439px",
+      minHeight: "42vh",
     },
   },
   iPadView: {
@@ -85,8 +85,8 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "32px",
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 40,
-      lineHeight: "58px",
+      fontSize: 25,
+      lineHeight: "32px",
     },
   },
   subTitle: {
@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 22,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 33,
+      fontSize: 22,
     },
   },
   detail: {
@@ -149,8 +149,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "0px",
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 18,
-      lineHeight: "25px",
+      fontSize: 16,
+      lineHeight: "19px",
+      marginTop: "0px",
     },
   },
   mt: {
@@ -159,9 +160,6 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: 72,
     },
     [theme.breakpoints.up("md")]: {
-      paddingBottom: 110,
-    },
-    [theme.breakpoints.up("xl")]: {
       paddingBottom: 110,
     },
   },
@@ -180,25 +178,14 @@ const useStyles = makeStyles((theme) => ({
   },
   minHeight: {
     minHeight: "135vh",
-
-    [theme.breakpoints.up("xl")]: {
-      minHeight: "0vh",
-    },
   },
-  manageUI: {
-    [theme.breakpoints.up("xl")]: {
-      maxWidth: 1120,
-    },
-    [theme.breakpoints.down("xl")]: {
-      maxWidth: 1120,
-    },
-  },
+  manageUI: {},
 }));
 export const VoiceAuthentication = () => {
   const classes = useStyles();
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} lg={9} xl={7} className={classes.manageUI}>
+      <Grid item xs={12} lg={9} xl={9} className={classes.manageUI}>
         <Grid container justifyContent="center" id="authentication">
           <Box>
             <Box className={classes.bgImg}>
@@ -235,7 +222,7 @@ export const VoiceAuthentication = () => {
                     ))}
                   </Box>
                 </Grid>
-                <Grid item lg={7} xl={6}>
+                <Grid item lg={7} xl={7}>
                   <AuthenticationCards />
                 </Grid>
               </Grid>
