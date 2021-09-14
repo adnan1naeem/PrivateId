@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 15,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 24,
+      fontSize: 15,
     },
   },
   detailStyling: {
@@ -66,8 +66,8 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "16px",
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 16,
-      lineHeight: "22px",
+      fontSize: 11,
+      lineHeight: "16px",
     },
   },
   nameStyling: {
@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 15,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 24,
+      fontSize: 15,
     },
   },
   linkedinContainer: {
@@ -107,7 +107,13 @@ const useStyles = makeStyles((theme) => ({
       right: 25,
       bottom: "-17px",
     },
-    [theme.breakpoints.between("lg,md")]: {
+
+    [theme.breakpoints.up("xl")]: {
+      height: 38,
+      right: 25,
+      bottom: "-17px",
+    },
+    [theme.breakpoints.between("lg,md,xl")]: {
       right: 30,
       bottom: "-18px",
       height: 45,
@@ -129,6 +135,11 @@ const useStyles = makeStyles((theme) => ({
       minHeight: 220,
       padding: 20,
     },
+
+    [theme.breakpoints.up("xl")]: {
+      minHeight: 220,
+      padding: 20,
+    },
   },
   bgWidth: {
     borderRadius: "19px",
@@ -146,10 +157,7 @@ const useStyles = makeStyles((theme) => ({
       width: "unset",
     },
     [theme.breakpoints.up("xl")]: {
-      borderRadius: "37px",
-      marginTop: 30,
-      width: "100%",
-      height: 600,
+      width: "unset",
     },
   },
   ml: {

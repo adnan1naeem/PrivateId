@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 24,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 48,
+      fontSize: 24,
     },
   },
   mt: {
@@ -37,15 +37,15 @@ const useStyles = makeStyles((theme) => ({
       width: 400,
     },
     [theme.breakpoints.up("xl")]: {
-      maxWidth: 600,
+      maxWidth: 400,
     },
   },
   container: {
-    [theme.breakpoints.between(1920, 2300)]: {
-      flexGrow: 0,
-      maxWidth: "91.666667%",
-      flexBasis: "91.666667%",
-    },
+    // [theme.breakpoints.between(1900, 2300)]: {
+    //   flexGrow: 0,
+    //   maxWidth: "91.666667%",
+    //   flexBasis: "91.666667%",
+    // },
   },
 }));
 export const Leadership = () => {
@@ -53,7 +53,7 @@ export const Leadership = () => {
   return (
     <Box bgcolor="#F3F3F3">
       <Grid container justifyContent="center" spacing={4}>
-        <Grid item xs={11} md={6} lg={8} xl={12} className={classes.container}>
+        <Grid item xs={11} md={6} lg={8} xl={8} className={classes.container}>
           <Box bgcolor="#F3F3F3" pt={4} pb={8} id="leadership">
             <Box>
               <Box className={classes.heading}>Leadership</Box>
