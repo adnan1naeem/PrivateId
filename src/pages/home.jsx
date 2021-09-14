@@ -28,7 +28,7 @@ export const Home = () => {
       <Features />
       <VoiceAuthentication />
       <GetReady />
-      {/* <GoPricing /> */}
+      <GoPricing />
       <LetsTalk />
       <WebFooter className={classes.footer} />
     </div>

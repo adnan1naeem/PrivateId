@@ -19,6 +19,9 @@ const StyledTableCell = withStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       fontSize: 20,
     },
+    [theme.breakpoints.down("xl")]: {
+      fontSize: 20,
+    },
     [theme.breakpoints.only("xs")]: {
       fontSize: 8,
     },
@@ -60,6 +63,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       marginTop: 25,
     },
+
+    [theme.breakpoints.only("xl")]: {
+      marginTop: 25,
+    },
     [theme.breakpoints.only("xs")]: {
       marginTop: 20,
     },
@@ -75,6 +82,10 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 1,
       fontSize: 30,
     },
+    [theme.breakpoints.down("xl")]: {
+      marginTop: 1,
+      fontSize: 30,
+    },
     [theme.breakpoints.down("xs")]: {
       fontSize: 18,
       marginTop: "0px",
@@ -84,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
   detail: {
     fontWeight: 400,
     fontSize: 20,
-    width: " 50%",
+    width: "50%",
     textAlign: "center",
     marginBottom: 54,
     color: "#000000",
@@ -122,12 +133,22 @@ const useStyles = makeStyles((theme) => ({
       height: 64,
       width: 64,
     },
+    [theme.breakpoints.down("xl")]: {
+      fontSize: 24,
+      height: 64,
+      width: 64,
+    },
     [theme.breakpoints.only("xs")]: {
       fontSize: 8,
       height: 20,
       width: 20,
     },
     [theme.breakpoints.only("lg")]: {
+      fontSize: 20,
+      height: 42,
+      width: 42,
+    },
+    [theme.breakpoints.only("xl")]: {
       fontSize: 20,
       height: 42,
       width: 42,
@@ -152,6 +173,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 15,
     },
+
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 15,
+    },
   },
   headerRadiusLastColumn: {
     borderTopRightRadius: 20,
@@ -171,6 +196,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 8,
     },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 8,
+    },
   },
   dot: {
     width: 17,
@@ -185,6 +213,10 @@ const useStyles = makeStyles((theme) => ({
       width: 10,
       height: 10,
     },
+    [theme.breakpoints.only("xl")]: {
+      width: 10,
+      height: 10,
+    },
   },
   dflex: {
     display: "flex",
@@ -192,6 +224,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 49,
     marginBottom: 49,
     [theme.breakpoints.down("lg")]: {
+      marginTop: 20,
+    },
+    [theme.breakpoints.down("xl")]: {
       marginTop: 20,
     },
     [theme.breakpoints.down("sm")]: {
@@ -222,11 +257,14 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.up("xl")]: {
-      top: -56,
+      top: -388,
     },
   },
   manageUI: {
     [theme.breakpoints.up("xl")]: {
+      maxWidth: 1120,
+    },
+    [theme.breakpoints.up("lg")]: {
       maxWidth: 1120,
     },
   },
@@ -237,14 +275,14 @@ export default function GoPricing() {
 
   return (
     <Grid container justifyContent="center">
-      <Grid item xs={12} lg={9} className={classes.manageUI}>
+      <Grid item xs={12} lg={9} xl={9} className={classes.manageUI}>
         <TableContainer
           component={Paper}
           className={classes.containerPosition}
           elevation={0}
         >
           <Grid container justifyContent="center" id="pricing">
-            <Grid xs={10} item lg={9}>
+            <Grid xs={10} item lg={9} xl={9}>
               <Box className={classes.dFlex}>
                 <Box className={classes.header}>PAY-AS-YOU-GO PRICING</Box>
               </Box>
