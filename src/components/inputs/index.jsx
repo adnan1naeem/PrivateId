@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       width: "unset",
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 12,
+      fontSize: 10,
     },
   },
   circul: {
@@ -37,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
     width: 19,
     borderRadius: 10,
     [theme.breakpoints.only("lg")]: {
+      height: 10,
+      width: 10,
+    },
+    [theme.breakpoints.only("xl")]: {
       height: 10,
       width: 10,
     },

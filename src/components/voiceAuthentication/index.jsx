@@ -145,7 +145,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       fontSize: 16,
       lineHeight: "19px",
-
       marginTop: "0px",
     },
     [theme.breakpoints.up("xl")]: {
@@ -164,7 +163,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   width: {
-    width: "80%",
     [theme.breakpoints.down("md")]: {
       width: "100%",
       marginRight: 9,
@@ -179,7 +177,14 @@ const useStyles = makeStyles((theme) => ({
   minHeight: {
     minHeight: "135vh",
   },
-  manageUI: {},
+  manageUI: {
+    [theme.breakpoints.down("lg")]: {
+      maxWidth: 1200,
+    },
+    [theme.breakpoints.down("xl")]: {
+      maxWidth: 1200,
+    },
+  },
 }));
 export const VoiceAuthentication = () => {
   const classes = useStyles();
