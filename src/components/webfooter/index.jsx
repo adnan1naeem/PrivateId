@@ -13,9 +13,6 @@ import MobileFooter from "../mobileFooter";
 const useStyles = makeStyles((theme) => ({
   footer: {
     display: "flex",
-    [theme.breakpoints.only("xl")]: {
-      justifyContent: "space-evenly",
-    },
   },
   line: {
     width: "100%",
@@ -38,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
     },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 12,
+    },
   },
   lowertext2: {
     fontFamily: "DM Sans",
@@ -47,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "#000000",
     [theme.breakpoints.only("lg")]: {
+      fontSize: 8,
+    },
+    [theme.breakpoints.only("xl")]: {
       fontSize: 8,
     },
   },
@@ -59,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#000000",
     marginBottom: "5rem",
     [theme.breakpoints.only("lg")]: {
+      fontSize: 8,
+    },
+    [theme.breakpoints.only("xl")]: {
       fontSize: 8,
     },
   },
@@ -79,12 +85,19 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 15,
     },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 15,
+    },
   },
   image: {
     width: 32,
     height: 20,
     marginTop: 10,
     [theme.breakpoints.only("lg")]: {
+      width: 16,
+      height: 16,
+    },
+    [theme.breakpoints.only("xl")]: {
       width: 16,
       height: 16,
     },
@@ -104,6 +117,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
       width: "23%",
     },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 12,
+      width: "23%",
+    },
   },
 
   continousItems: {
@@ -117,6 +134,10 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 5,
     width: "38%",
     [theme.breakpoints.only("lg")]: {
+      fontSize: 12,
+      width: "23%",
+    },
+    [theme.breakpoints.only("xl")]: {
       fontSize: 12,
       width: "23%",
     },
@@ -135,6 +156,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
     },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 12,
+    },
   },
   connecteditems: {
     padding: 10,
@@ -150,6 +174,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("lg")]: {
       fontSize: 12,
     },
+    [theme.breakpoints.only("xl")]: {
+      fontSize: 12,
+    },
   },
   circle: {
     width: 10,
@@ -158,6 +185,10 @@ const useStyles = makeStyles((theme) => ({
     background: "#C4C4C4",
     borderRadius: 10,
     [theme.breakpoints.only("lg")]: {
+      width: 7,
+      height: 7,
+    },
+    [theme.breakpoints.only("xl")]: {
       width: 7,
       height: 7,
     },
@@ -181,19 +212,14 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.up("xl")]: {
-      top: 258,
-      marginBottom: 240,
+      top: 0,
     },
   },
   bgClrAboutUs: {
     backgroundColor: "#DEDEDE",
     position: "relative",
   },
-  manageUI: {
-    [theme.breakpoints.up("xl")]: {
-      maxWidth: 1120,
-    },
-  },
+  manageUI: {},
 }));
 export const WebFooter = () => {
   const classes = useStyles();
@@ -206,7 +232,7 @@ export const WebFooter = () => {
   return (
     <Box className={containerClass}>
       <Grid container justifyContent="center">
-        <Grid item xs={10} lg={7} className={classes.manageUI}>
+        <Grid item xs={10} lg={7} xl={7} className={classes.manageUI}>
           <Hidden mdDown>
             <Grid container justifyContent="center">
               <Grid
@@ -215,7 +241,7 @@ export const WebFooter = () => {
                 spacing={3}
                 justifyContent="center"
               >
-                <Grid item lg={3} xl={2}>
+                <Grid item lg={3} xl={3}>
                   <Typography className={classes.heading}>
                     Private ID
                   </Typography>
@@ -265,7 +291,7 @@ export const WebFooter = () => {
                   </Box>
                 </Grid>
 
-                <Grid item lg={3} xl={2}>
+                <Grid item lg={3} xl={3}>
                   <Box className={classes.heading}>Company</Box>
                   <a
                     href="/about"
@@ -379,7 +405,7 @@ export const WebFooter = () => {
                   </Box>
                 </Grid>
 
-                <Grid item lg={3} xl={2}>
+                <Grid item lg={3} xl={3}>
                   <Typography className={classes.heading}>Support</Typography>
                   <a>
                     <Box className={classes.dflex}>
